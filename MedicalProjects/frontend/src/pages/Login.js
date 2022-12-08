@@ -1,7 +1,7 @@
 import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form} from 'reactstrap'
 import {Row,Col} from 'react-bootstrap'
 import React, { useState } from "react";
-import Base from "../components/Base";
+import Base from "../Components/Base";
 
 const Login = () =>{
     return(

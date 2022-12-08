@@ -1,5 +1,5 @@
 // import CustomNavbar from "../components/CustomNavbar";
-import Base from "../components/Base";
+import Base from "../Components/Base";
 const Home = () =>{
     return(
         <Base>

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Base from "../components/Base";
+import Base from "../Components/Base";
 import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form} from 'reactstrap'
 import {Row,Col} from 'react-bootstrap'
 import { useState } from "react";

@@ -6,20 +6,22 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
-import Base from './components/Base';
-import CustomNavbar from './components/CustomNavbar';
+import Base from './Components/Base';
+import CustomNavbar from './Components/CustomNavbar';
 import Services from './pages/Services';
+import FormForPatient from './Components/FormForPatient';
 
 function App() {
   return (
     
   <BrowserRouter>
   <Routes>
-     <FormForPatient />
+    
     <Route path="/home" element= {<Home />} />
     <Route path="/login" element= {<Login />} />
     <Route path ="/signup" element={<Signup />} />
     <Route path="/services" element={<Services />} />
+    <Route path ="/patientForm" element ={<FormForPatient />} />
   </Routes>
   </BrowserRouter>
   );
