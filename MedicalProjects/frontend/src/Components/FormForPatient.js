@@ -1,10 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
-import PhoneInput from 'react-phone-number-input';
 
 function FormForPatient() {
 
-const [name, setName] = useState("");
+const [name, setName] = useState('');
 const [age , setAge] = useState('');
 const [occupation , setOccupation] = useState('');
 const [height , setHeight] = useState('');
@@ -15,7 +14,6 @@ const [state, setState] = useState('');
 const [city, setCity] = useState('');
 const [street , setStreet] = useState('');
 const [zipCode, setZipCode] = useState('');
-
 
  
 const handleName =(e)=>{
@@ -34,9 +32,9 @@ const handleName =(e)=>{
     setWeight(e.target.value);
   }
 
-//   const handleMobileChange =(e) =>{
-//     setMobile(e.target.value);
-//   }
+  const handleMobileChange =(e) =>{
+    setMobile(e.target.value);
+  }
   const handleAddressChange =(e)=>{
     setAddress(e.target.value);
   }
@@ -53,6 +51,8 @@ const handleZipCodeChange =(e)=>{
     setZipCode(e.target.value);
   }
 
+
+  //Connect to backend 
   const handleSubmit=(e)=>{
    
       alert('Name :'+name+" "+ 'Age :'+age+" "+'occupation :'+occupation+" "+'Heigth :'+height+" "+
@@ -61,51 +61,73 @@ const handleZipCodeChange =(e)=>{
     e.preventDefault();
 
   }
-
   return (
-    <form onSubmit={(e) => {handleSubmit(e)}}>
-        <div>
-            <label>Name</label><br/>
-            <input type='Text' required onChange={(e)=>{handleName(e)}} /><br/>
+  
+  <form className="row g-3 justify-content-center" onSubmit={(e) => {handleSubmit(e)}}>>
+  
+  <div className="justify-content-center col-12" >
+    <label className="form-label">Name</label>
+    <input type="text" className="form-control" placeholder="Patient Name" required onChange={(e)=>{handleName(e)}}  />
 
+    <label className="form-label">Occupation</label>
+    <input type="text" className="form-control" placeholder="Occupation" required onChange={(e)=>{handleOccupationChnage(e)}}  />
+  </div>
 
-            <label>Age</label><br/>
-            <input type='number' required onChange={(e)=>{handleAgeChange(e)}} /><br/>
+  <div className="col-4" >
+    <label for="number">Age</label>
+    <input type="number" class="form-control" placeholder='Age' required onChange={(e)=>{handleAgeChange(e)}} />
+  </div>
+  <div className="col-4" >
+    <label for="number">Weight</label>
+    <input type="number" class="form-control" placeholder='Weight' onChange={(e)=>{handleWeightChange(e)}} />
+  </div>
+  
+  <div className="col-4">
+    <label for="number">Height</label>
+    <input type="number" class="form-control" placeholder='Height' onChange={(e)=>{handleHeightChange(e)}} />
+  </div>
+  <div class="form-outline col-4">
+    <label class="form-label" for="typePhone">Mobile Number</label>
+    <input type="tel" id="typePhone" class="form-control" placeholder="Mobile No" onChange={(e)=>{handleMobileChange(e)}}/>
+</div>
+  <div className="col-4 justify-content-center" >
+    <label for="inputAddress" className="form-label">Address</label>
+    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" required onChange={(e)=>{handleAddressChange(e)}} />
+  </div>
+  <div className="col-4 justify-content-center">
+    <label for="inputAddress2" className="form-label">Street</label>
+    <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required onChange={(e)=>{handleStreetChange(e)}} />
+  </div>
+  <div className="col-md-4">
+    <label for="inputState" className="form-label" required onChange={(e)=>{handleStateChange(e)}} >State</label>
+    <select id="inputState" className="form-select">
+      <option >Maharastra</option>
+      <option>Karnataka</option>
+      <option>Delhi</option>
+      <option>Rajastan</option>
+      <option>Kerala</option>
 
-            <label>Occupation</label><br/>
-            <input type='Text' onChange={(e)=>{handleOccupationChnage(e)}} /><br/>
-            
-            <label>Height</label><br/>
-            <input type='number' onChange={(e)=>{handleHeightChange(e)}} /><br/>
+    </select>
+  </div>
 
-            <label>Weight</label><br/>
-            <input type='number' onChange={(e)=>{handleWeightChange(e)}} /><br/>
+  <div className="col-4">
+    <label for="inputCity" className="form-label">City</label>
+    <input type="text" className="form-control" id="inputCity"  placeholder="City" required onChange={(e)=>{handleCityChange(e)}} />
+  </div>
+  
+  <div className="col-4">
+    <label for="inputZip" className="form-label">Zip</label>
+    <input type="text" className="form-control" id="inputZip"  placeholder="Zip Code" required onChange={(e)=>{handleZipCodeChange(e)}} />
+  </div>
+  
+  <div className="col-12">
+    <button type="submit" className="btn btn-primary">submit</button>
+  </div>
 
-            <label>Phone/mobile No.</label>
-            <PhoneInput value ={mobile} onChange={setMobile} /><br/>
-
-            <label>Address</label><br/>
-            <input type='Text' required onChange={(e)=>{handleAddressChange(e)}} /><br/>
-
-            <label>State</label><br/>
-            <input type='Text' required onChange={(e)=>{handleStateChange(e)}} /><br/>
-
-            <br/>
-            <label>City</label>
-            <input type='Text' required onChange={(e)=>{handleCityChange(e)}} />
-
-            <label>Street</label>
-            <input type='Text' required onChange={(e)=>{handleStreetChange(e)}} />
-
-            <label>ZipCode</label>
-            <input type='Text' required onChange={(e)=>{handleZipCodeChange(e)}} /><br/>
-
-
-            <input type="submit" value="Submit"/>
-
-        </div>
-    </form>
+</form>
+   
   )
-
 }
-export default FormForPatient
+
+export default  FormForPatient
+
