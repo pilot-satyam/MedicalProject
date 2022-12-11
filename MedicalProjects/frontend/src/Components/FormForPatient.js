@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
+import CustomNavbar from './CustomNavbar';
+import Base from './Base';
 
 function FormForPatient() {
 
@@ -62,7 +64,7 @@ const handleZipCodeChange =(e)=>{
 
   }
   return (
-  
+ <Base>
   <form className="row g-3 justify-content-center" onSubmit={(e) => {handleSubmit(e)}}>>
   
   <div className="justify-content-center col-12" >
@@ -125,7 +127,7 @@ const handleZipCodeChange =(e)=>{
   </div>
 
 </form>
-   
+</Base>
   )
 }
 

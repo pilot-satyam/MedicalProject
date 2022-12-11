@@ -10,6 +10,7 @@ import Base from './Components/Base';
 import CustomNavbar from './Components/CustomNavbar';
 import Services from './pages/Services';
 import FormForPatient from './Components/FormForPatient';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
     <Route path ="/signup" element={<Signup />} />
     <Route path="/services" element={<Services />} />
     <Route path ="/patientForm" element ={<FormForPatient />} />
+    <Route path= "*" element ={<ErrorPage />}></Route>
   </Routes>
   </BrowserRouter>
   );
