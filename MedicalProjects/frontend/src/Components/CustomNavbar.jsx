@@ -7,7 +7,7 @@ import {NavItem} from 'react-bootstrap';
 
 const CustomNavbar =()=> {
   return (
-    <Navbar bg="warning" expand="lg" variant="light">
+    <Navbar bg="secondary" expand="lg" variant="light">
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar"/>
         <Navbar.Brand href="#">I-myEYE</Navbar.Brand>
