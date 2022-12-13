@@ -29,7 +29,7 @@ const Services = () => {
             <table>
                 <tr>
                     <td>
-            <h2 className="text-center">-------About Us-------</h2>
+            <h2 className="text-center">About Us</h2>
             <br></br>
             
             <p>

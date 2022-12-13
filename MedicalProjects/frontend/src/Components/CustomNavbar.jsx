@@ -2,8 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { NavLink as ReactLink } from 'react-router-dom';
-import {NavItem} from 'react-bootstrap';
+
 
 const CustomNavbar =()=> {
   return (
@@ -19,6 +18,8 @@ const CustomNavbar =()=> {
                 <Nav.Link href="/login"> Login </Nav.Link>
                 <Nav.Link href="/signup">SignUp</Nav.Link>
             <Nav.Link href="/patientForm">New Patient Registration</Nav.Link>
+            <Nav.Link href='/physicianlogin'>Physician Login</Nav.Link>
+            <Nav.Link href='doctorsignup'>Doctor Signup</Nav.Link>
             <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item href="/services">Services</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
