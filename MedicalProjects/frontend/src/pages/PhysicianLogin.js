@@ -2,6 +2,7 @@ import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form} from 'reacts
 import {Row,Col} from 'react-bootstrap'
 import React, { useState } from "react";
 import Base from "../Components/Base";
+import DoctorSignup from './DoctorSignup';
 
 const PhysicianLogin = () =>{
     return(
@@ -29,7 +30,8 @@ const PhysicianLogin = () =>{
                              </FormGroup>
                      <Container className='text-center'>
                          <Button color="dark" outline>Login</Button>
-                         <Button className='ms-2' color='secondary' outline>Reset</Button>
+                         <Button className='ms-2' color='dark' outline>Reset</Button>
+                         <Button color='dark'className='ms-2' href='./DoctorSignup' outline >New Here ? Register Here </Button>
                      </Container>
                          </Form>
                      </CardBody>

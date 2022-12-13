@@ -15,11 +15,8 @@ const CustomNavbar =()=> {
           <Nav className="me-auto">
             <Nav.Link href="#home"> Home</Nav.Link>
             {/* <Nav className='me-auto'> */}
-                <Nav.Link href="/login"> Login </Nav.Link>
-                <Nav.Link href="/signup">SignUp</Nav.Link>
-            <Nav.Link href="/patientForm">New Patient Registration</Nav.Link>
+                <Nav.Link href="/login"> New Admission </Nav.Link>
             <Nav.Link href='/physicianlogin'>Physician Login</Nav.Link>
-            <Nav.Link href='doctorsignup'>Doctor Signup</Nav.Link>
             <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item href="/services">Services</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">

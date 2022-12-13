@@ -44,7 +44,7 @@ const DoctorSignup = () =>{
             <Col sm={{size:6}}>
             <Card>
             <CardHeader>
-               <h4> Fill Information To Register !!! </h4>
+               <h4> Hey Doc,Please Register Here :) </h4>
             </CardHeader>
         <CardBody>
             <Form>
