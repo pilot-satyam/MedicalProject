@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import CustomNavbar from './CustomNavbar';
 import Base from './Base';
+import axios from 'axios';
 
 function FormForPatient() {
 
@@ -57,10 +58,18 @@ const handleZipCodeChange =(e)=>{
   //Connect to backend 
   const handleSubmit=(e)=>{
    
-      alert('Name :'+name+" "+ 'Age :'+age+" "+'occupation :'+occupation+" "+'Heigth :'+height+" "+
-      'Weight :'+weight+" "+'PhoneNo :'+mobile+" "+'Address :'+address+" ");
+      // alert('Name :'+name+" "+ 'Age :'+age+" "+'occupation :'+occupation+" "+'Heigth :'+height+" "+
+      // 'Weight :'+weight+" "+'PhoneNo :'+mobile+" "+'Address :'+address+" ");
     
     e.preventDefault();
+    axios
+    .post('',this.state)
+    .then(response=>{
+      <h3>Welcome {this.state.name}!</h3>
+    })
+    .catch(error=>{
+      <h3>Error occured while loading the date!</h3>
+    })
 
   }
   return (
