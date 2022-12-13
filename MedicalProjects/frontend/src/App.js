@@ -3,6 +3,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Login from './pages/Login';
+import PhysicianLogin from './pages/PhysicianLogin';
+import DoctorSignup from './pages/DoctorSignup';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
 import { Container } from 'react-bootstrap';
@@ -19,7 +21,9 @@ function App() {
     <Route path="/login" element= {<Login />} />
     <Route path ="/signup" element={<Signup />} />
     <Route path="/services" element={<Services />} />
+    <Route path="/physicianlogin" element={<PhysicianLogin />} />
     <Route path ="/patientForm" element ={<FormForPatient />} />
+    <Route path="/doctorsignup" element={<DoctorSignup />} />
     <Route path= "*" element ={<ErrorPage />}></Route>
   </Routes>
   </BrowserRouter>
