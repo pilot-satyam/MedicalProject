@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import Base from './Base';
+import axios from 'axios';
 
 function FormForPatient() {
 
@@ -56,15 +57,23 @@ const handleZipCodeChange =(e)=>{
   //Connect to backend 
   const handleSubmit=(e)=>{
    
-      alert('Name :'+name+" "+ 'Age :'+age+" "+'occupation :'+occupation+" "+'Heigth :'+height+" "+
-      'Weight :'+weight+" "+'PhoneNo :'+mobile+" "+'Address :'+address+" ");
+      // alert('Name :'+name+" "+ 'Age :'+age+" "+'occupation :'+occupation+" "+'Heigth :'+height+" "+
+      // 'Weight :'+weight+" "+'PhoneNo :'+mobile+" "+'Address :'+address+" ");
     
     e.preventDefault();
+    axios
+    .post('',this.state)
+    .then(response=>{
+      <h3>Welcome {this.state.name}!</h3>
+    })
+    .catch(error=>{
+      <h3>Error occured while loading the date!</h3>
+    })
 
   }
   return (
  <Base>
-   <form className="row g-3 justify-content-center" onSubmit={(e) => {handleSubmit(e)}} >>
+   <form className="row g-3 justify-content-center" onSubmit={(e) => {handleSubmit(e)}} >
   <div className="justify-content-center col-12" >
     <label className="form-label">Name</label>
     <input type="text" className="form-control" placeholder="Patient Name" required onChange={(e)=>{handleName(e)}}  />
