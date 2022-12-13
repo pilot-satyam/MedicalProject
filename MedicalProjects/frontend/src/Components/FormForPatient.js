@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-import CustomNavbar from './CustomNavbar';
 import Base from './Base';
 
 function FormForPatient() {
@@ -65,8 +64,7 @@ const handleZipCodeChange =(e)=>{
   }
   return (
  <Base>
-  <form className="row g-3 justify-content-center" onSubmit={(e) => {handleSubmit(e)}}>>
-  
+   <form className="row g-3 justify-content-center" onSubmit={(e) => {handleSubmit(e)}} >>
   <div className="justify-content-center col-12" >
     <label className="form-label">Name</label>
     <input type="text" className="form-control" placeholder="Patient Name" required onChange={(e)=>{handleName(e)}}  />
@@ -104,7 +102,7 @@ const handleZipCodeChange =(e)=>{
     <label for="inputState" className="form-label" required onChange={(e)=>{handleStateChange(e)}} >State</label>
     <select id="inputState" className="form-select">
       <option >Maharastra</option>
-      <option>Karnataka</option>
+      <option>Hyderabad</option>
       <option>Delhi</option>
       <option>Rajastan</option>
       <option>Kerala</option>
