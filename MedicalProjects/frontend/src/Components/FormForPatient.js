@@ -73,7 +73,7 @@ const handleZipCodeChange =(e)=>{
   }
   return (
  <Base>
-   <form className="row g-3 justify-content-center" onSubmit={(e) => {handleSubmit(e)}} >>
+   <form className="row g-3 justify-content-center" onSubmit={(e) => {handleSubmit(e)}} >
   <div className="justify-content-center col-12" >
     <label className="form-label">Name</label>
     <input type="text" className="form-control" placeholder="Patient Name" required onChange={(e)=>{handleName(e)}}  />
