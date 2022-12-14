@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { NavLink } from 'react-router-dom';
 
 
 const CustomNavbar =()=> {
@@ -13,10 +14,10 @@ const CustomNavbar =()=> {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home"> Home</Nav.Link>
+            <NavLink to="#home"> Home</NavLink>
             {/* <Nav className='me-auto'> */}
-                <Nav.Link href="/login"> New Admission </Nav.Link>
-            <Nav.Link href='/physicianlogin'>Physician Login</Nav.Link>
+                <NavLink to="/login"> New Admission </NavLink>
+            <NavLink to='/physicianlogin'>Physician Login</NavLink>
             <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item href="/services">Services</NavDropdown.Item>
               <NavDropdown.Item href='/contactUS'>

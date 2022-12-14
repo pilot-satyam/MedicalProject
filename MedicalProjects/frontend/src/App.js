@@ -29,9 +29,11 @@ function App() {
     <Route exact path="/contactUs" element={<Contact />}/>
     <Route exact path="/address" element={<Address/>}/>
     <Route exact path= "*" element ={<ErrorPage />}></Route>
+  
   </Routes>
-  </BrowserRouter>
   <Footer />
+  </BrowserRouter>
+  
   </Container>
   );
 }
