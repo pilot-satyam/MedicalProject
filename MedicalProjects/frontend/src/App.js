@@ -11,10 +11,11 @@ import CustomNavbar from './Components/CustomNavbar';
 import Services from './pages/Services';
 import FormForPatient from './Components/FormForPatient';
 import ErrorPage from './pages/ErrorPage';
+import PatientInformation from './pages/PatientInformation';
 
 function App() {
   return (
-    
+ 
   <BrowserRouter>
   <Routes>
     
