@@ -9,16 +9,20 @@ import Signup from './pages/Signup';
 import Home from './pages/Home';
 import { Container } from 'react-bootstrap';
 import Services from './pages/Services';
-import FormForPatient from './pages/FormForPatient';
+import FormForPatient from './Components/FormForPatient';
 import ErrorPage from './pages/ErrorPage';
+
 import Contact from './pages/Contact';
 import Address from './pages/Address';
+
+
 
 function App() {
   return (
   <Container>
   <BrowserRouter>
   <Routes>
+
     <Route exact path="/home" element= {<Home />} />
     <Route exact path="/login" element= {<Login />} />
     <Route exact path ="/signup" element={<Signup />} />

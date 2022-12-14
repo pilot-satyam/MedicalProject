@@ -20,7 +20,7 @@ const CustomNavbar =()=> {
             <NavLink to='/physicianlogin'>Physician Login</NavLink>
             <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item href="/services">Services</NavDropdown.Item>
-              <NavDropdown.Item href='/contactUS'>
+              <NavDropdown.Item href="#action/3.2">
                 Contact Us
               </NavDropdown.Item>
               <NavDropdown.Item href="/address">Address</NavDropdown.Item>
