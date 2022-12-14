@@ -9,7 +9,7 @@ import Signup from './pages/Signup';
 import Home from './pages/Home';
 import { Container } from 'react-bootstrap';
 import Services from './pages/Services';
-import FormForPatient from './Components/FormForPatient';
+import FormForPatient from './pages/FormForPatient';
 import ErrorPage from './pages/ErrorPage';
 
 import Contact from './pages/Contact';

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Base from '../Components/Base';
+import Base from "../Components/Base";
+
 class ErrorPage extends Component {
   render() {
     return (
