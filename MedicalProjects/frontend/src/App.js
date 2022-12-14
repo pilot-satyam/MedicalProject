@@ -12,6 +12,7 @@ import Services from './pages/Services';
 import FormForPatient from './pages/FormForPatient';
 import ErrorPage from './pages/ErrorPage';
 import Contact from './pages/Contact';
+import Address from './pages/Address';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
     <Route exact path ="/patientForm" element ={<FormForPatient />} />
     <Route exact path="/doctorsignup" element={<DoctorSignup />} />
     <Route exact path="/contactUs" element={<Contact />}/>
+    <Route exact path="/address" element={<Address/>}/>
     <Route exact path= "*" element ={<ErrorPage />}></Route>
   </Routes>
   </BrowserRouter>

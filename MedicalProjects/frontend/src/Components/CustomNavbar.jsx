@@ -22,7 +22,7 @@ const CustomNavbar =()=> {
               <NavDropdown.Item href='/contactUS'>
                 Contact Us
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Address</NavDropdown.Item>
+              <NavDropdown.Item href="/address">Address</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
