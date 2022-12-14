@@ -30,6 +30,7 @@ const Login = () =>{
                     <Container className='text-center'>
                         <Button color="dark" outline>Login</Button>
                         <Button className='ms-2' color='secondary' outline>Reset</Button>
+                        <Button className='ms-2' color='dark' outline href='./Signup'>New Patient? Register Here</Button>
                     </Container>
 
                         </Form>
