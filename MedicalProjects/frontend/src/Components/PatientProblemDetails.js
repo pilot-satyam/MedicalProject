@@ -11,10 +11,12 @@ function PatientProblemDetails(props){
     const [medications , setMedications] = useState('');
     const [exercise , setExercise] = useState('');
     const [diet,setDiet] = useState('');
-    const [alcohol, setAddress] = useState('');
+    const [alcohol, setAlcohol] = useState('');
     const [caffeine, setCaffeine] = useState('');
     const [everhad, setEverHad] = useState('');
     const [disease, setDisease] = useState([]);
+    const [smoke, setSmoke] = useState('');
+   
     var dList=[];
 
     const handleAllergyChange =(e)=>{
@@ -127,7 +129,7 @@ function PatientProblemDetails(props){
             No<input type="radio"  id='SmokeInput' onClick={(e)=>{handleOtherChange(e)}} />           
             0-1 pack/day<input type="radio"  id='SmokeInput' onClick={(e)=>{handleSmokeChange(e)}}/>
             1-2 packs/day<input type="radio"  id='SmokeInput' onClick={(e)=>{handleSmokeChange(e)}}/>
-            2+ packs/day<input type="radio"  id='SmokeInput' onClick={(e)=>    {handleSmokeChange(e)}}/>
+            2+ packs/day<input type="radio"  id='SmokeInput' onClick={(e)=> {handleSmokeChange(e)}}/>
             </div>  
 
             <div>

@@ -1,4 +1,4 @@
-import Footer from './Components/Footer';
+// import FooterOne from './Components/FooterOne';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
@@ -15,16 +15,17 @@ import PatientInformation from './pages/PatientInformation';
 
 import Contact from './pages/Contact';
 import Address from './pages/Address';
+import FooterOne from './Components/FooterOne';
+
+
 
 
 
 function App() {
   return (
-<<<<<<< HEAD
- 
-=======
+
   <Container>
->>>>>>> 1b3cf2f1bccaa3cb7fa61a6006b7e0d74d359ac7
+
   <BrowserRouter>
   <Routes>
 
@@ -37,10 +38,11 @@ function App() {
     <Route exact path="/doctorsignup" element={<DoctorSignup />} />
     <Route exact path="/contactUs" element={<Contact />}/>
     <Route exact path="/address" element={<Address/>}/>
+    <Route exact path="/symptomForm" element={<PatientInformation/>}/>
     <Route exact path= "*" element ={<ErrorPage />}></Route>
   
   </Routes>
-  <Footer />
+  <FooterOne />
   </BrowserRouter>
   
   </Container>
