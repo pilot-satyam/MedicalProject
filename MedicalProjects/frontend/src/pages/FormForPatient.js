@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import Base from './Base';
+import Base from "../Components/Base";
 import axios from 'axios';
 
 function FormForPatient() {
