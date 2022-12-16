@@ -7,14 +7,14 @@ import { NavLink } from 'react-router-dom';
 
 const CustomNavbar =()=> {
   return (
-    <Navbar bg="secondary" expand="lg" variant="light">
+    <Navbar bg="secondary" expand ="lg" variant="light" style={{width:"auto"}}>
       <Container>
-        <img src ="favicon-32x32.png" alt="Image of eye for the navBar"/>
+        <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
         <Navbar.Brand href="#">I-myEYE</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavLink to="#home"> Home</NavLink>
+            <NavLink to="/home"> Home</NavLink>
             {/* <Nav className='me-auto'> */}
                 <NavLink to="/login"> New Admission </NavLink>
             <NavLink to='/physicianlogin'>Physician Login</NavLink>

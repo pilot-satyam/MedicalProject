@@ -1,12 +1,20 @@
 // import CustomNavbar from "../components/CustomNavbar";
 import Base from "../Components/Base";
-const Home = () =>{
-    return(
-        <Base>
-        <div>
-            <h1> Home Page</h1>
-        </div>
-        </Base>
-    );
+import Content from "../Components/Content"
+
+import React from 'react'
+import { NavLink } from "react-router-dom";
+function Home() {
+
+    const data = {
+        name: "ImyEYE Care Center",
+      };
+  return (
+    <Base>
+       <Content myData={data} />;
+    </Base>
+  )
 }
+
 export default Home
+
