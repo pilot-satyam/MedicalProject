@@ -41,9 +41,9 @@ function App() {
     <Route exact path="/address" element={<Address/>}/>
     <Route exact path="/symptomForm" element={<PatientInformation/>}/>
     <Route exact path= "*" element ={<ErrorPage />}></Route>
-    <FooterOne />
+    
   </Routes>
-  
+  <FooterOne />
   </BrowserRouter>
   
   </Container>
