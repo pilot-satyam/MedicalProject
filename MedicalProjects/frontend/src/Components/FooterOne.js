@@ -1,5 +1,5 @@
 import React from 'react'
-import footer from "../Style/footer.css"
+import '../Style/footer.css';
 import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
 function FooterOne() {
 
