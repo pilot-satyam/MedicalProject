@@ -6,6 +6,7 @@ function Contact() {
     
 <div>
   <Base >
+  <br/>
 <h2 className="common-heading d-flex align-items-center justify-content-center">Contact page</h2>
 
 

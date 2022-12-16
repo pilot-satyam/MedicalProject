@@ -5,7 +5,7 @@ function FooterOne() {
 
   
   return (
-    <footer class="text-center text-white mt-5 footercss">
+    <footer class="text-center text-white footercss border-bottom fixed-bottom">
   
   <div class="container p-4 pb-0">
   

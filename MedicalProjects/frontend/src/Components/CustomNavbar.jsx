@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 const CustomNavbar =()=> {
   return (
-    <Navbar bg="secondary" expand ="lg" variant="light" style={{width:"auto"}}>
+    <Navbar bg="secondary" expand ="lg" variant="light" style={{width:"auto", height:"10%"}} fixed="top" >
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
         <Navbar.Brand href="#">I-myEYE</Navbar.Brand>
