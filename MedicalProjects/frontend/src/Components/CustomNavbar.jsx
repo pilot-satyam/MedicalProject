@@ -13,7 +13,7 @@ const CustomNavbar =()=> {
         <Navbar.Brand href="#">I-myEYE</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto space">
             <NavLink to="/home"> Home</NavLink>
             {/* <Nav className='me-auto'> */}
                 <NavLink to="/login"> New Admission </NavLink>

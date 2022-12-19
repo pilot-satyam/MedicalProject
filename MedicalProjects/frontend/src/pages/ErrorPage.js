@@ -6,6 +6,8 @@ class ErrorPage extends Component {
     return (
     <Base>
       <div>
+        <br/>
+        <br/>
         <h1>You are at wrong path!</h1>
       </div>
     </Base>
