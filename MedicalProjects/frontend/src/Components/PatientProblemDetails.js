@@ -59,7 +59,7 @@ function PatientProblemDetails(props){
 
     }
     
-    const lst=["Anemia","Asthma","Arthritis","Cancer","Gout","Diabetes","Emotional", "Disorder","Epilepsy Seizures","Fainting Spells","Gallstones","Heart Disease","Heart Attack","Rheumatic Fever","High Blood Pressure","Digestive Problems", "Ulcerative Colitis","Ulcer Disease","Hepatitis","Kidney Disease","Liver Disease","Sleep Apnea","Use a C-PAP machine","Thyroid Problems","Tuberculosis","Venereal Diseases","Neurological Disorders","Bleeding Disroders","Lung Disease","Emphysema"    ];
+    const lst=['Refractive Errors','Cataract','Diabetic Retinopathy','Glaucoma','Amblyopia','Strabismus','Color Blindness','Amblyopia (Lazy Eye)','Retinal Detachment','Color Blindness','Floaters'    ];
 
     return(
         <Base>

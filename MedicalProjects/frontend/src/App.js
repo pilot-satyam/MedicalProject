@@ -16,6 +16,9 @@ import PatientInformation from './pages/PatientInformation';
 import Contact from './pages/Contact';
 import Address from './pages/Address';
 import FooterOne from './Components/FooterOne';
+import PatientDetails from './pages/PatientDetails';
+import { FaPrescription } from 'react-icons/fa';
+import Prescription from './pages/Prescription';
 
 
 
@@ -24,12 +27,13 @@ import FooterOne from './Components/FooterOne';
 function App() {
   return (
 
+
   <Container>
     
   <BrowserRouter>
   
   <Routes>
-    
+
     <Route  path="/home" element= {<Home />} />
     <Route exact path="/login" element= {<Login />} />
     <Route exact path ="/signup" element={<Signup />} />
