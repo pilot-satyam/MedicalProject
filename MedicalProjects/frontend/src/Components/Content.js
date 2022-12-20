@@ -13,7 +13,7 @@ const Content = ({ myData }) => {
           <div className="hero-section-data">
             <br/>
             <br/>
-            
+              
             <h1> {name} </h1>
             <p>
             Here at Eye Physicians of I-myEye, we are dedicated to ensuring that our patients get the vision they deserve.

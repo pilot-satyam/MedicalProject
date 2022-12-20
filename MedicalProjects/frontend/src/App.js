@@ -17,6 +17,8 @@ import Contact from './pages/Contact';
 import Address from './pages/Address';
 import FooterOne from './Components/FooterOne';
 
+import ShowAppointment from './pages/AppointmentPage/ShowApppointment';
+
 
 
 
@@ -40,6 +42,8 @@ function App() {
     <Route exact path="/contactUs" element={<Contact />}/>
     <Route exact path="/address" element={<Address/>}/>
     <Route exact path="/symptomForm" element={<PatientInformation/>}/>
+    <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
+    
     <Route exact path= "*" element ={<ErrorPage />}></Route>
     
   </Routes>
