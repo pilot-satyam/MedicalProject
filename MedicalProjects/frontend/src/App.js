@@ -20,6 +20,8 @@ import PatientDetails from './pages/PatientDetails';
 import { FaPrescription } from 'react-icons/fa';
 import Prescription from './pages/Prescription';
 
+import ShowAppointment from './pages/AppointmentPage/ShowApppointment';
+
 
 
 
@@ -44,6 +46,8 @@ function App() {
     <Route exact path="/contactUs" element={<Contact />}/>
     <Route exact path="/address" element={<Address/>}/>
     <Route exact path="/symptomForm" element={<PatientInformation/>}/>
+    <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
+    
     <Route exact path= "*" element ={<ErrorPage />}></Route>
     
   </Routes>
