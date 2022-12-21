@@ -4,6 +4,7 @@ import Content from "../Components/Content"
 import Slider from "../pages/Slider"
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import '../Style/Global.css';
 function Home() {
 
     const data = {
@@ -12,8 +13,8 @@ function Home() {
   return (
     <Base><br/>
         <div >
-          <h2>Welcome to ImyEYE care center</h2>
-          <p>We provide the best cure that you are looking for!</p>
+          <h2 className="centerIt">Welcome to ImyEYE care center</h2>
+          <p className="centerIt">We provide the best cure that you are looking for!</p>
             <Slider />
             <Content myData={data} />
         </div>

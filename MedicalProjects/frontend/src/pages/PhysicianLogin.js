@@ -15,7 +15,7 @@ const PhysicianLogin = () =>{
              }}>
                  <Card>
                      <CardHeader>
-                         <h3>Hey Amazing Doc, <br></br>Login Here</h3>
+                         <h3 className="centerIt">Hey Amazing Doc, <br></br>Login Here</h3>
                      </CardHeader>
                      <CardBody>
                          <Form>

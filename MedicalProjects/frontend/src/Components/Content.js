@@ -14,7 +14,7 @@ const Content = ({ myData }) => {
             <br/>
             <br/>
               
-            <h1> {name} </h1>
+            <h1 className="centerIt"> {name} </h1>
             <p>
             Here at Eye Physicians of I-myEye, we are dedicated to ensuring that our patients get the vision they deserve.
             We are also dedicated to making sure that all of our patients have healthy eyes.<br/>
@@ -23,7 +23,7 @@ const Content = ({ myData }) => {
             </p>
             
             <NavLink to="/contactUs"> 
-              <button className="btn button btn.sm justify-content-center">Contact Us!</button>
+              <button className="btn button btn.sm justify-align-center">Contact Us!</button>
             </NavLink>
               
             <br/>
