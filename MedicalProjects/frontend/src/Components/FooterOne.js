@@ -5,7 +5,10 @@ function FooterOne() {
 
   
   return (
-    <footer class="text-center text-white footercss border-bottom fixed-bottom">
+
+    <div id="page-container">
+   <div id="content-wrap">
+    <footer class="text-center footercss fixed-bottom rounded-pill bottomfooter mb-0" id ="footer">
   
   <div class="container p-4 pb-0">
   
@@ -47,6 +50,9 @@ function FooterOne() {
   </div>
   
 </footer>
+</div>
+
+</div>
   )
 }
 

@@ -77,6 +77,9 @@ class Appointment extends React.Component {
           <FormText color="muted" className="mb-1">
             <span className="text-danger">*</span>All fields are required
           </FormText>
+
+          {/* for backed put code here to save the detailes  */}
+          
           <Form onSubmit={this.save}>
             <FormGroup>
               <Label for="patientName">Patient Name</Label>

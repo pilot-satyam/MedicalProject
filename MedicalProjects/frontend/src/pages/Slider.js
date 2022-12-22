@@ -1,5 +1,5 @@
 import React from "react";
-import ImageSlider from "./ImageSlider";
+import ImageSlider from "../pages/ImageSlider";
 const Slider = () => {
   const slides = [
     { url: "Image1.jpg", title: "Image1" },

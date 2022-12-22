@@ -14,7 +14,7 @@ const rightArrowStyles = {
   transform: "translate(0, -50%)",
   right: "32px",
   fontSize: "45px",
-  color: "#fff",
+  color: "#808080",
   zIndex: 1,
   cursor: "pointer",
 };
@@ -25,7 +25,7 @@ const leftArrowStyles = {
   transform: "translate(0, -50%)",
   left: "32px",
   fontSize: "45px",
-  color: "#fff",
+  color: "#808080",
   zIndex: 1,
   cursor: "pointer",
 };
@@ -87,7 +87,7 @@ const ImageSlider = ({ slides }) => {
             ●
           </div>
         ))}
-      </div>
+      </div> 
     </div>
   );
 };

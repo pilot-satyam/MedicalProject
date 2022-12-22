@@ -12,8 +12,8 @@ import Services from './pages/Services';
 import FormForPatient from './pages/FormForPatient';
 import ErrorPage from './pages/ErrorPage';
 import PatientInformation from './pages/PatientInformation';
-import Doctor from './pages/Doctor'; 
-
+import Doctor from './pages/Doctor11'; 
+import List from "../src/pages/DoctorList/List"
 import Contact from './pages/Contact';
 import Address from './pages/Address';
 import FooterOne from './Components/FooterOne';
@@ -44,7 +44,7 @@ function App() {
     <Route exact path="/address" element={<Address/>}/>
     <Route exact path="/symptomForm" element={<PatientInformation/>}/>
     <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
-    <Route exact path ="/doctor" element ={<Doctor/>}/>
+    <Route exact path ="/doctor" element ={<List/>}/>
     <Route exact path= "*" element ={<ErrorPage />}></Route>
     
   </Routes>
