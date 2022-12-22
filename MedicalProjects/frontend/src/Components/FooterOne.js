@@ -14,7 +14,7 @@ function FooterOne() {
       <a
         class="btn text-white btn-floating m-1"
         style={{backgroundColor: "#3b5998"}}
-        href="#!"
+        href="https://discord.com/"
         role="button"
         > <FaDiscord className="icons" />
       </a>
@@ -23,7 +23,7 @@ function FooterOne() {
       <a
         class="btn text-white btn-floating m-1"
         style={{backgroundColor: "#55acee"}}
-        href="#!"
+        href="https://www.youtube.com/"
         role="button"
         ><FaYoutube className="icons" /></a>
 
@@ -31,7 +31,7 @@ function FooterOne() {
       <a
         class="btn text-white btn-floating m-1"
         style={{backgroundColor: "#dd4b39"}}
-        href="#!"
+        href="https://www.instagram.com/"
         role="button"
         ><FaInstagram className="icons" /></a>
 
@@ -43,7 +43,7 @@ function FooterOne() {
  
   <div class="text-center p-3" >
     <span class="text-black">  @{new Date().getFullYear()} Copyright: </span> 
-    <a  href="http://localhost:3000/login">  ImyEyeCareCenter.com  </a>
+    <a  href="http://localhost:3000/home">  ImyEyeCareCenter.com  </a>
   </div>
   
 </footer>

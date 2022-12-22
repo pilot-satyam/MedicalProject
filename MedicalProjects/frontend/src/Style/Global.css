@@ -44,8 +44,12 @@
     color: rgb(0, 0, 0);
     padding: 40px;
     font-family: Arial;
-    text-align: center;
+    /*  */
   }
   .space{
     display: inline-block;
+  }
+
+  .centerIt{
+    text-align: center;
   }

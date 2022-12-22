@@ -14,7 +14,7 @@ const Login = () =>{
             }}>
                 <Card>
                     <CardHeader>
-                        <h3>Login Here</h3>
+                        <h3 className="centerIt">Login Here</h3>
                     </CardHeader>
                     <CardBody>
                         <Form>
