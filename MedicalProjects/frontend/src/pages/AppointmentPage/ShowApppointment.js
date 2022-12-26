@@ -3,8 +3,9 @@ import _ from 'lodash';
 import { Container } from 'reactstrap';
 import AppointmentForm from './AppointmentForm';
 import ListOfAppointment from './ListOfAppointement';
-
+import { Link } from 'react-router-dom';
 import Base from '../../Components/Base';
+import IsConfirmed from './IsConfirmed';
 
 
 class ShowAppointment extends Component {
@@ -75,7 +76,8 @@ class ShowAppointment extends Component {
        <Base>
         <Container>
           <AppointmentForm saveApt={this.saveAppointment} />
-         
+        
+          <IsConfirmed/> 
           <ListOfAppointment appointments={filteredApts} onDelete={this.deleteAppointment} />
         </Container>
       </Base>

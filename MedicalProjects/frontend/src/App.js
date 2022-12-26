@@ -19,6 +19,8 @@ import Address from './pages/Address';
 import FooterOne from './Components/FooterOne';
 
 import ShowAppointment from './pages/AppointmentPage/ShowApppointment';
+import IsConfirmed from './pages/AppointmentPage/IsConfirmed';
+import Appointment from './pages/AppointmentPage/AppointmentForm';
 
 
 
@@ -43,8 +45,10 @@ function App() {
     <Route exact path="/contactUs" element={<Contact />}/>
     <Route exact path="/address" element={<Address/>}/>
     <Route exact path="/symptomForm" element={<PatientInformation/>}/>
+    <Route exact path ="/appointmentForm" element={<Appointment/>}/>
     <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
     <Route exact path ="/doctor" element ={<List/>}/>
+    <Route exact path ="/isConfirmed" element={<IsConfirmed/>}/>
     <Route exact path= "*" element ={<ErrorPage />}></Route>
     
   </Routes>
