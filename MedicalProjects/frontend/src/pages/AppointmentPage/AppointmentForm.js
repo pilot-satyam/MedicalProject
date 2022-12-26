@@ -3,6 +3,7 @@ import {
   Card, CardHeader, CardBody, Form, FormGroup, Label, Input, FormText, Button, Alert
 } from 'reactstrap'
 import Base from "../../Components/Base";
+
 const styles = { "backgroundColor": "#593196", "color": "#ffffff", "cursor": "pointer" };
 
 class Appointment extends React.Component {
@@ -71,12 +72,18 @@ class Appointment extends React.Component {
     };
     return (
     <Base>
+    
+
+    
       <Card className="mt-4 mb-4 card-border" outline color="primary">
         <CardHeader style={styles} onClick={this.toggleBody}><i className="fas fa-plus"></i> Add New Appointment</CardHeader>
         <CardBody style={displayBody} id="aptBody">
           <FormText color="muted" className="mb-1">
             <span className="text-danger">*</span>All fields are required
           </FormText>
+
+          {/* for backed put code here to save the detailes  */}
+          
           <Form onSubmit={this.save}>
             <FormGroup>
               <Label for="patientName">Patient Name</Label>
@@ -109,10 +116,13 @@ class Appointment extends React.Component {
             <Alert color="danger" style={errors}>
               Please fill all the details
           </Alert>
-            <Button type="submit" color="primary" block>Add Appointment</Button>
+            <Button type="submit" color="fff" block>Add Appointment</Button>
+            
           </Form>
         </CardBody>
       </Card >
+  
+      
     </Base>
     )
   }

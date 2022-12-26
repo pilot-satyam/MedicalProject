@@ -12,8 +12,8 @@ import Services from './pages/Services';
 import FormForPatient from './pages/FormForPatient';
 import ErrorPage from './pages/ErrorPage';
 import PatientInformation from './pages/PatientInformation';
-import Doctor from './pages/Doctor'; 
-
+import Doctor from './pages/Doctor11'; 
+import List from "../src/pages/DoctorList/List"
 import Contact from './pages/Contact';
 import Address from './pages/Address';
 import FooterOne from './Components/FooterOne';
@@ -22,6 +22,8 @@ import { FaPrescription } from 'react-icons/fa';
 import Prescription from './pages/Prescription';
 
 import ShowAppointment from './pages/AppointmentPage/ShowApppointment';
+import IsConfirmed from './pages/AppointmentPage/IsConfirmed';
+import Appointment from './pages/AppointmentPage/AppointmentForm';
 
 
 
@@ -47,8 +49,10 @@ function App() {
     <Route exact path="/contactUs" element={<Contact />}/>
     <Route exact path="/address" element={<Address/>}/>
     <Route exact path="/symptomForm" element={<PatientInformation/>}/>
+    <Route exact path ="/appointmentForm" element={<Appointment/>}/>
     <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
-    <Route exact path ="/doctor" element ={<Doctor/>}/>
+    <Route exact path ="/doctor" element ={<List/>}/>
+    <Route exact path ="/isConfirmed" element={<IsConfirmed/>}/>
     <Route exact path= "*" element ={<ErrorPage />}></Route>
     
   </Routes>
