@@ -33,37 +33,34 @@ import Appointmentlist from './pages/Appoinmentlist';
 function App() {
   return (
 
-    <div>
-      <Appointmentlist/>
-    </div>
-
-  // <Container>
-    
-  // <BrowserRouter>
   
-  // <Routes>
-
-  //   <Route  path="/home" element= {<Home />} />
-  //   <Route exact path="/login" element= {<Login />} />
-  //   <Route exact path ="/signup" element={<Signup />} />
-  //   <Route exact path="/services" element={<Services />} />
-  //   <Route exact path="/physicianlogin" element={<PhysicianLogin />} />
-  //   <Route exact path ="/patientForm" element ={<FormForPatient />} />
-  //   <Route exact path="/doctorsignup" element={<DoctorSignup />} />
-  //   <Route exact path="/contactUs" element={<Contact />}/>
-  //   <Route exact path="/address" element={<Address/>}/>
-  //   <Route exact path="/symptomForm" element={<PatientInformation/>}/>
-  //   <Route exact path ="/appointmentForm" element={<Appointment/>}/>
-  //   <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
-  //   <Route exact path ="/doctor" element ={<List/>}/>
-  //   <Route exact path ="/isConfirmed" element={<IsConfirmed/>}/>
-  //   <Route exact path= "*" element ={<ErrorPage />}></Route>
+  <Container>
     
-  // </Routes>
-  // <FooterOne />
-  // </BrowserRouter>
+  <BrowserRouter>
   
-  // </Container>
+  <Routes>
+
+    <Route  path="/home" element= {<Home />} />
+    <Route exact path="/login" element= {<Login />} />
+    <Route exact path ="/signup" element={<Signup />} />
+    <Route exact path="/services" element={<Services />} />
+    <Route exact path="/physicianlogin" element={<PhysicianLogin />} />
+    <Route exact path ="/patientForm" element ={<FormForPatient />} />
+    <Route exact path="/doctorsignup" element={<DoctorSignup />} />
+    <Route exact path="/contactUs" element={<Contact />}/>
+    <Route exact path="/address" element={<Address/>}/>
+    <Route exact path="/symptomForm" element={<PatientInformation/>}/>
+    <Route exact path ="/appointmentForm" element={<Appointment/>}/>
+    <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
+    <Route exact path ="/doctor" element ={<List/>}/>
+    <Route exact path ="/isConfirmed" element={<IsConfirmed/>}/>
+    <Route exact path= "*" element ={<ErrorPage />}></Route>
+    
+  </Routes>
+  <FooterOne />
+  </BrowserRouter>
+  
+  </Container>
   );
 }
 
