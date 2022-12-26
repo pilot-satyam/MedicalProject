@@ -4,9 +4,9 @@ import Base from "../Components/Base";
 
 function Prescription(){
     return (
-        <div>
-        <table>
-                    <h3>Prescription</h3>
+        <div className="">
+        <table className="table table-bordered text-start">
+                    <h3 className="text-center">Prescription</h3>
 
 
                     <tr>
@@ -49,12 +49,14 @@ function Prescription(){
                         <td>Comments regarding Medical History</td>
                         <td>10</td>
                     </tr>
-                    <tr>
-                        <td>Prescription</td>
-                        <td>mwdw</td>
-                    </tr>
+
                 </table>
- </div>
+
+                <div className="text-center">
+                    <h4 >Prescription</h4>
+                    <p className="border border-primary" >jjjjjjjjj lorem3 efm</p>
+                </div>
+            </div>
                 )
 }
 
