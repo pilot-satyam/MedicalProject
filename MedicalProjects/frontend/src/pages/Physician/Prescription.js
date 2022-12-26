@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import Base from '../../Components/Base';
-import  '../../Style/Global.css';
+// import  '../../Style/Global.css';
 function Prescription(){
     return (
         <Base>

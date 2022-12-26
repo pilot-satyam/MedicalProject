@@ -11,7 +11,7 @@ import { Container } from 'react-bootstrap';
 import Services from './pages/Services';
 import FormForPatient from './pages/FormForPatient';
 import ErrorPage from './pages/ErrorPage';
-import PatientInformation from './pages/PatientInformation';
+
 import Doctor from './pages/Doctor11'; 
 import List from "../src/pages/DoctorList/List"
 import Contact from './pages/Contact';
@@ -22,8 +22,9 @@ import ShowAppointment from './pages/AppointmentPage/ShowApppointment';
 import IsConfirmed from './pages/AppointmentPage/IsConfirmed';
 import Appointment from './pages/AppointmentPage/AppointmentForm';
 import PatientDetails from './pages/Physician/PatientDetails';
-import PatientProblemDetails from './Components/PatientProblemDetails';
+import PatientProblemDetails from './pages/Physician/PatientProblemDetails';
 import Prescription from './pages/Physician/Prescription';
+import PatientInformation from './pages/Physician/PatientInformation';
 
 
 
