@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
-import Base from "../Components/Base";
+import  '../../Style/Global.css';
+
+import Base from '../../Components/Base';
 
 function PatientDetails(props)
 {

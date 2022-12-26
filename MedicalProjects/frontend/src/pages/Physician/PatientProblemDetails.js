@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-// import React from 'react'
-import CustomNavbar from './CustomNavbar';
-import Base from './Base';
+
+import  '../../Style/Global.css';
+import Base from '../../Components/Base';
 
 function PatientProblemDetails(props){
 

@@ -1,9 +1,11 @@
 import React from 'react'
 import { useState } from 'react';
-import Base from "../Components/Base";
-
+import Base from '../../Components/Base';
+import  '../../Style/Global.css';
 function Prescription(){
     return (
+        <Base>
+        
         <div className="">
         <table className="table table-bordered text-start">
                     <h3 className="text-center">Prescription</h3>
@@ -57,6 +59,7 @@ function Prescription(){
                     <p className="border border-primary" >jjjjjjjjj lorem3 efm</p>
                 </div>
             </div>
+            </Base>
                 )
 }
 

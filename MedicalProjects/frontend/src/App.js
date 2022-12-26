@@ -21,6 +21,9 @@ import FooterOne from './Components/FooterOne';
 import ShowAppointment from './pages/AppointmentPage/ShowApppointment';
 import IsConfirmed from './pages/AppointmentPage/IsConfirmed';
 import Appointment from './pages/AppointmentPage/AppointmentForm';
+import PatientDetails from './pages/Physician/PatientDetails';
+import PatientProblemDetails from './Components/PatientProblemDetails';
+import Prescription from './pages/Physician/Prescription';
 
 
 
@@ -45,6 +48,9 @@ function App() {
     <Route exact path="/contactUs" element={<Contact />}/>
     <Route exact path="/address" element={<Address/>}/>
     <Route exact path="/symptomForm" element={<PatientInformation/>}/>
+    <Route exact path="/patientDetails" element={<PatientDetails/>}/>
+    <Route exact path ="/patientProblemDetails" element={<PatientProblemDetails/>}/>
+    <Route exact path="/prescription" element={<Prescription/>}/>
     <Route exact path ="/appointmentForm" element={<Appointment/>}/>
     <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
     <Route exact path ="/doctor" element ={<List/>}/>
