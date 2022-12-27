@@ -2,6 +2,7 @@ import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form} from 'reacts
 import {Row,Col} from 'react-bootstrap'
 import React, { useState } from "react";
 import Base from "../Components/Base";
+import "../Style/Global.css";
 
 const Login = () =>{
     return(
@@ -12,9 +13,10 @@ const Login = () =>{
                 size:6,
                 offset:2
             }}>
-                <Card>
-                    <CardHeader>
+                <Card className='mt-4'>
+                    <CardHeader className='mt-4'>
                         <h3 className="centerIt">Login Here</h3>
+                        <i style={{fontSize:"24px"}} class="fa centerIt">&#xf2bc;</i>
                     </CardHeader>
                     <CardBody>
                         <Form>

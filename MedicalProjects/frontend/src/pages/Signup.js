@@ -45,7 +45,10 @@ const Signup = () => {
             <Col sm={{size:6}}>
             <Card>
             <CardHeader>
-               <h4> Fill Information To Register !!! </h4>
+               <h4> Fill Information To Register
+                <br/>
+                <i style={{fontSize:"24px"}} class="fa">&#xf2bc;</i>
+               </h4>
             </CardHeader>
         <CardBody>
             <Form>

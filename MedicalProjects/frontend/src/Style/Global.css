@@ -35,8 +35,16 @@
     color: rgb(0, 0, 0);
     padding: 40px;
     font-family: Arial;
-    margin-top: 25px;
-    /*  */
+   
+      /* display: table-cell;
+      vertical-align: middle; */
+
+
+      
+      justify-content:center;
+      
+  
+    
   }
   .space{
     display: inline-block;
@@ -96,4 +104,4 @@
   .nav { 
     display: inline-block;
   }
-  
+ 
