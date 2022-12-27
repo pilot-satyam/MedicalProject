@@ -11,7 +11,7 @@ import { Container } from 'react-bootstrap';
 import Services from './pages/Services';
 import FormForPatient from './pages/FormForPatient';
 import ErrorPage from './pages/ErrorPage';
-import PatientInformation from './pages/PatientInformation';
+
 import Doctor from './pages/Doctor11'; 
 import List from "../src/pages/DoctorList/List"
 import Contact from './pages/Contact';
@@ -25,9 +25,12 @@ import IsConfirmed from './pages/AppointmentPage/IsConfirmed';
 import Appointment from './pages/AppointmentPage/AppointmentForm';
 import Appointmentlist from './pages/Appoinmentlist';
 import PatientDetails from './pages/Physician/PatientDetails';
-import PatientProblemDetails from './Components/PatientProblemDetails';
+
 // import Prescription from './pages/Physician/Prescription';
 
+import PatientProblemDetails from './pages/Physician/PatientProblemDetails';
+import Prescription from './pages/Physician/Prescription';
+import PatientInformation from './pages/Physician/PatientInformation';
 
 
 
@@ -42,13 +45,15 @@ function App() {
   
   <Routes>
 
-    <Route  path="/home" element= {<Home />} />
+    
+    <Route  path="/" element= {<Home />} />
     <Route exact path="/login" element= {<Login />} />
     <Route exact path ="/signup" element={<Signup />} />
     <Route exact path="/services" element={<Services />} />
     <Route exact path="/physicianlogin" element={<PhysicianLogin />} />
-    <Route exact path ="/patientForm" element ={<FormForPatient />} />
     <Route exact path="/doctorsignup" element={<DoctorSignup />} />
+    <Route exact path ="/patientForm" element ={<FormForPatient />} />
+    
     <Route exact path="/contactUs" element={<Contact />}/>
     <Route exact path="/address" element={<Address/>}/>
     <Route exact path="/symptomForm" element={<PatientInformation/>}/>

@@ -44,7 +44,8 @@ function FooterOne() {
 
 
  
-  <div class="text-center p-3" >
+  <div class="text-center">
+    {/* p-1 */}
     <span class="text-black">  @{new Date().getFullYear()} Copyright: </span> 
     <a  href="http://localhost:3000/home">  ImyEyeCareCenter.com  </a>
   </div>

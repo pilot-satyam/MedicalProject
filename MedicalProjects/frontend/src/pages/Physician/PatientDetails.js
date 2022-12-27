@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import  '../../Style/Global.css';
+// import  '../../Style/Global.css';
 
 import Base from '../../Components/Base';
 
@@ -22,7 +22,7 @@ function PatientDetails(props)
 
                 <Base>
 
-                <table className="table table-bordered ">
+                <table className="table table-bordered">
                     <h3 className = "text-center">Patient Details</h3>
                     <tr classNAme="col">
                         <td className="col-6">Name of Patient</td>

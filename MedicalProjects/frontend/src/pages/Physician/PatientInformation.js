@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PatientProblemDetails from "../Components/PatientProblemDetails";
+import PatientProblemDetails from "./PatientProblemDetails";
 function PatientInformation(){
   return(
         <div>

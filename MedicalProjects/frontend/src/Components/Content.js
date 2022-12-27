@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import '../Style/Global.css';
 import { Button } from "react-bootstrap";
+import { Container } from "reactstrap";
 
 const Content = ({ myData }) => {
   const { name } = myData;
@@ -19,12 +20,14 @@ const Content = ({ myData }) => {
             Here at Eye Physicians of I-myEye, we are dedicated to ensuring that our patients get the vision they deserve.
             We are also dedicated to making sure that all of our patients have healthy eyes.<br/>
             Our entire staff works together to give you a good visit every time you come into our office. We will work around your schedule and make every effort to see you in a timely fashion.
-            To do this, we ask that you call ahead with any questions or concerns you have before your appointment.
+            To do this, we ask that you mail ahead with any questions or concerns you have before your appointment.
             </p>
+            <Container className="text-center">
+             <NavLink to="/contactUs"> 
+              <button className="btn.sm button">Contact Us!</button>
+             </NavLink>
+            </Container>
             
-            <NavLink to="/contactUs"> 
-              <button className="btn button btn.sm justify-align-center">Contact Us!</button>
-            </NavLink>
               
             <br/>
           </div>

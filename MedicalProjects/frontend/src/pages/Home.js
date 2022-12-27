@@ -15,9 +15,9 @@ function Home() {
     <section style={{width :"100%" , heigth:"100%"}}>
     <Base><br/>
         <div >
-          <h2 className="centerIt">Welcome to ImyEYE care center</h2>
+          <h2 className="centerIt">Welcome to ImyEYE Care Center</h2>
           <p className="centerIt">We provide the best cure that you are looking for!</p>
-          <container style={{width :"100%" , heigth:"100%"}}>
+          <container style={{width :"50%" , heigth:"50%"}}>
             <SliderAuto />
           </container>
             <Content myData={data} />
