@@ -2,7 +2,7 @@ import React from 'react'
 import { Media, Button } from 'reactstrap'
 import IsConfirmed from './IsConfirmed'
 
-const ListOfAppointments = ({ appointments, onDelete }) => {
+const ListOfAppointement = ({ appointments, onDelete }) => {
   const handleDelete = (event) => {
     onDelete(event.target.id);
   }
@@ -35,4 +35,4 @@ const ListOfAppointments = ({ appointments, onDelete }) => {
   );
 }
 
-export default ListOfAppointments;
+export default ListOfAppointement;

@@ -24,7 +24,7 @@ function PatientDetails(props)
 
                 <table className="table table-bordered">
                     <h3 className = "text-center">Patient Details</h3>
-                    <tr classNAme="col">
+                    <tr className="col">
                         <td className="col-6">Name of Patient</td>
                         <td className="col-6">ejndjen</td>
                     </tr>
@@ -61,7 +61,7 @@ function PatientDetails(props)
                         <td>6</td>
                     </tr>
                     <tr>
-                        <td>Alcohol Consumtipn</td>
+                        <td>Alcohol Consumtion</td>
                         <td>7</td>
                     </tr>
                     <tr>
@@ -81,9 +81,9 @@ function PatientDetails(props)
 
 
 
-                        <form className="row g-3 justify-content-center" onSubmit={(e) => {handleSubmit(e)}} >
-                            <div className="justify-content-center col-12" >
-                                <label className="text-center">Prescription</label>
+                        <form className="" onSubmit={(e) => {handleSubmit(e)}} >
+                            <div className="" >
+                                <label className="">Prescription</label>
                                 <input type="text" className="form-control" placeholder="Prescription" rows="3" required onChange={(e)=>{handlePrescription(e)}}  />
                             </div>
                         </form>
