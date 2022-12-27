@@ -44,7 +44,11 @@ function Contact() {
         placeholder="Enter you message"
         className='mt-4'></textarea>
       <br/>
-      <input className ="d-flex ml-4 button"type="submit" value="send" />
+      <div className="text-center">
+        <button className ="button"type="submit" value="send" >
+          Submit
+        </button>
+      </div>
     </form>
   </div>
 </div>

@@ -36,25 +36,26 @@ import FooterOne from './Components/FooterOne';
 
 
 
+
 import ShowAppointment from './pages/AppointmentPage/ShowApppointment';
 
 import IsConfirmed from './pages/AppointmentPage/IsConfirmed';
 
 import Appointment from './pages/AppointmentPage/AppointmentForm';
 
+
 import PatientDetails from './pages/Physician/PatientDetails';
 
+
+import PatientDetails from './pages/Physician/PatientDetails';
 import PatientProblemDetails from './pages/Physician/PatientProblemDetails';
 
 import Prescription from './pages/Physician/Prescription';
 
 import PatientInformation from './pages/Physician/PatientInformation';
 
+
 import ListForDoctor from './pages/AppointmentPage/ListForDoctor';
-
-
-
-
 
 function App() {
   return (
@@ -63,9 +64,8 @@ function App() {
     
   <BrowserRouter>
   
-  <Routes>
+  <Routes>    
 
-    
   <Route  path="/" element= {<Home />} />
 
   <Route exact path="/login" element= {<Login />} />
@@ -107,6 +107,28 @@ function App() {
   <Route exact path ="/isConfirmed" element={<IsConfirmed/>}/>
 
   <Route exact path= "*" element ={<ErrorPage />}></Route>
+=======
+    <Route  path="/" element= {<Home />} />
+    <Route exact path="/login" element= {<Login />} />
+    <Route exact path ="/signup" element={<Signup />} />
+    
+    <Route exact path="/physicianlogin" element={<PhysicianLogin />} />
+    <Route exact path="/doctorsignup" element={<DoctorSignup />} />
+    <Route exact path ="/patientForm" element ={<FormForPatient />} />
+
+    <Route exact path="/services" element={<Services />} />
+    <Route exact path="/contactUs" element={<Contact />}/>
+    <Route exact path="/address" element={<Address/>}/>
+    
+    <Route exact path="/symptomForm" element={<PatientInformation/>}/>
+    <Route exact path="/patientDetails" element={<PatientDetails/>}/>
+    <Route exact path ="/patientProblemDetails" element={<PatientProblemDetails/>}/>
+    <Route exact path="/prescription" element={<Prescription/>}/>
+    <Route exact path ="/appointmentForm" element={<Appointment/>}/>
+    <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
+    <Route exact path ="/doctor" element ={<List/>}/>
+    <Route exact path ="/isConfirmed" element={<IsConfirmed/>}/>
+    <Route exact path= "*" element ={<ErrorPage />}></Route>
     
   </Routes>
   <FooterOne />
