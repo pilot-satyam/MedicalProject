@@ -5,7 +5,9 @@
 
 .button {
   align-items: center;  
-  background-color: #a48bd3;
+  background-color: #a991d4;
+  border-radius: 45%;
+  border: none;
 }
 
 /* img {
@@ -84,8 +86,8 @@
     display: table-cell; 
   }
   .bg1{
-    background-color: #9373ce;
+    background-color: #a490ca;
   }
   .bg2{
-    background-color: #927eb7;
+    background-color: #7657b1;
   }

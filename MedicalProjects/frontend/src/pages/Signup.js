@@ -3,9 +3,10 @@ import Base from "../Components/Base";
 import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form} from 'reactstrap'
 import {Row,Col} from 'react-bootstrap'
 import { useState } from "react";
+ 
 
 
-const Signup = () =>{
+const Signup = () => {
 
     const[data,setData] = useState({
         name:'',
@@ -49,7 +50,7 @@ const Signup = () =>{
         <CardBody>
             <Form>
                 <FormGroup>
-                    <label for="name">Enter Name</label>
+                    <label htmlFor="name">Enter Name</label>
                     <br></br>
                     <input type="text" 
                     placeholder="Enter Name" 
@@ -60,14 +61,14 @@ const Signup = () =>{
                 </FormGroup>
 
                 <FormGroup>
-                    <label for="email">Enter Email</label> <br></br>
+                    <label htmlFor="email">Enter Email</label> <br></br>
                     <input type="email" placeholder="Enter email" invalid="true" id="name"
                     onChange= {(e)=>handleChange(e,'email')}
                     value = {data.email}></input>
                 </FormGroup>
 
                 <FormGroup>
-                    <label for="password">Enter Password</label> <br></br>
+                    <label htmlFor="password">Enter Password</label> <br></br>
                     <input type="password" placeholder="Enter Password" invalid="true" id="password"
                     onChange= {(e)=>handleChange(e,'password')}
                     value = {data.password}></input>

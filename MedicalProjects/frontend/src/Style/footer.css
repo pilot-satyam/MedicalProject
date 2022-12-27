@@ -16,10 +16,19 @@ position: relative;
 }
 
 #footer {
-  position: fixed;
+
+ 
+    width: 100%;
+    position: relative;
+    bottom: -10em;
+    margin-top: 5em;
+    
+
+  /* position: fixed;
   bottom: 0;
   width: 100%;
-  height: 7.5rem;            /* Footer height */
+  height: 7.5rem; */
+              /* Footer height */
 }
 
 .bottomfooter
