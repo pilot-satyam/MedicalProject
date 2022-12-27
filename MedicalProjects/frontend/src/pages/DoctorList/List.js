@@ -1,11 +1,13 @@
 import React from 'react'
 import Doctor from '../DoctorList/Doctor'
-
+import Base from "../../Components/Base"
 import { Link } from 'react-router-dom';
+import '../../Style/Global.css';
 
 function List() {
   return (
     <div>
+    <Base>
       <table className="centerTable mt-5 mb-5 striped bordered hover">
         <tr>
             <td>
@@ -13,7 +15,7 @@ function List() {
             </td>
             <td>
                 <Link to ="/showAppointment">
-                    <button>Add Appointment</button>
+                    <button className='button'>Add Appointment</button>
                 </Link>
             </td>
         </tr>
@@ -23,7 +25,7 @@ function List() {
             </td>
             <td>
                 <Link to ="/showAppointment">
-                    <button>Add Appointment</button>
+                    <button className='button'>Add Appointment</button>
                 </Link>
             </td>
         </tr>
@@ -33,11 +35,12 @@ function List() {
             </td>
             <td>
                 <Link to ="/showAppointment">
-                    <button>Add Appointment</button>
+                    <button className='button'>Add Appointment</button>
                 </Link>
             </td>
         </tr>
       </table>
+    </Base>
     </div>
   )
 }
