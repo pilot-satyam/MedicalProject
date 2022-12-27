@@ -43,10 +43,6 @@ import IsConfirmed from './pages/AppointmentPage/IsConfirmed';
 
 import Appointment from './pages/AppointmentPage/AppointmentForm';
 
-
-import PatientDetails from './pages/Physician/PatientDetails';
-
-
 import PatientDetails from './pages/Physician/PatientDetails';
 import PatientProblemDetails from './pages/Physician/PatientProblemDetails';
 
