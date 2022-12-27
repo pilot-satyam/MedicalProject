@@ -91,3 +91,9 @@
   .bg2{
     background-color: #7657b1;
   }
+
+
+  .nav { 
+    display: inline-block;
+  }
+  
