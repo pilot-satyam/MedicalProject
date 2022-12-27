@@ -7,6 +7,7 @@ import { Button } from 'react-bootstrap';
 function Appointmentlist(){
     return(
         <div>
+            <Base>
             <table className="table table-bordered">
                 <tr>
                     <th>Id</th>
@@ -89,6 +90,7 @@ function Appointmentlist(){
                 </tr>
                 
             </table>
+            </Base>
         </div>
     )
 }

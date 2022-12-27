@@ -14,7 +14,7 @@ const CustomNavbar =()=> {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto space">
-            <NavLink to="/home" style={{textDecoration: 'none'}}> Home &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/" style={{textDecoration: 'none'}}> Home &nbsp;&nbsp;&nbsp;</NavLink>
             {/* <Nav className='me-auto'> */}
             <NavLink to="/login" style={{textDecoration: 'none'}}> New Admission &nbsp;&nbsp;&nbsp; </NavLink>
             <NavLink to='/physicianlogin' style={{textDecoration: 'none'}}>Physician Login &nbsp;&nbsp;&nbsp;</NavLink>

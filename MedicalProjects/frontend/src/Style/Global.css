@@ -4,8 +4,8 @@
 } */
 
 .button {
-    
-  background-color: #a991d4
+  align-items: center;  
+  background-color: #a48bd3;
 }
 
 /* img {
@@ -26,18 +26,7 @@
   width: 100%;
   height: auto;
 }
-
-
-
-  figure::after {
-    content: "";
-    width: 50%;
-    height: 100%;
-    left: 0;
-    top: 10%;
-    /* bottom: 10%; */
-    background-color: rgba(81, 56, 238, 0.4);
-  }
+ 
 
   body {
     background-color: #e3e8f3;
@@ -81,8 +70,4 @@
 
   h1{
     text-align: center;
-  }
-
-  button{
-    
   }

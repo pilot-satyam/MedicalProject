@@ -39,13 +39,14 @@ function App() {
   
   <Routes>
     
-    <Route  path="/home" element= {<Home />} />
+    <Route  path="/" element= {<Home />} />
     <Route exact path="/login" element= {<Login />} />
     <Route exact path ="/signup" element={<Signup />} />
     <Route exact path="/services" element={<Services />} />
     <Route exact path="/physicianlogin" element={<PhysicianLogin />} />
-    <Route exact path ="/patientForm" element ={<FormForPatient />} />
     <Route exact path="/doctorsignup" element={<DoctorSignup />} />
+    <Route exact path ="/patientForm" element ={<FormForPatient />} />
+    
     <Route exact path="/contactUs" element={<Contact />}/>
     <Route exact path="/address" element={<Address/>}/>
     <Route exact path="/symptomForm" element={<PatientInformation/>}/>

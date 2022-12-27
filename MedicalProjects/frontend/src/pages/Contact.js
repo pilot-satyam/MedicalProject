@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Base from "../Components/Base";
+import '../Style/Global.css';
 function Contact() {
 
   return (
@@ -43,7 +44,7 @@ function Contact() {
         placeholder="Enter you message"
         className='mt-4'></textarea>
       <br/>
-      <input className ="d-flex align-items-center justify-content-center"type="submit" value="send" />
+      <input className ="d-flex ml-4 button"type="submit" value="send" />
     </form>
   </div>
 </div>
