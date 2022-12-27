@@ -1,4 +1,5 @@
 import Base from "../Components/Base"
+import {Link} from recat
 import Content from "../Components/Content";
 const Services = () => {
     const data = {
