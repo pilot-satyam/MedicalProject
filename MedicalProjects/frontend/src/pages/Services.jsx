@@ -1,5 +1,5 @@
 import Base from "../Components/Base"
-import {Link} from recat
+import { Link } from 'react-router-dom';
 import Content from "../Components/Content";
 const Services = () => {
     const data = {

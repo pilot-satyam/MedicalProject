@@ -47,7 +47,7 @@ function FooterOne() {
   <div class="text-center">
     {/* p-1 */}
     <span class="text-black">  @{new Date().getFullYear()} Copyright: </span> 
-    <a  href="http://localhost:3000/home">  ImyEyeCareCenter.com  </a>
+    <a  href="http://localhost:3000/">  ImyEyeCareCenter.com  </a>
   </div>
   
 </footer>

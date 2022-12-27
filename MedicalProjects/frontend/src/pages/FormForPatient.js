@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Base from "../Components/Base";
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
+import '../Style/Global.css';
 
 function FormForPatient() {
 
@@ -131,7 +132,7 @@ const handleZipCodeChange =(e)=>{
   </div>
   
   <div className="col-12">
-    <button type="submit" className="btn btn-primary">submit</button>
+    <button type="submit" className="button btn-primary">submit</button>
     {/* <Button >Submit</Button> */}
   </div>
 

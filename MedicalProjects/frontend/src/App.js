@@ -17,24 +17,14 @@ import List from "../src/pages/DoctorList/List"
 import Contact from './pages/Contact';
 import Address from './pages/Address';
 import FooterOne from './Components/FooterOne';
-import { FaPrescription } from 'react-icons/fa';
-import Prescription from './pages/Prescription';
 
 import ShowAppointment from './pages/AppointmentPage/ShowApppointment';
 import IsConfirmed from './pages/AppointmentPage/IsConfirmed';
 import Appointment from './pages/AppointmentPage/AppointmentForm';
-import Appointmentlist from './pages/Appoinmentlist';
 import PatientDetails from './pages/Physician/PatientDetails';
-
-// import Prescription from './pages/Physician/Prescription';
-
 import PatientProblemDetails from './pages/Physician/PatientProblemDetails';
 import Prescription from './pages/Physician/Prescription';
 import PatientInformation from './pages/Physician/PatientInformation';
-
-
-
-
 
 function App() {
   return (
@@ -44,18 +34,19 @@ function App() {
   <BrowserRouter>
   
   <Routes>
-
     
     <Route  path="/" element= {<Home />} />
     <Route exact path="/login" element= {<Login />} />
     <Route exact path ="/signup" element={<Signup />} />
-    <Route exact path="/services" element={<Services />} />
+    
     <Route exact path="/physicianlogin" element={<PhysicianLogin />} />
     <Route exact path="/doctorsignup" element={<DoctorSignup />} />
     <Route exact path ="/patientForm" element ={<FormForPatient />} />
-    
+
+    <Route exact path="/services" element={<Services />} />
     <Route exact path="/contactUs" element={<Contact />}/>
     <Route exact path="/address" element={<Address/>}/>
+    
     <Route exact path="/symptomForm" element={<PatientInformation/>}/>
     <Route exact path="/patientDetails" element={<PatientDetails/>}/>
     <Route exact path ="/patientProblemDetails" element={<PatientProblemDetails/>}/>
