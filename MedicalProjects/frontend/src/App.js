@@ -27,13 +27,10 @@ import ListForDoctor from './pages/AppointmentPage/ListForDoctor';
 function App() {
   return (
 
-  <Container>
-    
+  <Container> 
   <BrowserRouter>
-  
   <Routes>    
-
-  
+    
   <Route  path="/" element= {<Home />} />
   <Route exact path="/login" element= {<Login />} />
   <Route exact path ="/signup" element={<Signup />} />
