@@ -15,17 +15,19 @@ const PhysicianLogin = () =>{
              }}>
                  <Card>
                      <CardHeader>
-                         <h3 className="centerIt">Hey Amazing Doc, <br></br>Login Here</h3>
+                         <h3 className="centerIt">Hey Amazing Doctors, <br></br>Login Here<br/>
+                            <i style={{fontSize:"24px"}} class="fa">&#xf2bc;</i>
+                         </h3>
                      </CardHeader>
                      <CardBody>
                          <Form>
                              <FormGroup>
-                                 <label for="email"> Enter Email</label> <br></br>
+                                 <label htmlFor="email"> Enter Email</label> <br></br>
                                  <input type="text" id="email"></input>
                              </FormGroup>
  
                              <FormGroup>
-                                 <label for="password"> Enter Password</label> <br></br>
+                                 <label htmlFor="password"> Enter Password</label> <br></br>
                                  <input type="password" id="password"></input>
                              </FormGroup>
                      <Container className='text-center'>

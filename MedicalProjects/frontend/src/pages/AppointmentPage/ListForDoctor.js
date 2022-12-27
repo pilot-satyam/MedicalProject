@@ -1,20 +1,21 @@
 import React from 'react'
 import { useState } from 'react';
-import Base from "../Components/Base";
+// import Base from "../Components/Base";
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
 
-function Appointmentlist(){
+function ListForDoctor(props){
     return(
         <div>
-            <Base>
+            <h3 className="text-center mt-4">Doctor-1</h3>
             <table className="table table-bordered">
+            <h6 className="text-center mt-4">{props.name}</h6>
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
                     <th>Appointment Timing</th>
                 </tr>
-                <h5 className="text-center">Doctor-1</h5>  
+                  
                 <tr>
                     <td>1</td>
                     <td>Patient-1</td>
@@ -39,61 +40,11 @@ function Appointmentlist(){
                     <td>15</td>
                 </tr>
 
-                <h5 className="text-center">Doctor-2</h5>  
-                <tr>
-                    <td>5</td>
-                    <td>Patient-5</td>
-                    <td>16</td>
-                </tr>
-                
-                <tr>
-                    <td>6</td>
-                    <td>Patient-6</td>
-                    <td>17</td>
-                </tr>
-
-                <tr>
-                    <td>7</td>
-                    <td>Patient-7</td>
-                    <td>18</td>
-                </tr>
-
-                <tr>
-                    <td>8</td>
-                    <td>Patient-8</td>
-                    <td>19</td>
-                </tr>
-
-                <h5 className="text-center">Doctor-3</h5>  
-                <tr>
-                    <td>9</td>
-                    <td>Patient-9</td>
-                    <td>20</td>
-                </tr>
-                
-                <tr>
-                    <td>10</td>
-                    <td>Patient-10</td>
-                    <td>21</td>
-                </tr>
-
-                <tr>
-                    <td>11</td>
-                    <td>Patient-12</td>
-                    <td>22</td>
-                </tr>
-
-                <tr>
-                    <td>12</td>
-                    <td>Patient-12</td>
-                    <td>23</td>
-                </tr>
-                
             </table>
-            </Base>
+            
         </div>
     )
 }
 
 
-export default Appointmentlist
+export default ListForDoctor

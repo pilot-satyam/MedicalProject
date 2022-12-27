@@ -3,11 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink } from 'react-router-dom';
-
+import "../Style/Global.css";
 
 const CustomNavbar =()=> {
   return (
-    <Navbar bg="secondary" expand ="lg" variant="light" style={{width:"auto", height:"15%", justifyContent: "space-around"}} fixed="top" >
+    <Navbar bg="secondary" expand ="lg" variant="light" style={{width:"auto", height:"13%", justifyContent: "space-around"}} fixed="top" >
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
         <Navbar.Brand href="#">I-myEYE</Navbar.Brand>
@@ -18,7 +18,7 @@ const CustomNavbar =()=> {
             {/* <Nav className='me-auto'> */}
             <NavLink to="/login" style={{textDecoration: 'none'}}> New Admission &nbsp;&nbsp;&nbsp; </NavLink>
             <NavLink to='/physicianlogin' style={{textDecoration: 'none'}}>Physician Login &nbsp;&nbsp;&nbsp;</NavLink>
-            <NavDropdown title="More" id="basic-nav-dropdown">
+            <NavDropdown title="More" id="basic-nav-dropdown" className='nav'>
               <NavDropdown.Item href="/services" >Services</NavDropdown.Item>
               <NavDropdown.Item href="/contactUs">
                 Contact Us

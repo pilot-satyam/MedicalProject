@@ -66,44 +66,44 @@ function PatientProblemDetails(props){
         <form className="row g-3 justify-content-center" onSubmit={handleSubmit()}>
             <h1 className="text-center">Patients information</h1>
             
-            <div className="col-4">
+            <div className="col-4 text-center">
             <label for='AllergiesInput'>Please list any drug allergies</label>
             <input type="text" className="form-control" id='AllergiesInput' onChange={(e)=>{handleAllergyChange(e)}} />
             </div>
 
 
 
-            <div className="col-4">
+            <div className="col-4 text-center">
             <label for="OperationsInput">Please list any Operations</label>
             <input type="text"  className="form-control" id='operations' onChange={(e)=>{handleOperationChange(e)}}/>
             </div>
 
-            <div className="col-4">
+            <div className="col-4 text-center " >
             <label for="MedicationsInput">Please list your Current Medications</label>
             <input type="text" className="form-control" id='MedicationsInput' onChange={(e)=>{handleMedicationsChange(e)}}/>
             </div>
 
-            <div className="text-start">
-            <p>Any problem present below</p>
+            <div className="text-start mt-5">
+            <p>Please mark if you have any problem written below</p>
             {lst.map(data=>{
-             return(<div className="col"><input type="checkbox" key={lst.indexOf(data)} onClick={()=>handleDisease(lst.indexOf(data))} />{data }</div>)
+             return(<div className="form-check-inline col-3"><input type="checkbox" key={lst.indexOf(data)} onClick={()=>handleDisease(lst.indexOf(data))} />{data }</div>)
             })}
             </div>
             
             
-            <div className="col-4">
+            <div className="col-4 text-center">
             <label  for="IllnessInput">Other illness</label>
             <input type="text"  className="form-control" id='IllnessInput' onChange={(e)=>{handleIllnessChange(e)}} />
             </div>
 
             
-            <div className="col-4">
+            <div className="col-4 text-center">
                 <label  for="">Comments regarding your Medical History</label>
                 <input className="form-control" type="text" onChange={(e)=>{handleOtherChange(e)}}/>
             </div>
 
 
-            <h5>Healthy and Unhealthy Habits</h5>
+            <h5 className="mt-5">Healthy and Unhealthy Habits</h5>
             
             <div className="text-start">
             <label className="me-5" for="ExerciseInput">Exercise</label>
@@ -148,8 +148,8 @@ function PatientProblemDetails(props){
             </div>  
 
 
-            <div className="col-12">
-            <button type="submit">submit</button>
+            <div className="col-12 text-center">
+            <button type="submit" className="btn btn-primary ">submit</button>
           </div>
 
         </form>

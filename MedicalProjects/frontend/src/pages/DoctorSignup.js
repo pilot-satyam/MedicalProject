@@ -44,7 +44,9 @@ const DoctorSignup = () =>{
             <Col sm={{size:6}}>
             <Card>
             <CardHeader>
-               <h4> Hey Doc,Please Register Here :) </h4>
+               <h4> Hey Doctors,Please Register Here<br/>
+               <i style={{fontSize:"24px"}} class="fa">&#xf2bc;</i>
+                </h4>
             </CardHeader>
         <CardBody>
             <Form>
