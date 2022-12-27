@@ -17,7 +17,6 @@ import List from "../src/pages/DoctorList/List"
 import Contact from './pages/Contact';
 import Address from './pages/Address';
 import FooterOne from './Components/FooterOne';
-import PatientDetails from './pages/PatientDetails';
 import { FaPrescription } from 'react-icons/fa';
 import Prescription from './pages/Prescription';
 
@@ -25,6 +24,10 @@ import ShowAppointment from './pages/AppointmentPage/ShowApppointment';
 import IsConfirmed from './pages/AppointmentPage/IsConfirmed';
 import Appointment from './pages/AppointmentPage/AppointmentForm';
 import Appointmentlist from './pages/Appoinmentlist';
+import PatientDetails from './pages/Physician/PatientDetails';
+import PatientProblemDetails from './Components/PatientProblemDetails';
+// import Prescription from './pages/Physician/Prescription';
+
 
 
 
@@ -33,7 +36,6 @@ import Appointmentlist from './pages/Appoinmentlist';
 function App() {
   return (
 
-  
   <Container>
     
   <BrowserRouter>
@@ -50,6 +52,9 @@ function App() {
     <Route exact path="/contactUs" element={<Contact />}/>
     <Route exact path="/address" element={<Address/>}/>
     <Route exact path="/symptomForm" element={<PatientInformation/>}/>
+    <Route exact path="/patientDetails" element={<PatientDetails/>}/>
+    <Route exact path ="/patientProblemDetails" element={<PatientProblemDetails/>}/>
+    <Route exact path="/prescription" element={<Prescription/>}/>
     <Route exact path ="/appointmentForm" element={<Appointment/>}/>
     <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
     <Route exact path ="/doctor" element ={<List/>}/>
