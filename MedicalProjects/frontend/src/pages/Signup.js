@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Base from "../Components/Base";
 import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form} from 'reactstrap'
 import {Row,Col} from 'react-bootstrap'
+import { signUp } from "../services/user-service";
 import { useState } from "react";
  
 
@@ -28,7 +29,16 @@ const Signup = () => {
  const submitForm = (event) =>{
     event.preventDefault()
     console.log(data);
- }
+    //data validation
+    //call server api for sending data
+    signUp(data).then((resp)=>{
+        console.log(resp)
+        console.log("Successfully log");
+    }).catch((error)=>{
+        console.log(error)
+        console.log("Error log")
+    })
+ };
 
      //dynamically setting the values 
     const handleChange = (event,property)=>{
