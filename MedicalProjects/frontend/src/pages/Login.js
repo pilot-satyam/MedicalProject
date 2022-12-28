@@ -16,17 +16,17 @@ const Login = () =>{
                 <Card className='mt-4'>
                     <CardHeader className='mt-4'>
                         <h3 className="centerIt">Login Here</h3>
-                        <i style={{fontSize:"24px"}} class="fa centerIt">&#xf2bc;</i>
+                        <i style={{fontSize:"24px"}} className="fa centerIt">&#xf2bc;</i>
                     </CardHeader>
                     <CardBody>
                         <Form>
                             <FormGroup>
-                                <label for="email"> Enter Email</label> <br></br>
+                                <label htmlFor="email"> Enter Email</label> <br></br>
                                 <input type="text" id="email"></input>
                             </FormGroup>
 
                             <FormGroup>
-                                <label for="password"> Enter Password</label> <br></br>
+                                <label htmlFor="password"> Enter Password</label> <br></br>
                                 <input type="password" id="password"></input>
                             </FormGroup>
                     <Container className='text-center'>

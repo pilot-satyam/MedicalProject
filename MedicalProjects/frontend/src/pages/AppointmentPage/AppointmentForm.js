@@ -86,15 +86,15 @@ class Appointment extends React.Component {
           
           <Form onSubmit={this.save}>
             <FormGroup>
-              <Label for="patientName">Patient Name</Label>
+              <Label htmlFor="patientName">Patient Name</Label>
               <Input type="text" id="patientName" placeholder="Patient's name" value={this.state.patientName} onChange={this.handleChange} />
             </FormGroup>
             <FormGroup>
-              <Label for="patientAge">Age</Label>
+              <Label htmlFor="patientAge">Age</Label>
               <Input type="number" id="patientAge" placeholder="Patient's age" value={this.state.patientAge} onChange={this.handleChange} />
             </FormGroup>
             <FormGroup>
-              <Label for="gender">Gender</Label>
+              <Label htmlFor="gender">Gender</Label>
               <Input type="select" id="gender" value={this.state.gender} onChange={this.handleChange} >
                 <option>Select gender</option>
                 <option>Male</option>
@@ -102,15 +102,15 @@ class Appointment extends React.Component {
               </Input>
             </FormGroup>
             <FormGroup>
-              <Label for="aptDate">Date</Label>
+              <Label htmlFor="aptDate">Date</Label>
               <Input type="date" id="aptDate" value={this.state.aptDate} onChange={this.handleChange} />
             </FormGroup>
             <FormGroup>
-              <Label for="aptTime">Time</Label>
+              <Label htmlFor="aptTime">Time</Label>
               <Input type="time" id="aptTime" value={this.state.aptTime} onChange={this.handleChange} />
             </FormGroup>
             <FormGroup>
-              <Label for="exampleText">Symptoms</Label>
+              <Label htmlFor="exampleText">Symptoms</Label>
               <Input type="textarea" id="aptNotes" placeholder="Notes" value={this.state.aptNotes} onChange={this.handleChange} />
             </FormGroup>
             <Alert color="danger" style={errors}>

@@ -85,32 +85,32 @@ const handleZipCodeChange =(e)=>{
   </div>
 
   <div className="col-4" >
-    <label for="number">Age</label>
-    <input type="number" class="form-control" placeholder='Age' required onChange={(e)=>{handleAgeChange(e)}} />
+    <label htmlFor="number">Age</label>
+    <input type="number" className="form-control" placeholder='Age' required onChange={(e)=>{handleAgeChange(e)}} />
   </div>
   <div className="col-4" >
-    <label for="number">Weight</label>
-    <input type="number" class="form-control" placeholder='Weight' onChange={(e)=>{handleWeightChange(e)}} />
+    <label htmlFor="number">Weight</label>
+    <input type="number" className="form-control" placeholder='Weight' onChange={(e)=>{handleWeightChange(e)}} />
   </div>
   
   <div className="col-4">
-    <label for="number">Height</label>
-    <input type="number" class="form-control" placeholder='Height' onChange={(e)=>{handleHeightChange(e)}} />
+    <label htmlFor="number">Height</label>
+    <input type="number" className="form-control" placeholder='Height' onChange={(e)=>{handleHeightChange(e)}} />
   </div>
-  <div class="form-outline col-4">
-    <label class="form-label" for="typePhone">Mobile Number</label>
-    <input type="tel" id="typePhone" class="form-control" placeholder="Mobile No" onChange={(e)=>{handleMobileChange(e)}}/>
+  <div className="form-outline col-4">
+    <label className="form-label" htmlFor="typePhone">Mobile Number</label>
+    <input type="tel" id="typePhone" className="form-control" placeholder="Mobile No" onChange={(e)=>{handleMobileChange(e)}}/>
 </div>
   <div className="col-4 justify-content-center" >
-    <label for="inputAddress" className="form-label">Address</label>
+    <label htmlFor="inputAddress" className="form-label">Address</label>
     <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" required onChange={(e)=>{handleAddressChange(e)}} />
   </div>
   <div className="col-4 justify-content-center">
-    <label for="inputAddress2" className="form-label">Street</label>
+    <label htmlFor="inputAddress2" className="form-label">Street</label>
     <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required onChange={(e)=>{handleStreetChange(e)}} />
   </div>
   <div className="col-md-4">
-    <label for="inputState" className="form-label" required onChange={(e)=>{handleStateChange(e)}} >State</label>
+    <label htmlFor="inputState" className="form-label" required onChange={(e)=>{handleStateChange(e)}} >State</label>
     <select id="inputState" className="form-select">
       <option >Maharastra</option>
       <option>Hyderabad</option>
@@ -122,12 +122,12 @@ const handleZipCodeChange =(e)=>{
   </div>
 
   <div className="col-4">
-    <label for="inputCity" className="form-label">City</label>
+    <label htmlFor="inputCity" className="form-label">City</label>
     <input type="text" className="form-control" id="inputCity"  placeholder="City" required onChange={(e)=>{handleCityChange(e)}} />
   </div>
   
   <div className="col-4">
-    <label for="inputZip" className="form-label">Zip</label>
+    <label htmlFor="inputZip" className="form-label">Zip</label>
     <input type="text" className="form-control" id="inputZip"  placeholder="Zip Code" required onChange={(e)=>{handleZipCodeChange(e)}} />
   </div>
   

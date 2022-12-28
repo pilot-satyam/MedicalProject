@@ -89,7 +89,7 @@ const Signup = () => {
 
                 <Container className="text-center">
             <Button color="dark">Register</Button>
-            <Button color="secondary" className="ms-2" type="reset" value="Reset">Reset</Button>
+            <Button color="secondary" className="ms-2 " type="reset" value="Reset">Reset</Button>
           </Container>
 
             </Form>

@@ -77,7 +77,7 @@ class ShowAppointment extends Component {
         <Container>
           <AppointmentForm saveApt={this.saveAppointment} />
         
-          <IsConfirmed/> 
+          
           <ListOfAppointment appointments={filteredApts} onDelete={this.deleteAppointment} />
         </Container>
       </Base>
