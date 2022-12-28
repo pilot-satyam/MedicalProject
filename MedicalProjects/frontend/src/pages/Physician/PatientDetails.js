@@ -20,7 +20,7 @@ function PatientDetails(props)
 
         
 
-                <Base>
+            <Base>
 
                 <table className="table table-bordered">
                     <h3 className = "text-center">Patient Details</h3>

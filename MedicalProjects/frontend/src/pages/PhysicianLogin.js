@@ -7,7 +7,7 @@ import DoctorSignup from './DoctorSignup';
 const PhysicianLogin = () =>{
     return(
         <Base>
-        <Container className='mt-5'>
+        <Container className='mt-5 text-center'>
           <Row className='mt-4'>
              <Col sm={{
                  size:6,
@@ -15,9 +15,12 @@ const PhysicianLogin = () =>{
              }}>
                  <Card>
                      <CardHeader>
-                         <h3 className="centerIt">Hey Amazing Doctors, <br></br>Login Here<br/>
-                            <i style={{fontSize:"24px"}} class="fa">&#xf2bc;</i>
+                         <h6 className="centerIt">Hey Amazing Doctors, <br></br>
+                         <h3>
+                         Login Here<br/>
                          </h3>
+                            <i style={{fontSize:"24px"}} class="fa">&#xf2bc;</i>
+                         </h6>
                      </CardHeader>
                      <CardBody>
                          <Form>

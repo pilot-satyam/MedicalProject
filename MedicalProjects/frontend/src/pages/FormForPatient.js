@@ -75,7 +75,14 @@ const handleZipCodeChange =(e)=>{
   }
   return (
  <Base>
-   <form className="row g-3 justify-content-center" onSubmit={(e) => {handleSubmit(e)}} >
+   <form className="row g-3 justify-content-center mt-5" onSubmit={(e) => {handleSubmit(e)}} >
+
+    <div className='text-center'>
+      <h3>
+        Detail Form &nbsp;
+        <i style={{fontSize:"24px"}} className="fa">&#xf15c;</i>
+      </h3>
+    </div>
   <div className="justify-content-center col-12" >
     <label className="form-label">Name</label>
     <input type="text" className="form-control" placeholder="Patient Name" required onChange={(e)=>{handleName(e)}}  />
@@ -131,7 +138,7 @@ const handleZipCodeChange =(e)=>{
     <input type="text" className="form-control" id="inputZip"  placeholder="Zip Code" required onChange={(e)=>{handleZipCodeChange(e)}} />
   </div>
   
-  <div className="col-12">
+  <div className="col-12 text-center">
     <button type="submit" className="button btn-primary">submit</button>
     {/* <Button >Submit</Button> */}
   </div>

@@ -39,15 +39,16 @@ const DoctorSignup = () =>{
 
     return(
         <Base>
-       <Container className='mt-5'>
+       <Container className='mt-5 text-center'>
         <Row className="mt-4">
             <Col sm={{size:6}}>
             <Card>
             <CardHeader>
-               <h4> Hey Doctors,Please Register Here<br/>
+               <h6> Hey Doctors,<br/></h6>
+               <h3>Please Register Here</h3>
                {/* <i style={{fontSize:"24px"}} className="fa">&#xf2bc;</i> */}
                <i className="fa-solid fa-user"></i>
-                </h4>
+                
             </CardHeader>
         <CardBody>
             <Form>
