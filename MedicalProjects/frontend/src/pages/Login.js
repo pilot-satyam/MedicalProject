@@ -7,7 +7,7 @@ import "../Style/Global.css";
 const Login = () =>{
     return(
         <Base>
-       <Container>
+       <Container className='mt-5'>
          <Row className='mt-4'>
             <Col sm={{
                 size:6,

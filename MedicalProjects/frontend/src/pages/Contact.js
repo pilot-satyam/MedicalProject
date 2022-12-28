@@ -7,8 +7,8 @@ function Contact() {
     
 <div>
   <Base >
-  <br/>
-<h2 className="common-heading d-flex align-items-center justify-content-center">Contact page</h2>
+  
+<h2 className="common-heading d-flex align-items-center justify-content-center mt-5">Contact page</h2>
 
 
 
