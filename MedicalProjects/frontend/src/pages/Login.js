@@ -28,12 +28,14 @@ const Login = () =>{
                             label="Email address"
                             className="mb-3"
                         >
-                            <Form.Control type="email" placeholder="name@example.com" />
+                            <Form.Control type="email" placeholder="email" />
                         </FloatingLabel>
                         {/* <MDBInput label='Email' type='text' id='formWhite' contrast /> */}
                         <FloatingLabel controlId="floatingPassword" label="Password">
-                            <Form.Control type="password" placeholder="Password" />
+                            <Form.Control type="password" placeholder="password" />
                         </FloatingLabel>
+
+                        <br></br>
                       
                     <Container className='text-center'>
                         <Button color="dark" outline>Login</Button>
