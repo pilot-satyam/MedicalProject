@@ -14,6 +14,14 @@ function Home() {
   return (
     <section style={{width :"100%" , heigth:"100%"}}>
     <Base><br/>
+    {/* <FontAwesomeIcon icon={['fab', 'twitter']} />
+
+<FontAwesomeIcon icon={['fab', 'facebook']} />
+
+<FontAwesomeIcon icon={['fab', 'linkedin']} />
+
+<FontAwesomeIcon icon={['fab', 'github']} /> */}
+
         <div >
           <h2 className="centerIt">Welcome to ImyEYE Care Center</h2>
           <p className="centerIt">We provide the best cure that you are looking for!</p>

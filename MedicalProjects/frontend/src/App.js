@@ -23,6 +23,8 @@ import PatientProblemDetails from './pages/Physician/PatientProblemDetails';
 import Prescription from './pages/Physician/Prescription';
 import PatientInformation from './pages/Physician/PatientInformation';
 import ListForDoctor from './pages/AppointmentPage/ListForDoctor';
+// import initFontAwesome from './Components/initFontAwesome';
+// initFontAwesome();
 
 function App() {
   return (

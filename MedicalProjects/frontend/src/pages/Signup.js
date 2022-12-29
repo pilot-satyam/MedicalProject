@@ -44,8 +44,8 @@ const Signup = () => {
     const handleChange = (event,property)=>{
         // console.log("name changed");
         //here name will be override by new value
-        // setData({...data,name:event.target.value})
-        // setData({...data,[property] : event.target.value});
+        setData({...data,name:event.target.value})
+        setData({...data,[property] : event.target.value});
         }
 
     return(
@@ -63,7 +63,7 @@ const Signup = () => {
         <CardBody>
             <Form onSubmit={submitForm}>
                 <FormGroup>
-                    <Label for="name">Enter Name</Label>
+                    <Label htmlFor="name">Enter Name</Label>
                     <br></br>
                     <input type="text" 
                     placeholder="Enter Name" 
@@ -83,7 +83,7 @@ const Signup = () => {
                 </FormGroup>
 
                 <FormGroup>
-                    <Label for="password">Enter Password</Label> <br></br>
+                    <Label htmlFor="password">Enter Password</Label> <br></br>
                     <input type="password" 
                      placeholder="Enter Password" 
                      id="password"
