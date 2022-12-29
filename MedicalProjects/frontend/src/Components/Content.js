@@ -3,7 +3,7 @@ import styled from "styled-components";
 import '../Style/Global.css';
 import { Button } from "react-bootstrap";
 import { Container } from "reactstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const Content = ({ myData }) => {
   const { name } = myData;
@@ -17,10 +17,11 @@ const Content = ({ myData }) => {
             <br/>
               
             {/* <h1 className="centerIt"> {name}  */}
+
             <h1 className="centerIt">
             <FontAwesomeIcon icon="fas fa-heading "/>
             {name} &nbsp;
-            
+
 
 
             <i style={{fontSize:"24px"}} className='fas'>&#xf812;</i>

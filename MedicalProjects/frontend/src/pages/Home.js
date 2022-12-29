@@ -21,6 +21,14 @@ function Home() {
   return (
     <div style={slideStyles} className="mt-5">
     <Base><br/>
+    {/* <FontAwesomeIcon icon={['fab', 'twitter']} />
+
+<FontAwesomeIcon icon={['fab', 'facebook']} />
+
+<FontAwesomeIcon icon={['fab', 'linkedin']} />
+
+<FontAwesomeIcon icon={['fab', 'github']} /> */}
+
         <div >
           <h2 className="centerIt">Welcome to<br/> ImyEYE Care Center &nbsp;
             <i style={{fontSize:"24px"}} className='far'>&#xf06e;</i>

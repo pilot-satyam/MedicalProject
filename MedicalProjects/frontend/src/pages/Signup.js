@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Base from "../Components/Base";
-import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form} from 'reactstrap'
+import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form,Label} from 'reactstrap'
 import {Row,Col} from 'react-bootstrap'
 import { signUp } from "../services/user-service";
 import { useState } from "react";
@@ -44,7 +44,7 @@ const Signup = () => {
     const handleChange = (event,property)=>{
         // console.log("name changed");
         //here name will be override by new value
-        // setData({...data,name:event.target.value})
+        setData({...data,name:event.target.value})
         setData({...data,[property] : event.target.value});
         }
 
@@ -61,9 +61,9 @@ const Signup = () => {
                </h4>
             </CardHeader>
         <CardBody>
-            <Form>
+            <Form onSubmit={submitForm}>
                 <FormGroup>
-                    <label htmlFor="name">Enter Name</label>
+                    <Label htmlFor="name">Enter Name</Label>
                     <br></br>
                     <input type="text" 
                     placeholder="Enter Name" 
@@ -74,22 +74,26 @@ const Signup = () => {
                 </FormGroup>
 
                 <FormGroup>
-                    <label htmlFor="email">Enter Email</label> <br></br>
-                    <input type="email" placeholder="Enter email" invalid="true" id="name"
+                    <Label htmlFor="email">Enter Email</Label> <br></br>
+                    <input type="email" placeholder="Enter email" 
+                    invalid="true" 
+                    id="email"
                     onChange= {(e)=>handleChange(e,'email')}
                     value = {data.email}></input>
                 </FormGroup>
 
                 <FormGroup>
-                    <label htmlFor="password">Enter Password</label> <br></br>
-                    <input type="password" placeholder="Enter Password" invalid="true" id="password"
+                    <Label htmlFor="password">Enter Password</Label> <br></br>
+                    <input type="password" 
+                     placeholder="Enter Password" 
+                     id="password"
                     onChange= {(e)=>handleChange(e,'password')}
                     value = {data.password}></input>
                 </FormGroup>
 
                 <Container className="text-center">
             <Button color="dark">Register</Button>
-            <Button color="secondary" className="ms-2 " type="reset" value="Reset">Reset</Button>
+            <Button color="secondary" className="ms-2" type="reset" value="Reset">Reset</Button>
           </Container>
 
             </Form>
@@ -102,4 +106,4 @@ const Signup = () => {
         </Base> 
     );
 }
-export default Signup
+export default Signup;
