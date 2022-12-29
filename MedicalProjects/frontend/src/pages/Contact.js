@@ -1,7 +1,7 @@
 import React from 'react';
 import Base from "../Components/Base";
 import '../Style/Global.css';
-import '../Style/placeholderTop.css';
+// import '../Style/placeholderTop.css';
 function Contact() {
 
   return (
