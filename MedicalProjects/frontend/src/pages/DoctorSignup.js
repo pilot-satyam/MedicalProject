@@ -39,20 +39,22 @@ const DoctorSignup = () =>{
 
     return(
         <Base>
-       <Container>
+       <Container className='mt-5 text-center'>
         <Row className="mt-4">
             <Col sm={{size:6}}>
             <Card>
             <CardHeader>
-               <h4> Hey Doctors,Please Register Here<br/>
-               <i style={{fontSize:"24px"}} class="fa">&#xf2bc;</i>
-                </h4>
+               <h6> Hey Doctors,<br/></h6>
+               <h3>Please Register Here</h3>
+               {/* <i style={{fontSize:"24px"}} className="fa">&#xf2bc;</i> */}
+               <i className="fa-solid fa-user"></i>
+                
             </CardHeader>
         <CardBody>
             <Form>
 
                 <FormGroup>
-                    <label for="id">Enter Your I'd</label>
+                    <label htmlFor="id">Enter Your I'd</label>
                     <br></br>
                     <input type="text"
                     placeholder="Enter I'd"
@@ -63,7 +65,7 @@ const DoctorSignup = () =>{
                 </FormGroup>
 
                 <FormGroup>
-                    <label for="name">Enter Name</label>
+                    <label htmlFor="name">Enter Name</label>
                     <br></br>
                     <input type="text" 
                     placeholder="Enter Name" 
@@ -74,14 +76,14 @@ const DoctorSignup = () =>{
                 </FormGroup>
 
                 <FormGroup>
-                    <label for="email">Enter Email</label> <br></br>
+                    <label htmlFor="email">Enter Email</label> <br></br>
                     <input type="email" placeholder="Enter email" invalid="true" id="name"
                     onChange= {(e)=>handleChange(e,'email')}
                     value = {data.email}></input>
                 </FormGroup>
 
                 <FormGroup>
-                    <label for="password">Enter Password</label> <br></br>
+                    <label htmlFor="password">Enter Password</label> <br></br>
                     <input type="password" placeholder="Enter Password" invalid="true" id="password"
                     onChange= {(e)=>handleChange(e,'password')}
                     value = {data.password}></input>

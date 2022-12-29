@@ -20,7 +20,7 @@ function PatientDetails(props)
 
         
 
-                <Base>
+            <Base>
 
                 <table className="table table-bordered">
                     <h3 className = "text-center">Patient Details</h3>
@@ -81,13 +81,35 @@ function PatientDetails(props)
 
 
 
-                        <form className="" onSubmit={(e) => {handleSubmit(e)}} >
+                        {/* <form className="" onSubmit={(e) => {handleSubmit(e)}} >
                             <div className="" >
                                 <label className="">Prescription</label>
                                 <input type="text" className="form-control" placeholder="Prescription" rows="3" required onChange={(e)=>{handlePrescription(e)}}  />
                             </div>
+                        </form> */}
+
+                        <form className="" onSubmit={(e) => {handleSubmit(e)}} >
+
+                            <div className="" >
+
+                                <label className="text-center">Prescription</label>
+
+                                <input type="text" className="form-control" placeholder="Prescription" rows="3" required onChange={(e)=>{handlePrescription(e)}}  />
+
+                            </div>
+
+                            <div className="col-12 text-center mt-3">
+
+                            <button type="submit" className="button btn-primary">submit</button>
+
+                            {/* <Button >Submit</Button> */}
+
+                            </div>
+
                         </form>
-              </Base>
+
+</Base>
+              
     )
 }
 

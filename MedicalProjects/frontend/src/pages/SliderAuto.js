@@ -3,8 +3,8 @@ import '../Style/Global.css';
 import {Container} from 'reactstrap'
 function SliderAuto() {
   return (
-    <Container className="text-center   ">
-    <ImageSlider effectDelay={200} autoPlayDelay={1500} style ={{width:"50%", height:"50%"}}>
+    <Container className="text-center" style={{"width":"100%", "height":"100%"}}>
+    <ImageSlider effectDelay={200} autoPlayDelay={1500} style ={{"width":"50px", "height":"50px"}}>
       <Slide>
         <img alt="img2" src="Image1.jpg" />
       </Slide>

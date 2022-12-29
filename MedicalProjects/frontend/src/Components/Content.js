@@ -3,6 +3,7 @@ import styled from "styled-components";
 import '../Style/Global.css';
 import { Button } from "react-bootstrap";
 import { Container } from "reactstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Content = ({ myData }) => {
   const { name } = myData;
@@ -15,7 +16,17 @@ const Content = ({ myData }) => {
             <br/>
             <br/>
               
-            <h1 className="centerIt"> {name} </h1>
+            {/* <h1 className="centerIt"> {name}  */}
+            <h1>
+            <FontAwesomeIcon icon="fas fa-heading "/>
+            {name}
+            
+
+
+            <i style={{fontSize:"24px"}} className='fas'>&#xf812;</i>
+            </h1>
+            
+            {/* </h1> */}
             <p>
             Here at Eye Physicians of I-myEye, we are dedicated to ensuring that our patients get the vision they deserve.
             We are also dedicated to making sure that all of our patients have healthy eyes.<br/>
@@ -24,7 +35,8 @@ const Content = ({ myData }) => {
             </p>
             <Container className="text-center">
              <NavLink to="/contactUs"> 
-              <button className="btn.sm button">Contact Us!</button>
+             
+              <button className="button" outline color="secondary">Contact Us </button>
              </NavLink>
             </Container>
             

@@ -50,7 +50,7 @@ const Signup = () => {
 
     return(
         <Base>
-       <Container>
+       <Container className='mt-5 text-center'>
         <Row className="mt-4">
             <Col sm={{size:6}}>
             <Card>
@@ -93,9 +93,7 @@ const Signup = () => {
 
                 <Container className="text-center">
             <Button color="dark">Register</Button>
-            <Button color="secondary" className="ms-2"
-             type="reset"
-              value="Reset">Reset</Button>
+            <Button color="secondary" className="ms-2" type="reset" value="Reset">Reset</Button>
           </Container>
 
             </Form>

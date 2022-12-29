@@ -4,7 +4,7 @@ import { FaDiscord, FaInstagram, FaYoutube,FaFacebook,FaGoogle,FaTwitter,FaLinke
 // function FooterOne() {
 
   
-//   return (
+// //   return (
 
 //     <div id="page-container">
 //    <div id="content-wrap">
@@ -38,9 +38,9 @@ import { FaDiscord, FaInstagram, FaYoutube,FaFacebook,FaGoogle,FaTwitter,FaLinke
 //         role="button"
 //         ><FaInstagram className="icons" /></a>
 
-//     </section>
+// //     </section>
   
-//   </div>
+// //   </div>
 
 
  
@@ -50,10 +50,10 @@ import { FaDiscord, FaInstagram, FaYoutube,FaFacebook,FaGoogle,FaTwitter,FaLinke
 //     <a  href="http://localhost:3000/">  ImyEyeCareCenter.com  </a>
 //   </div>
   
-// </footer>
-// </div>
+// // </footer>
+// // </div>
 
-// </div>
+// // </div>
 //   )
 // }
 

@@ -12,39 +12,40 @@ const Services = () => {
         <Base>
             <Content myData={data} />
 
-        <container className="centerIt">
-            <div class="col-container bg1">
-                <div class="col">
-                    <p>Cure with Care Center</p>
+        <container className="centerIt mt-4">
+            <div className="col-container bg1">
+                <div className="col mt-4">
+                    <p className="mt-6">Cure with Care Center</p>
                     <p> and make your vision clear</p>
                     <Link to="/doctor">
                         <button className="button">
-                            Find Doctor
+                            <i style={{fontSize:"24px"}} className="fa">&#xf0f0;</i>
                         </button>
                     </Link>
                 </div>
 
-                <div class="col bg2">
+                <div className="col bg2">
                     
-                    <p>Want to book Appointment</p>
+                    <p className="mt-4">Want to book Appointment</p>
                     <p>to avaid the last minute rush then</p>
                     <p>book your Appointment</p>
                     <p>here!</p>
+                    
+                    
                     <Link to="/showAppointment">
-                        <button className="button">
-                            Add Appointment 
-                        </button>
+                        <button className="button"><i style={{fontSize:"24px"}} className="fa">&#xf274;</i></button>
                     </Link>
-                
+                    <br/>
+                    <br/>
                 </div>
 
-                <div class="col bg1">
+                <div className="col bg1">
                     
                     <p>See this address </p>
                     <p>for in person meeting.</p>
                     <Link to="/address">
-                        <button className="button">
-                            Address
+                        <button className="button mb-5">
+                            <i class="material-icons">&#xeb45;</i>
                         </button>
                     </Link>
                 </div>

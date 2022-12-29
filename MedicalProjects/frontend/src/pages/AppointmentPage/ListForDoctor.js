@@ -17,27 +17,27 @@ function ListForDoctor(props){
                 </tr>
                   
                 <tr>
-                    <td>1</td>
-                    <td>Patient-1</td>
-                    <td>12</td>
+                    <td>{props.id}</td>
+                    <td>{props.p_name}</td>
+                    <td>{props.timing}</td>
                 </tr>
                 
                 <tr>
-                    <td>2</td>
-                    <td>Patient-2</td>
-                    <td>13</td>
+                    <td>{props.id}</td>
+                    <td>{props.p_name}</td>
+                    <td>{props.timing}</td>
                 </tr>
 
                 <tr>
-                    <td>3</td>
-                    <td>Patient-3</td>
-                    <td>14</td>
+                    <td>{props.id}</td>
+                    <td>{props.p_name}</td>
+                    <td>{props.timing}</td>
                 </tr>
 
                 <tr>
-                    <td>4</td>
-                    <td>Patient-4</td>
-                    <td>15</td>
+                    <td>{props.id}</td>
+                    <td>{props.p_name}</td>
+                    <td>{props.timing}</td>
                 </tr>
 
             </table>

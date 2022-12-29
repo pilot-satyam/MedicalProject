@@ -3,11 +3,24 @@
   padding: 0rem 12rem;
 } */
 
+
+
 .button {
+
   align-items: center;  
-  background-color: #a991d4;
-  border-radius: 45%;
-  border: none;
+
+  background-color: #a48bd3;
+
+  border-radius: 5ch;
+
+}
+
+
+
+.button:hover{
+  border-radius: 5ch;
+  border-color: rgb(105, 24, 181);
+  transform:scale(1.05);
 }
 
 /* img {
