@@ -1,8 +1,11 @@
-import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form} from 'reactstrap'
+import {Button, Card,CardHeader,Container, FormGroup,CardBody} from 'reactstrap'
 import {Row,Col} from 'react-bootstrap'
 import React, { useState } from "react";
 import Base from "../Components/Base";
 import "../Style/Global.css";
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import {MDBInput} from 'mdb-react-ui-kit'
+import Form from 'react-bootstrap/Form';
 
 const Login = () =>{
     return(
@@ -20,15 +23,18 @@ const Login = () =>{
                     </CardHeader>
                     <CardBody>
                         <Form>
-                            <FormGroup>
-                                <label htmlFor="email"> Enter Email</label> <br></br>
-                                <input type="text" id="email"></input>
-                            </FormGroup>
-
-                            <FormGroup>
-                                <label htmlFor="password"> Enter Password</label> <br></br>
-                                <input type="password" id="password"></input>
-                            </FormGroup>
+                        <FloatingLabel
+                            controlId="floatingInput"
+                            label="Email address"
+                            className="mb-3"
+                        >
+                            <Form.Control type="email" placeholder="name@example.com" />
+                        </FloatingLabel>
+                        {/* <MDBInput label='Email' type='text' id='formWhite' contrast /> */}
+                        <FloatingLabel controlId="floatingPassword" label="Password">
+                            <Form.Control type="password" placeholder="Password" />
+                        </FloatingLabel>
+                      
                     <Container className='text-center'>
                         <Button color="dark" outline>Login</Button>
                         <Button className='ms-2' color='secondary' outline>Reset</Button>
