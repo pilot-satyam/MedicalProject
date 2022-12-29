@@ -45,7 +45,7 @@ const Services = () => {
                     <p>for in person meeting.</p>
                     <Link to="/address">
                         <button className="button mb-5">
-                            <i class="material-icons">&#xeb45;</i>
+                             <i style={{fontSize:'24px'}} className='fas'>&#xf3c5;</i>
                         </button>
                     </Link>
                 </div>

@@ -11,22 +11,30 @@ function Home() {
     const data = {
         name: "ImyEYE Care Center",
       };
+      const slideStyles = {
+        width: "100%",
+        height: "90%",
+        borderRadius: "10px",
+        // backgroundSize :""
+        backgroundPosition: "center",
+      };
   return (
-    <section style={{width :"100%" , heigth:"100%"}}>
+    <div style={slideStyles} className="mt-5">
     <Base><br/>
         <div >
-          <h2 className="centerIt">Welcome to ImyEYE Care Center</h2>
+          <h2 className="centerIt">Welcome to<br/> ImyEYE Care Center &nbsp;
+            <i style={{fontSize:"24px"}} className='far'>&#xf06e;</i>
+          </h2>
           <p className="centerIt">We provide the best cure that you are looking for!</p>
-          <container style={{width :"50%" , heigth:"50%"}}>
-            <SliderAuto />
-          </container>
-            <Content myData={data} />
-          
         </div>
-       
-       
+        <div>
+        
+            <Slider/>
+         
+            <Content myData={data} />
+        </div>
     </Base>
-    </section>
+    </div>
   )
 }
 

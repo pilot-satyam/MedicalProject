@@ -1,5 +1,6 @@
 import React from "react";
 import ImageSlider from "../pages/ImageSlider";
+
 const Slider = () => {
   const slides = [
     { url: "Image1.jpg", title: "Image1" },
@@ -16,7 +17,7 @@ const Slider = () => {
   return (
     
       <div style={containerStyles}>
-        <ImageSlider slides={slides} />
+        <ImageSlider slides={slides} effectDelay={200} autoPlayDelay={1500}/>
       </div>
  
   );

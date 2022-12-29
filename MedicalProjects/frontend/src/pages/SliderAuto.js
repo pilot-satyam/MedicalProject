@@ -2,9 +2,13 @@ import ImageSlider, { Slide } from "react-auto-image-slider";
 import '../Style/Global.css';
 import {Container} from 'reactstrap'
 function SliderAuto() {
+
+  
   return (
-    <Container className="text-center" style={{"width":"100%", "height":"100%"}}>
-    <ImageSlider effectDelay={200} autoPlayDelay={1500} style ={{"width":"50px", "height":"50px"}}>
+  <div >
+    {/* <Container className="text-center"> */}
+    <ImageSlider effectDelay={200} autoPlayDelay={1500} style={{ width: "10", height:"10" }}
+    resizeMode="contain">
       <Slide>
         <img alt="img2" src="Image1.jpg" />
       </Slide>
@@ -21,7 +25,8 @@ function SliderAuto() {
         <img alt="img1" src="Image5.jpg" />
       </Slide>
     </ImageSlider>
-    </Container>
+    {/* </Container> */}
+  </div> 
   );
 }
 
