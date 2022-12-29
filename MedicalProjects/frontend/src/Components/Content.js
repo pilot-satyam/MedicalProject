@@ -7,7 +7,7 @@ import { Container } from "reactstrap";
 
 const Content = ({ myData }) => {
   const { name } = myData;
-
+ 
   return (
    
       <div className="container">
@@ -17,9 +17,11 @@ const Content = ({ myData }) => {
             <br/>
               
             {/* <h1 className="centerIt"> {name}  */}
-            <h1>
-            {name}
-            
+
+            <h1 className="centerIt">
+            <FontAwesomeIcon icon="fas fa-heading "/>
+            {name} &nbsp;
+
 
 
             <i style={{fontSize:"24px"}} className='fas'>&#xf812;</i>
@@ -49,6 +51,8 @@ const Content = ({ myData }) => {
                 src="AboutUsImage.jpg"
                 alt="hero-section-photo"
                 className="img-style"
+                width="50px"
+                height="100px"
               />
             </figure>
           </div>
