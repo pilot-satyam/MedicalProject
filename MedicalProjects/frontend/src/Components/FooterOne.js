@@ -240,7 +240,7 @@ export default function App() {
       </MDBContainer>
       <div className='text-center' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         © 2022 Copyright:
-        <a className='text-white' href='./pages/home'>
+        <a className='text-white' href='/'>
           ImyEye
         </a>
       </div>

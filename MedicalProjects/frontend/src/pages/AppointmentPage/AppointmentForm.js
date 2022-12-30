@@ -75,7 +75,15 @@ class Appointment extends React.Component {
     
 
     
-      <Card className="mt-4 mb-4 card-border" outline color="primary">
+      <Card className="mt-5 mb-4 card-border" style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100%',
+        width:'100%'
+      }}
+      // style={{width:"50%", height:"50%"}}
+      outline color="primary">
         <CardHeader style={styles} onClick={this.toggleBody}><i className="fas fa-plus"></i> Add New Appointment</CardHeader>
         <CardBody style={displayBody} id="aptBody">
           <FormText color="muted" className="mb-1">
@@ -116,7 +124,7 @@ class Appointment extends React.Component {
             <Alert color="danger" style={errors}>
               Please fill all the details
           </Alert>
-            <Button type="submit" color="fff" block>Add Appointment</Button>
+            <Button type="submit" color="primary" block>Add Appointment</Button>
             
           </Form>
         </CardBody>

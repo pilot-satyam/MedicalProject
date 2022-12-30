@@ -19,7 +19,7 @@ function Home() {
         backgroundPosition: "center",
       };
   return (
-    <div style={slideStyles} className="mt-5">
+    <div style={{width: "auto", height:"auto"}} className="mt-5">
     <Base><br/>
     {/* <FontAwesomeIcon icon={['fab', 'twitter']} />
 
@@ -37,7 +37,7 @@ function Home() {
         </div>
         <div>
         
-            <Slider/>
+            <SliderAuto/>
          
             <Content myData={data} />
         </div>

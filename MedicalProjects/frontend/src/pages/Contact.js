@@ -1,7 +1,7 @@
 import React from 'react';
 import Base from "../Components/Base";
 import '../Style/Global.css';
-// import '../Style/placeholderTop.css';
+import '../Style/placeholderTop.css';
 function Contact() {
 
   return (
@@ -60,7 +60,7 @@ function Contact() {
     </div>
 
       <div className="text-center">
-        <button className ="button"type="submit" value="send" >
+        <button className ="button mb-5"type="submit" value="send" >
           Submit
         </button>
       </div>
