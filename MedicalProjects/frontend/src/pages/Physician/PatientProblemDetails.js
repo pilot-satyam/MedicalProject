@@ -63,7 +63,7 @@ function PatientProblemDetails(props){
 
     return(
         <Base>
-        <form className="row g-3 justify-content-center" onSubmit={handleSubmit()}>
+        <form className="row g-3 justify-content-center mt-5" onSubmit={handleSubmit()}>
             <h1 className="text-center">Patients information</h1>
             
             <div className="col-4 text-center">

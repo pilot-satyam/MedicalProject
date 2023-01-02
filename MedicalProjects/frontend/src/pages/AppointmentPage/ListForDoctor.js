@@ -13,6 +13,7 @@ function ListForDoctor(props){
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
+                    <th>Update Appointment</th>
                     <th>Appointment Timing</th>
                 </tr>
                   

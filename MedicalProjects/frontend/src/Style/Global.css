@@ -30,11 +30,12 @@
 
 
 .hero-section-image {
-  width: 100%;
+  /* width: 100%; */
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .img-style {
@@ -47,7 +48,8 @@
     background-color: #e3e8f3;
     color: rgb(0, 0, 0);
     padding: 40px;
-    font-family: Arial;
+    font-family: 'Arvo', serif;
+    font-family: 'Mukta', sans-serif;
    
       /* display: table-cell;
       vertical-align: middle; */

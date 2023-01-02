@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-// import  '../../Style/Global.css';
-
+import  '../../Style/Global.css';
 import Base from '../../Components/Base';
 
 function PatientDetails(props)
@@ -13,7 +12,7 @@ function PatientDetails(props)
     }  
     
     const handleSubmit=()=>{
-
+        
     }
 
     return (
@@ -26,57 +25,52 @@ function PatientDetails(props)
                     <h3 className = "text-center">Patient Details</h3>
                     <tr className="col">
                         <td className="col-6">Name of Patient</td>
-                        <td className="col-6">ejndjen</td>
+                        <td className="col-6">Name from the backend</td>
+                    </tr>
+                    <tr>
+                        <td>Id</td>
+                        <td>Age from backend</td>
                     </tr>
                     <tr>
                         <td>Age</td>
-                        <td>kewmdewkd</td>
+                        <td>Age from backend</td>
                     </tr>
                     <tr>
                         <td>Gender</td>
-                        <td>lw,dwld,</td>
+                        <td>Gender from backend</td>
                     </tr>
                     <tr>
-                        <td>Any Drug allergies</td>
-                        <td>1</td>
+                        <td>Old remarks</td>
+                        <td>this will be fetched from patient form</td>
                     </tr>
                     <tr>
-                        <td>Other illness</td>
-                        <td>2</td>
+                        <td>New Remarks</td>
+                        <td>
+                            <div className="form-group text-center">
+                                {/* <label htmlFor="exampleFormControlTextarea1"></label> */}
+                                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Any Operations</td>
-                        <td>3</td>
+                        <td>Uploaded Images</td>
+                        <td>??</td>
                     </tr>
-                    <tr>
-                        <td>Current Medications</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>Exercise</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>Eating</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td>Alcohol Consumtion</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>Caffeine Consumption</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>Smoke</td>
-                        <td>9</td>
-                    </tr>
-                    <tr>
-                        <td>Comments regarding Medical History</td>
-                        <td>10</td>
-                    </tr>
-                </table>
+                    
+                  </table>
+
+             {/* this is only editable for the doctor    */}
+            <form onSubmit={(e) => {handleSubmit(e)}} >
+                
+
+                <div className="col-12 text-center mb-3">
+                    <button type="submit" className="button btn-primary">submit</button>
+                </div>
+
+            </form>
+
+
+
 
 
 
@@ -88,7 +82,7 @@ function PatientDetails(props)
                             </div>
                         </form> */}
 
-                        <form className="" onSubmit={(e) => {handleSubmit(e)}} >
+                        {/* <form className="" onSubmit={(e) => {handleSubmit(e)}} >
 
                             <div className="" >
 
@@ -101,12 +95,12 @@ function PatientDetails(props)
                             <div className="col-12 text-center mt-3">
 
                             <button type="submit" className="button btn-primary">submit</button>
-
+                            </div> */}
                             {/* <Button >Submit</Button> */}
 
-                            </div>
+                           
 
-                        </form>
+                        {/* </form> */}
 
 </Base>
               
