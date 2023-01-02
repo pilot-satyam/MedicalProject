@@ -1,108 +1,67 @@
-import ImageSlider, { Slide } from "react-auto-image-slider";
-import '../Style/Global.css';
-import {Container} from 'reactstrap'
-function SliderAuto() {
+import { useState, useEffect } from "react";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { sliderData } from "../pages/slider-data";
+import '../../src/Style/Slider.scss';
 
-  // style={{ width: "50%", height:"50%" }}
+const Slider = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slideLength = sliderData.length;
+
+  const autoScroll = true;
+  let slideInterval;
+  let intervalTime = 5000;
+
+  const nextSlide = () => {
+    setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
+    
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1);
+ 
+  };
+
+  function auto() {
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, []);
+
+  useEffect(() => {
+    if (autoScroll) {
+      auto();
+    }
+    return () => clearInterval(slideInterval);
+  }, [currentSlide]);
+
   return (
-  <div>
-    {/* <Container className="text-center"> */}
-    <ImageSlider effectDelay={200} autoPlayDelay={1500}>
-      <Slide >
-        <img alt="img2" src="ImageOne.jpg" />
-      </Slide>
-      <Slide >
-        <img alt="img2" src="ImageTwo.jpg" /> 
-      </Slide>
-      <Slide>
-        <img alt="img1" src="ImageThree.jpg" />
-      </Slide>
-      <Slide >
-        <img alt="img1" src="ImageFour.jpg" />
-      </Slide>
-      <Slide >
-        <img alt="img1" src="ImageFive.jpg"/>
-      </Slide>
-    </ImageSlider>
-    {/* </Container> */}
-  </div> 
+    <div className="slider">
+      <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
+      <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
+      {sliderData.map((slide, index) => {
+        return (
+          <div
+            className={index === currentSlide ? "slide current" : "slide"}
+            key={index}
+          >
+            {index === currentSlide && (
+              <div>
+                <img src={slide.image} alt="slide" className="image" />
+                <div className="content">
+                  <h2>Connect with I-MyEye Care Center</h2>
+                  <p>Welcome to the I-myEye Care Family</p>
+                  <hr />
+                 
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
   );
-}
-export default SliderAuto;
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-// import "../Style/FooterAuto.css";
-// import React from "react";
-
-// const colors = ["Image1.jpg","Image2.jpg","Image3.jpg","Image4.jpg","Image5.jpg"];
-// const delay = 2500;
-
-// function Slideshow() {
-//   const [index, setIndex] = React.useState(0);
-//   const timeoutRef = React.useRef(null);
-
-//   function resetTimeout() {
-//     if (timeoutRef.current) {
-//       clearTimeout(timeoutRef.current);
-//     }
-//   }
-
-//   React.useEffect(() => {
-//     resetTimeout();
-//     timeoutRef.current = setTimeout(
-//       () =>
-//         setIndex((prevIndex) =>
-//           prevIndex === colors.length - 1 ? 0 : prevIndex + 1
-//         ),
-//       delay
-//     );
-
-//     return () => {
-//       resetTimeout();
-//     };
-//   }, [index]);
-
-//   return (
-//     <div className="slideshow">
-//       <div
-//         className="slideshowSlider"
-//         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-//       >
-//         {colors.map((backgroundColor, index) => (
-//           <div
-//             className="slide"
-//             key={index}
-//             style={{ backgroundColor }}
-//           ></div>
-//         ))}
-//       </div>
-
-//       <div className="slideshowDots">
-//         {colors.map((_, idx) => (
-//           <div
-//             key={idx}
-//             className={`slideshowDot${index === idx ? " active" : ""}`}
-//             onClick={() => {
-//               setIndex(idx);
-//             }}
-//           ></div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Slideshow;
-
-// ReactDOM.render(<Slideshow />, document.getElementById("App"));
+export default Slider;

@@ -10,13 +10,11 @@ import { Container } from 'react-bootstrap';
 import Services from './pages/Services';
 import FormForPatient from './pages/FormForPatient';
 import ErrorPage from './pages/ErrorPage';
-import Doctor from './pages/Doctor11';
 import List from "../src/pages/DoctorList/List"
 import Contact from './pages/Contact';
 import Address from './pages/Address';
 import FooterOne from './Components/FooterOne';
 import ShowAppointment from './pages/AppointmentPage/ShowApppointment';
-import IsConfirmed from './pages/AppointmentPage/IsConfirmed';
 import Appointment from './pages/AppointmentPage/AppointmentForm';
 import PatientDetails from './pages/Physician/PatientDetails';
 import PatientProblemDetails from './pages/Physician/PatientProblemDetails';
@@ -49,7 +47,6 @@ function App() {
   <Route exact path ="/appointmentForm" element={<Appointment/>}/>
   <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
   <Route exact path ="/doctor" element ={<List/>}/>
-  <Route exact path ="/isConfirmed" element={<IsConfirmed/>}/>
   <Route exact path='/ListForDoctor' element={<ListForDoctor/>}/>
   <Route exact path= "*" element ={<ErrorPage />}></Route>
     

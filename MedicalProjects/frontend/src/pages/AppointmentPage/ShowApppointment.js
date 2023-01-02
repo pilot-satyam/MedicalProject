@@ -5,7 +5,7 @@ import AppointmentForm from './AppointmentForm';
 import ListOfAppointment from './ListOfAppointement';
 import { Link } from 'react-router-dom';
 import Base from '../../Components/Base';
-import IsConfirmed from './IsConfirmed';
+
 
 
 class ShowAppointment extends Component {

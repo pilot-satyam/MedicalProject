@@ -1,7 +1,6 @@
 // import CustomNavbar from "../components/CustomNavbar";
 import Base from "../Components/Base";
 import Content from "../Components/Content"
-import Slider from "../pages/Slider"
 import React from 'react'
 import { NavLink } from "react-router-dom";
 import '../Style/Global.css';

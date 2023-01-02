@@ -1,6 +1,6 @@
 import React from 'react'
 import { Media, Button } from 'reactstrap'
-import IsConfirmed from './IsConfirmed'
+
 
 const ListOfAppointement = ({ appointments, onDelete }) => {
   const handleDelete = (event) => {
