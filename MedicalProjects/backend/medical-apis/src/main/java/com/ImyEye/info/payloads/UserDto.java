@@ -24,6 +24,16 @@ public class UserDto {
 	@NotEmpty
 	@Size(min=3,max=10,message = "Password must be minimum of 3 chars and max of 10 chars")
 	private String password;
+	@NotEmpty
+	private int age;
+	@NotEmpty
+	private int weight;
+	@NotEmpty
+	private int height;
+	@NotEmpty
+	private int contact;
+	@NotEmpty
+	private String address;
 	private Set<RoleDto> roles = new HashSet<>();
 
 }
