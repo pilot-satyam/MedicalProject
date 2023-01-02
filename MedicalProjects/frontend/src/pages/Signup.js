@@ -13,6 +13,11 @@ const Signup = () => {
         name:'',
         email:'',
         password:'',
+        age:'',
+        weight:'',
+        height:'',
+        contact:'',
+        address:'',
       })
     
       const[error,setError] = useState({
@@ -89,6 +94,61 @@ const Signup = () => {
                      id="password"
                     onChange= {(e)=>handleChange(e,'password')}
                     value = {data.password}></input>
+                </FormGroup>
+
+                <FormGroup>
+                    <Label htmlFor="age">Enter Age</Label>
+                    <br></br>
+                    <input type="text" 
+                    placeholder="Enter age" 
+                    invalid="true" 
+                    id="age"
+                    onChange= {(e)=>handleChange(e,'age')}
+                    value = {data.age}></input> 
+                </FormGroup>
+
+                <FormGroup>
+                    <Label htmlFor="weight">Enter weight</Label>
+                    <br></br>
+                    <input type="text" 
+                    placeholder="Enter weight" 
+                    invalid="true" 
+                    id="weight"
+                    onChange= {(e)=>handleChange(e,'weight')}
+                    value = {data.weight}></input> 
+                </FormGroup>
+
+                <FormGroup>
+                    <Label htmlFor="height">Enter Height</Label>
+                    <br></br>
+                    <input type="text" 
+                    placeholder="Enter Height" 
+                    invalid="true" 
+                    id="height"
+                    onChange= {(e)=>handleChange(e,'height')}
+                    value = {data.height}></input> 
+                </FormGroup>
+
+                <FormGroup>
+                    <Label htmlFor="contact">Enter contact</Label>
+                    <br></br>
+                    <input type="text" 
+                    placeholder="Enter Contact" 
+                    invalid="true" 
+                    id="contact"
+                    onChange= {(e)=>handleChange(e,'contact')}
+                    value = {data.contact}></input> 
+                </FormGroup>
+
+                <FormGroup>
+                    <Label htmlFor="address">Enter Address</Label>
+                    <br></br>
+                    <input type="text" 
+                    placeholder="Enter Address" 
+                    invalid="true" 
+                    id="address"
+                    onChange= {(e)=>handleChange(e,'address')}
+                    value = {data.address}></input> 
                 </FormGroup>
 
                 <Container className="text-center">

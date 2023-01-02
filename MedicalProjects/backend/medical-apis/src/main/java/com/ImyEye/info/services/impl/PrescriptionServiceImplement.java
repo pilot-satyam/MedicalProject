@@ -50,6 +50,9 @@ private DoctorRepo docRepo;
 		prescription.setOldRemarks(pDto.getOldRemarks());
 		prescription.setNewRemarks(pDto.getNewRemarks());
 		prescription.setReportImage(pDto.getReportImage());
+		prescription.setAlchohol(pDto.getAlcohol());
+		prescription.setSmoke(pDto.getSmoke());
+		prescription.setOperations(pDto.getOperations());
 		Prescription updatedPrescription =  this.prescriptionRepo.save(prescription);
 		return this.modelMapper.map(updatedPrescription, PrescriptionDto.class);
 	}

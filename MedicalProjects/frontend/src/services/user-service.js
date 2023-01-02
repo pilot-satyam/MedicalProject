@@ -5,3 +5,25 @@ export const signUp = (user)=>{
     .post("/api/v1/auth/register",user)
     .then((response)=>response.data)
 };
+export default signUp;
+
+// import axios from 'axios';
+// import React, { Component } from 'react';
+
+// axios.post('http://localhost:9090/api/register',request_data, {
+//           headers: {
+//               'Content-Type': 'application/json',
+//               'Authorization': 'Bearer '+token
+//           },      
+//       })      
+//       .then((response) => {
+//         console.log('response',response.data)
+
+//       })
+//       .catch((error) => {
+//         alert('error',error.response)
+
+//       })
+
+//   // console.log('----cheers---------',data)
+// // dispatch(userUpdateProfileSuccess(data))

@@ -1,7 +1,9 @@
-import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form} from 'reactstrap'
+import {Button, Card,CardHeader,Container, FormGroup,CardBody} from 'reactstrap'
 import {Row,Col} from 'react-bootstrap'
 import React, { useState } from "react";
 import Base from "../Components/Base";
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
 import DoctorSignup from './DoctorSignup';
 
 const PhysicianLogin = () =>{
@@ -24,7 +26,7 @@ const PhysicianLogin = () =>{
                      </CardHeader>
                      <CardBody>
                          <Form>
-                             <FormGroup>
+                             {/* <FormGroup>
                                  <label htmlFor="email"> Enter Email</label> <br></br>
                                  <input type="text" id="email"></input>
                              </FormGroup>
@@ -32,7 +34,19 @@ const PhysicianLogin = () =>{
                              <FormGroup>
                                  <label htmlFor="password"> Enter Password</label> <br></br>
                                  <input type="password" id="password"></input>
-                             </FormGroup>
+                             </FormGroup> */}
+                              <FloatingLabel
+                            controlId="floatingInput"
+                            label="Email address"
+                            className="mb-3"
+                        >
+                            <Form.Control type="email" placeholder="email" />
+                        </FloatingLabel>
+                        {/* <MDBInput label='Email' type='text' id='formWhite' contrast /> */}
+                        <FloatingLabel controlId="floatingPassword" label="Password">
+                            <Form.Control type="password" placeholder="password" />
+                        </FloatingLabel>
+                        <br></br>
                      <Container className='text-center'>
                          <Button color="dark" outline>Login</Button>
                          <Button className='ms-2' color='dark' outline>Reset</Button>
