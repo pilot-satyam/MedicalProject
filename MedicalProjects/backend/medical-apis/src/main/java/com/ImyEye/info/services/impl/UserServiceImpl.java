@@ -16,6 +16,8 @@ import com.ImyEye.info.repositories.RoleRepo;
 import com.ImyEye.info.repositories.UserRepo;
 import com.ImyEye.info.services.UserService;
 
+import net.bytebuddy.dynamic.DynamicType.Builder.AbstractBase.UsingTypeWriter;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -48,6 +50,11 @@ public class UserServiceImpl implements UserService {
 		user.setName(userDto.getName());
 		user.setEmail(userDto.getEmail());
 		user.setPassword(userDto.getPassword());
+		user.setAge(userDto.getAge());
+		user.setWeight(userDto.getWeight());
+		user.setHeight(userDto.getHeight());
+		user.setContact(userDto.getContact());
+		user.setAddress(userDto.getAddress());
 		//now update it
 		User updatedUser = userRepo.save(user);
 		UserDto userDto1 = userToDto(updatedUser);
@@ -114,6 +121,7 @@ public class UserServiceImpl implements UserService {
 		User user = this.modelMapper.map(userDto,User.class);
 		//get the password from user that is plain text and then passing it to encode method and then set it
         user.setPassword(this.passwordEncoder.encode(user.getPassword()));
+		// user.setAddress(null);
         Role role =  this.roleRepo.findById(AppConstants.NORMAL_USER).get();
 		user.getRoles().add(role);
 		User newUser =  this.userRepo.save(user);

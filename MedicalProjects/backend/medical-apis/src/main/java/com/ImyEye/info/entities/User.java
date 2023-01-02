@@ -23,6 +23,7 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -38,13 +39,25 @@ public class User implements UserDetails {
      private int id;
 	@Column(nullable = false,length=100)
      private String name;
+     @Email
      private String email;
+     @Column(nullable = false)
      private String password;
-     //age
+      //age
+     @Column(nullable = false)
+     private int age;
      //weight
+     @Column(nullable = false)
+     private int weight;
      //height
+     @Column(nullable = false)
+     private int height;
      //contact
+     @Column(nullable = false)
+     private int contact;
      //address
+     @Column(nullable = false)
+     private String address;
      
 //     @ManyToOne(mappedBy = "doctor",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
      // @ManyToOne
