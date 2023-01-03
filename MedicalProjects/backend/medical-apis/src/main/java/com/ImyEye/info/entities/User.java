@@ -43,7 +43,7 @@ public class User implements UserDetails {
      private String email;
      @Column(nullable = false)
      private String password;
-      //age
+     // age
      @Column(nullable = false)
      private int age;
      //weight

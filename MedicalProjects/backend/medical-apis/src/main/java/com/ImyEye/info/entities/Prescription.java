@@ -20,8 +20,11 @@ public class Prescription {
 	private Date AddedDate;
 	private String ReportImage;
 	//alcohol
+	private String alchohol;
 	//smoke
+	private String smoke;
 	//operations
+	private String operations;
 	@ManyToOne
 	private User user;
 	@JoinColumn(name="doctor_id")
