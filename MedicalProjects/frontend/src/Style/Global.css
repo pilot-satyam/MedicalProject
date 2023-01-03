@@ -39,8 +39,11 @@
 }
 
 .img-style {
-  width: 100%;
-  height: auto;
+  /* width: 100%;
+  height: auto; */
+  width: 560px;
+  height: 400px;
+  margin-left: 500px;
 }
  
 
@@ -120,3 +123,8 @@
     display: inline-block;
   }
  
+  .imageCenter{
+    display: grid;
+    place-items: center;
+    margin-right: 500px;
+  }

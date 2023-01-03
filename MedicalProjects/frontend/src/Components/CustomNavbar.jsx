@@ -7,12 +7,13 @@ import "../Style/Global.css";
 
 const CustomNavbar =()=> {
   return (
-    <Navbar bg="secondary" expand ="lg" variant="light" style={{width:"auto", height:"13%", justifyContent: "space-around"}} fixed="top" >
+    <Navbar bg="secondary" navbar-expand-sm variant="light" style={{width:"auto", height:"13%", justifyContent: "space-around"}} fixed="top" >
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
         <Navbar.Brand href="#">I-myEYE</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        {/* basic-navbar-nav */}
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto space">
             <NavLink to="/" style={{textDecoration: 'none'}}> Home &nbsp;&nbsp;&nbsp;</NavLink>
             {/* <Nav className='me-auto'> */}

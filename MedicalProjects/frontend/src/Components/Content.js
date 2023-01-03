@@ -42,15 +42,16 @@ const Content = ({ myData }) => {
             <br/>
           </div>
           {/* our homepage image  hero-section-image*/}
-          <div className="hero-section-image" style={{width:"560px",height:"400px"}} >
-            <figure >
+          <div className="hero-section-image imageCenter">
+            
               <img
                 src="AboutUsImage.jpg"
                 alt="hero-section-photo"
-                className="img-style"
+                className="img-style centerIt"
+
             
               />
-            </figure>
+          
           </div>
         </div>
       </div>
