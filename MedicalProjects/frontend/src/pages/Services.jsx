@@ -12,7 +12,8 @@ const Services = () => {
         <Base>
             <Content myData={data} />
 
-        <container className="centerIt mt-4">
+        <br/>
+        <container className="centerIt">
             <div className="col-container bg1">
                 <div className="col mt-4">
                     <p className="mt-6">Cure with Care Center</p>
