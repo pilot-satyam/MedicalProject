@@ -7,6 +7,13 @@ export const signUp = (user)=>{
 };
 export default signUp;
 
+
+export const loginUser = (loginDetail)=>{
+    return myAxios
+    .post('/api/v1/auth/login',loginDetail)
+    .then((response)=>response.data)
+}
+
 // import axios from 'axios';
 // import React, { Component } from 'react';
 
