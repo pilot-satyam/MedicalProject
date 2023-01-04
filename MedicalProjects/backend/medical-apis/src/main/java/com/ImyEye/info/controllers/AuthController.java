@@ -1,5 +1,6 @@
 package com.ImyEye.info.controllers;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ImyEye.info.Security.JwtTokenHelper;
+import com.ImyEye.info.entities.User;
 import com.ImyEye.info.payloads.JwtAuthRequest;
 import com.ImyEye.info.payloads.JwtAuthResponse;
 import com.ImyEye.info.payloads.UserDto;
@@ -35,6 +37,9 @@ public class AuthController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+	  private ModelMapper mapper;
+
     @PostMapping("/login")
     public ResponseEntity<JwtAuthResponse> createToken(
     @RequestBody JwtAuthRequest request
@@ -43,8 +48,10 @@ public class AuthController {
           this.authenticate(request.getUsername(),request.getPassword());
           UserDetails userDetails =  this.userDetailsService.loadUserByUsername(request.getUsername());
           String token = this.jwtTokenHelper.generateToken(userDetails);
+
           JwtAuthResponse response = new JwtAuthResponse();
           response.setToken(token);
+          response.setUser(this.mapper.map((User) userDetails,UserDto.class));
           return new ResponseEntity<JwtAuthResponse>(response,HttpStatus.OK);
      } 
 
@@ -53,6 +60,7 @@ public class AuthController {
       try{
          this.authenticationManager.authenticate(authenticationToken);
       }
+
       catch(BadCredentialsException e){
         System.out.println("Invalid Information!!!!");
         throw new ApiException("Invalid username or password!!!");

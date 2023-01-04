@@ -24,6 +24,9 @@ import ListForDoctor from './pages/AppointmentPage/ListForDoctor';
 import{ToastContainer} from 'react-toastify';
 import{toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import PrivateRoute from './Components/PrivateRoute';
+import UserDashboard from './pages/user-routes/UserDashboard';
+import ProfileInfo from './pages/user-routes/ProfileInfo';
 // import initFontAwesome from './Components/initFontAwesome';
 // initFontAwesome();
 
@@ -50,10 +53,15 @@ function App() {
   <Route exact path ="/appointmentForm" element={<Appointment/>}/>
   <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
   <Route exact path ="/doctor" element ={<List/>}/>
-  <Route exact path='/ListForDoctor' element={<ListForDoctor/>}/>
-  <Route exact path= "*" element ={<ErrorPage />}></Route>
-    
-  </Routes>
+  <Route exact path='/ListForDoctor' element={<ListForDoctor />}/>
+  <Route exact path= "*" element ={<ErrorPage />} />
+
+
+  <Route path="/user" element={<PrivateRoute />} >
+  <Route path="/dashboard" element={<UserDashboard />} />
+  <Route path="/profile-info" element={<ProfileInfo />} />
+  </Route>
+   </Routes>
   <FooterOne />
   </BrowserRouter>
   

@@ -8,6 +8,7 @@ import {toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'; 
 import Form from 'react-bootstrap/Form';
 import { loginUser } from '../services/user-service';
+import { doLogin } from '../auth';
 
 const Login = () =>{
 
@@ -45,9 +46,19 @@ const handleForSubmit = (event) =>{
     //submit the data to server to generate token
 
     //loginUser cmng from user-service file from myAxios
-    loginUser(loginDetail).then((jwtTokenData)=>{
+    loginUser(loginDetail).then((data)=>{
         console.log("user login:")
-        console.log(jwtTokenData)
+        console.log(data)
+
+      //save data to localStorage
+      doLogin(data,()=>{
+        console.log("login detail saved to local storage")
+
+        //redirect to user dashboard page
+        
+      })
+
+
         toast.success("Login Successfull :)")
     }).catch(error=>{
         console.log(error)

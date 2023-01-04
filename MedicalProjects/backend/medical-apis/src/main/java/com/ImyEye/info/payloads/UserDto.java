@@ -3,6 +3,8 @@ package com.ImyEye.info.payloads;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -35,5 +37,10 @@ public class UserDto {
 	@NotEmpty
 	private String address;
 	private Set<RoleDto> roles = new HashSet<>();
+
+	@JsonIgnore
+	public String getPassword(){
+		return this.password;
+	}
 
 }
