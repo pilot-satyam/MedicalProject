@@ -21,6 +21,9 @@ import PatientProblemDetails from './pages/Physician/PatientProblemDetails';
 import Prescription from './pages/Physician/Prescription';
 import PatientInformation from './pages/Physician/PatientInformation';
 import ListForDoctor from './pages/AppointmentPage/ListForDoctor';
+import{ToastContainer} from 'react-toastify';
+import{toast} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 // import initFontAwesome from './Components/initFontAwesome';
 // initFontAwesome();
 
@@ -29,8 +32,8 @@ function App() {
 
   <Container> 
   <BrowserRouter>
-  <Routes>    
-    
+  <ToastContainer />
+  <Routes>       
   <Route  path="/" element= {<Home />} />
   <Route exact path="/login" element= {<Login />} />
   <Route exact path ="/signup" element={<Signup />} />

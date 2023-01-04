@@ -4,10 +4,62 @@ import React, { useState } from "react";
 import Base from "../Components/Base";
 import "../Style/Global.css";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import {MDBInput} from 'mdb-react-ui-kit'
+import {toast} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'; 
 import Form from 'react-bootstrap/Form';
+import { loginUser } from '../services/user-service';
 
 const Login = () =>{
+
+    const[loginDetail,setLoginDetail] = useState({
+        username : '',
+        password : ''
+    })
+
+const handleChange=(event,field)=>{
+    let actualValue = event.target.value
+    setLoginDetail({
+        ...loginDetail,
+        [field] : actualValue
+    })
+}
+
+const handleForReset=()=>{
+    setLoginDetail({
+        username : "",
+        password : "",
+    });
+};
+
+
+const handleForSubmit = (event) =>{
+    event.preventDefault();
+    console.log(loginDetail);
+
+    //validation
+    if(loginDetail.username.trim() == '' || loginDetail.password.trim() == ''){
+        toast.error("Username or Password is required!!!!")
+        return;
+    }
+
+    //submit the data to server to generate token
+
+    //loginUser cmng from user-service file from myAxios
+    loginUser(loginDetail).then((jwtTokenData)=>{
+        console.log("user login:")
+        console.log(jwtTokenData)
+        toast.success("Login Successfull :)")
+    }).catch(error=>{
+        console.log(error)
+        if(error.response.status == 400 || error.response.status == 404){
+            toast.error(error.response.data.message)
+        }
+        else{
+        toast.error("Something went wrong!!!")
+        }
+    })
+};
+
     return(
         <Base>
        <Container className='mt-5 text-center'>
@@ -22,24 +74,33 @@ const Login = () =>{
                         <i style={{fontSize:"24px"}} className="fa centerIt">&#xf2bc;</i>
                     </CardHeader>
                     <CardBody>
-                        <Form>
+                        <Form onSubmit={handleForSubmit}>
                         <FloatingLabel
                             controlId="floatingInput"
                             label="Email address"
                             className="mb-3"
                         >
-                            <Form.Control type="email" placeholder="email" />
+                            <Form.Control
+                             type="email" 
+                             placeholder="email" 
+                             value={loginDetail.username}
+                             onChange={(e)=>handleChange(e,'username')} />
                         </FloatingLabel>
-                        {/* <MDBInput label='Email' type='text' id='formWhite' contrast /> */}
+
                         <FloatingLabel controlId="floatingPassword" label="Password">
-                            <Form.Control type="password" placeholder="password" />
+                            <Form.Control 
+                            type="password" 
+                            placeholder = "password" 
+                            value = {loginDetail.password}
+                            onChange={(e)=>handleChange(e,'password')}
+                             />
                         </FloatingLabel>
 
                         <br></br>
                       
                     <Container className='text-center'>
                         <Button color="dark" outline>Login</Button>
-                        <Button className='ms-2' color='secondary' outline>Reset</Button>
+                        <Button onClick={handleForReset} className='ms-2' color='secondary' outline>Reset</Button>
                         <Button className='ms-2' color='dark' outline href='./Signup'>New Patient? Register Here</Button>
                     </Container>
 
