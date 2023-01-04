@@ -4,7 +4,7 @@ import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form,Label} from '
 import {Row,Col} from 'react-bootstrap'
 import { signUp } from "../services/user-service";
 import { useState } from "react";
- 
+import FloatingLabel from 'react-bootstrap/FloatingLabel'; 
 
 
 const Signup = () => {
@@ -57,9 +57,11 @@ const Signup = () => {
         <Base>
        <Container className='mt-5 text-center'>
         <Row className="mt-4">
-            <Col sm={{size:6}}>
-            <Card>
-            <CardHeader>
+            <Col sm={{
+                size:6, 
+                offset:2}}>
+            <Card className='mt-4'>
+            <CardHeader className='mt-4'>
                <h4> Fill Information To Register
                 <br/>
                 <i style={{fontSize:"24px"}} class="fa">&#xf2bc;</i>
@@ -67,7 +69,14 @@ const Signup = () => {
             </CardHeader>
         <CardBody>
             <Form onSubmit={submitForm}>
+                        {/* <FloatingLabel
+                            controlId="floatingInput"
+                            label="Enter Name"
+                            className="mb-3">
+                            <Form.Control type="email" placeholder="Enter Name" />
+                        </FloatingLabel> */}
                 <FormGroup>
+                    
                     <Label htmlFor="name">Enter Name</Label>
                     <br></br>
                     <input type="text" 
