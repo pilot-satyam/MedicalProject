@@ -20,6 +20,9 @@ import com.ImyEye.info.payloads.JwtAuthRequest;
 import com.ImyEye.info.payloads.JwtAuthResponse;
 import com.ImyEye.info.payloads.UserDto;
 import com.ImyEye.info.services.UserService;
+
+import jakarta.validation.Valid;
+
 import com.ImyEye.info.exceptions.ApiException;
 
 
@@ -55,6 +58,7 @@ public class AuthController {
           return new ResponseEntity<JwtAuthResponse>(response,HttpStatus.OK);
      } 
 
+
      private void authenticate(String username,String password) throws Exception{
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username, password); 
       try{
@@ -70,11 +74,10 @@ public class AuthController {
      //new user register Api
      //we use requestBody so that the obtained data which is in json format we will get its body
      @PostMapping("/register")
-     public ResponseEntity<UserDto> registerUser(@RequestBody UserDto userDto){
-        
+     public ResponseEntity<UserDto> registerUser(@Valid @RequestBody UserDto userDto){    
      UserDto registeredUser = this.userService.registerUser(userDto);
      return new ResponseEntity<UserDto>(registeredUser,HttpStatus.CREATED);
+    }
 
-     }
 
 }

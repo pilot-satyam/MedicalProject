@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.ImyEye.info.entities.Doctor;
@@ -18,6 +19,9 @@ public class DoctorServiceImpl implements DoctorService {
 	private DoctorRepo doctorRepo;
 	@Autowired
 	private ModelMapper modelMapper;
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 	
 	@Override
 	public DoctorDto createDoctor(DoctorDto doctorDto) {
@@ -73,6 +77,14 @@ public class DoctorServiceImpl implements DoctorService {
 	{
 		DoctorDto doctorDto = this.modelMapper.map(doctor,DoctorDto.class);
 		return doctorDto;
+	}
+
+	@Override
+	public DoctorDto registerDoctor(DoctorDto doctorDto) {
+		Doctor doctor = this.modelMapper.map(doctorDto, Doctor.class);
+		doctor.setPassword(this.passwordEncoder.encode(doctor.getPassword()));
+		Doctor newDoctor = this.doctorRepo.save(doctor);
+		return this.modelMapper.map(newDoctor, DoctorDto.class);
 	}
 
 }
