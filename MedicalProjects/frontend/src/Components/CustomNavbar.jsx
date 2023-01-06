@@ -10,13 +10,13 @@ const CustomNavbar =()=> {
     <Navbar bg="secondary" navbar-expand-sm variant="light" style={{width:"auto", height:"13%", justifyContent: "space-around"}} fixed="top" >
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
-        <Navbar.Brand href="#">I-myEYE</Navbar.Brand>
+        <Navbar.Brand href="/home">I-myEYE</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         {/* basic-navbar-nav */}
         <Navbar.Collapse id="responsive-navbar-nav">
 
          <Nav className="me-auto space">
-            <NavLink to="/" style={{textDecoration: 'none'}}> Home &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/home" style={{textDecoration: 'none'}}> Home &nbsp;&nbsp;&nbsp;</NavLink>
             {/* <Nav className='me-auto'> */}
             <NavDropdown title="More" id="basic-nav-dropdown" className='nav'>
               <NavDropdown.Item href="/services" >Services</NavDropdown.Item>
