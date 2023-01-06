@@ -58,8 +58,8 @@ function App() {
 
 
   <Route path="/user" element={<PrivateRoute />} >
-  <Route path="/dashboard" element={<UserDashboard />} />
-  <Route path="/profile-info" element={<ProfileInfo />} />
+  <Route path="/user/dashboard" element={<UserDashboard />} />
+  <Route path="/user/dashboard/profile-info" element={<ProfileInfo />} />
   </Route>
    </Routes>
   <FooterOne />
