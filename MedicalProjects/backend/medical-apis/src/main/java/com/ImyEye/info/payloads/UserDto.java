@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,21 +27,21 @@ public class UserDto {
 	@NotEmpty
 	@Size(min=3,max=10,message = "Password must be minimum of 3 chars and max of 10 chars")
 	private String password;
-	@NotEmpty
+	@NotNull
 	private int age;
-	@NotEmpty
+	@NotNull
 	private int weight;
-	@NotEmpty
+	@NotNull
 	private int height;
-	@NotEmpty
+	@NotNull
 	private int contact;
 	@NotEmpty
 	private String address;
 	private Set<RoleDto> roles = new HashSet<>();
 
-	@JsonIgnore
-	public String getPassword(){
-		return this.password;
-	}
+	// @JsonIgnore
+	// public String getPassword(){
+	// 	return this.password;
+	// }
 
 }

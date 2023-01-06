@@ -23,6 +23,7 @@ public class MedicalApisApplication implements CommandLineRunner {
 
 	@Autowired
 	private RoleRepo roleRepo;
+    
 	public static void main(String[] args) {
 		SpringApplication.run(MedicalApisApplication.class, args);
 	}
@@ -55,5 +56,4 @@ public class MedicalApisApplication implements CommandLineRunner {
 			e.printStackTrace();
 		}
 	}
-
 }
