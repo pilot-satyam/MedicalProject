@@ -16,8 +16,6 @@ import com.ImyEye.info.repositories.RoleRepo;
 import com.ImyEye.info.repositories.UserRepo;
 import com.ImyEye.info.services.UserService;
 
-import net.bytebuddy.dynamic.DynamicType.Builder.AbstractBase.UsingTypeWriter;
-
 @Service
 public class UserServiceImpl implements UserService {
 

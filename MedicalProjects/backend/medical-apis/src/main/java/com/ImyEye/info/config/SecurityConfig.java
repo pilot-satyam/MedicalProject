@@ -34,9 +34,6 @@ import com.ImyEye.info.Security.JwtAuthenticationFilter;
 
 public class SecurityConfig{
 
-    // public static final String[] PUBLIC_URLS={
-    //      "/api/v1/auth/login","api/v1/auth/register","/v3/api-docs"
-    // };
 
     @Autowired
     private CustomUserDetailService customUserDetailService;
@@ -44,14 +41,12 @@ public class SecurityConfig{
     private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
     @Autowired
     private JwtAuthenticationFilter jwtAuthenticationFilter;
-/**
- * @param http
- * @return
- * @throws Exception
- */
+
 @Bean
 public SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Exception{
     http
+    .cors()
+    .and()
     .csrf()
     .disable()
     .authorizeHttpRequests()
@@ -60,10 +55,14 @@ public SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Excepti
     .requestMatchers("/api/v1/auth/login")
     // .requestMatchers("/api/v1/auth/**")
     .permitAll()
+    // .requestMatchers("/api/v1/auth/docLogin")
+    // .permitAll()
     .requestMatchers("/v3/api-docs")
     .permitAll()
     .requestMatchers("/api/v1/auth/register")
     .permitAll()
+    // .requestMatchers("/api/v1/auth/docRegister")
+    // .permitAll()
     .requestMatchers(HttpMethod.GET)
     .permitAll()
     // .requestMatchers("/v2/api-docs", "/swagger-resources/configuration/ui", "/swagger-resources", "/swagger-resources/configuration/security", "/swagger-ui.html", "/webjars/**")
