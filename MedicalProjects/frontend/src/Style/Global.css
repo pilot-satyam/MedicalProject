@@ -128,3 +128,9 @@
     place-items: center;
     margin-right: 500px;
   }
+
+  .footer{
+    left:0; 
+    bottom:0; 
+    width:100vw;
+  }

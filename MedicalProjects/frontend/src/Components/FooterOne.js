@@ -19,6 +19,7 @@ import {
 function FooterOne(){
   return (
     // const icon = <FontAwesomeIcon icon = {faFacebook} />
+   
     <MDBFooter id ="footer" className='text-center' color='white' bgColor='dark'>
       <MDBContainer className='p-4'>
         <section className='mb-4'>
@@ -78,6 +79,7 @@ function FooterOne(){
         </a>
       </div>
     </MDBFooter>
+   
 
    
   // footer{
