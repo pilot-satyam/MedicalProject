@@ -35,7 +35,8 @@ function App() {
   <Container> 
   <BrowserRouter>
   <ToastContainer />
-  <Routes>       
+  <Routes>   
+  <Route path="/" element={<Home />} />    
   <Route  path="/home" element= {<Home />} />
   <Route exact path="/login" element= {<Login />} />
   <Route exact path ="/signup" element={<Signup />} />
@@ -56,10 +57,9 @@ function App() {
   <Route exact path= "*" element ={<ErrorPage />} />
 
 
-
   <Route path="/user" element={<PrivateRoute />} >
-  <Route path="/user/dashboard" element={<UserDashboard />} />
-  <Route path="/user/dashboard/profile-info" element={<ProfileInfo />} />
+  <Route path="dashboard" element={<UserDashboard />} />
+  <Route path="profile-info/:userId" element={<ProfileInfo />} />
 
   </Route>
    </Routes>
