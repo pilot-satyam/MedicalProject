@@ -9,9 +9,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import Form from 'react-bootstrap/Form';
 import { loginUser } from '../services/user-service';
 import { doLogin } from '../auth';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () =>{
 
+    const navigate = useNavigate()
     const[loginDetail,setLoginDetail] = useState({
         username : '',
         password : ''
@@ -55,7 +57,7 @@ const handleForSubmit = (event) =>{
         console.log("login detail saved to local storage")
 
         //redirect to user dashboard page
-        
+        navigate("/user/dashboard")  
       })
 
 

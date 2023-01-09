@@ -35,7 +35,8 @@ function App() {
   <Container> 
   <BrowserRouter>
   <ToastContainer />
-  <Routes>       
+  <Routes>   
+  <Route path="/" element={<Home />} />    
   <Route  path="/home" element= {<Home />} />
   <Route exact path="/login" element= {<Login />} />
   <Route exact path ="/signup" element={<Signup />} />
@@ -55,16 +56,9 @@ function App() {
   <Route exact path='/ListForDoctor' element={<ListForDoctor />}/>
   <Route exact path= "*" element ={<ErrorPage />} />
 
-
-<<<<<<< HEAD
   <Route path="/user" element={<PrivateRoute />} >
-  <Route path="/user/dashboard" element={<UserDashboard />} />
-  <Route path="/user/dashboard/profile-info" element={<ProfileInfo />} />
-=======
-  <Route path="/user/*" element={<PrivateRoute />} >
   <Route path="dashboard" element={<UserDashboard />} />
-  <Route path="profile-info" element={<ProfileInfo />} />
->>>>>>> 515ccb8e83af4ed974d4dac4d4655959b6bf1917
+  <Route path="profile-info/:userId" element={<ProfileInfo />} />
   </Route>
    </Routes>
   <FooterOne />

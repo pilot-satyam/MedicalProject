@@ -28,13 +28,13 @@ export const doLogout=(next)=>{
 //getCurrent User
 
 export const getCurrentUserDetail = () =>{
-    if(isLoggedIn){
+    if(isLoggedIn()){
 
         //using parse to convert from string to object as we are using stringify to set the values
         //.user property is used so that we get only user details and not the token data
-        return JSON.parse(localStorage.getItem("data").user);
+        return JSON.parse(localStorage.getItem("data")).user;
     }
     else{
-        return false;
+        return undefined;
     }
 };
