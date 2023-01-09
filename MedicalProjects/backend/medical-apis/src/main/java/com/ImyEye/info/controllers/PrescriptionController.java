@@ -29,7 +29,7 @@ import com.ImyEye.info.services.PrescriptionService;
 import jakarta.servlet.http.HttpServletResponse;
 
 @RestController
-@RequestMapping("/api/")
+@RequestMapping("/api/v1/")
 public class PrescriptionController {
 
     @Autowired

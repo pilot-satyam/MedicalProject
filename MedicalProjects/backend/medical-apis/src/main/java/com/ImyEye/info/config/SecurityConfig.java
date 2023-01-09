@@ -61,6 +61,8 @@ public SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Excepti
     .permitAll()
     .requestMatchers("/api/v1/auth/register")
     .permitAll()
+    .requestMatchers("/api/v1/doctors")
+    .permitAll()
     // .requestMatchers("/api/v1/auth/docRegister")
     // .permitAll()
     .requestMatchers(HttpMethod.GET)

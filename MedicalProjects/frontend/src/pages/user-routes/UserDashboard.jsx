@@ -1,13 +1,15 @@
 import React from 'react'
+import { Container } from 'reactstrap'
+import AddPrescription from '../../Components/AddPrescription'
 import Base from '../../Components/Base'
 
 const UserDashboard =()=>{
   return (
-   <Base>
-    <div>
-      Welcome to User DashBoard
-    </div>
-   </Base>
+  //  <Base>
+  <Container>
+   <AddPrescription />
+   </Container>
+  //  </Base>
   )
 }
 
