@@ -31,6 +31,7 @@ class Appointment extends React.Component {
     if (patientName !== "" && patientAge !== "" && gender !== "" && aptDate !== "" && aptTime !== "" && aptNotes !== "") {
       let apt = {
         id: Date.now(),
+        // count: this.state.count,
         patientName: this.state.patientName,
         patientAge: this.state.patientAge,
         gender: this.state.gender,
@@ -70,6 +71,9 @@ class Appointment extends React.Component {
     let errors = {
       display: this.state.formErrors ? 'block' : 'none'
     };
+    let limit ={
+      display: this.count < 3 ? console.log('Appointment is confirmed') : console.log('Appointments are full')
+    }
     return (
     <Base>
     
@@ -84,7 +88,9 @@ class Appointment extends React.Component {
       }}
       // style={{width:"50%", height:"50%"}}
       outline color="primary">
-        <CardHeader style={styles} onClick={this.toggleBody}><i className="fas fa-plus"></i> Add New Appointment</CardHeader>
+        <CardHeader style={styles} onClick={this.toggleBody}>
+          <i className="fas fa-plus"></i> Add New Appointment
+        </CardHeader>
         <CardBody style={displayBody} id="aptBody">
           <FormText color="muted" className="mb-1">
             <span className="text-danger">*</span>All fields are required

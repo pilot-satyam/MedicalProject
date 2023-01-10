@@ -59,14 +59,20 @@ const CustomNavbar =()=> {
          <Nav className="me-auto space">
             <NavLink to="/home" style={{textDecoration: 'none'}}> Home &nbsp;&nbsp;&nbsp;</NavLink>
             {/* <Nav className='me-auto'> */}
+            
 
-            <NavDropdown title="More" id="basic-nav-dropdown" className='nav'>
+
+            <NavLink to="/services" style={{textDecoration: 'none'}}> Services &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/contactUs" style={{textDecoration: 'none'}}>  Contact Us &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/address" style={{textDecoration: 'none'}}> Address &nbsp;&nbsp;&nbsp;</NavLink>
+
+            {/* <NavDropdown title="More" id="basic-nav-dropdown" className='nav'>
               <NavDropdown.Item href="/services" >Services</NavDropdown.Item>
               <NavDropdown.Item href="/contactUs">
                 Contact Us
               </NavDropdown.Item>
               <NavDropdown.Item href="/address" >Address</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
 
           <Nav>

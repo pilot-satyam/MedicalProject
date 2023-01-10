@@ -87,8 +87,8 @@ const handleZipCodeChange =(e)=>{
     <label className="form-label">Name</label>
     <input type="text" className="form-control" placeholder="Patient Name" required onChange={(e)=>{handleName(e)}}  />
 
-    <label className="form-label">Occupation</label>
-    <input type="text" className="form-control" placeholder="Occupation" required onChange={(e)=>{handleOccupationChnage(e)}}  />
+    {/* <label className="form-label">Occupation</label>
+    <input type="text" className="form-control" placeholder="Occupation" required onChange={(e)=>{handleOccupationChnage(e)}}  /> */}
   </div>
 
   <div className="col-4" >
@@ -112,10 +112,10 @@ const handleZipCodeChange =(e)=>{
     <label htmlFor="inputAddress" className="form-label">Address</label>
     <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" required onChange={(e)=>{handleAddressChange(e)}} />
   </div>
-  <div className="col-4 justify-content-center">
+  {/* <div className="col-4 justify-content-center">
     <label htmlFor="inputAddress2" className="form-label">Street</label>
     <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required onChange={(e)=>{handleStreetChange(e)}} />
-  </div>
+  </div> */}
   <div className="col-md-4">
     <label htmlFor="inputState" className="form-label" required onChange={(e)=>{handleStateChange(e)}} >State</label>
     <select id="inputState" className="form-select">
@@ -133,10 +133,10 @@ const handleZipCodeChange =(e)=>{
     <input type="text" className="form-control" id="inputCity"  placeholder="City" required onChange={(e)=>{handleCityChange(e)}} />
   </div>
   
-  <div className="col-4">
+  {/* <div className="col-4">
     <label htmlFor="inputZip" className="form-label">Zip</label>
     <input type="text" className="form-control" id="inputZip"  placeholder="Zip Code" required onChange={(e)=>{handleZipCodeChange(e)}} />
-  </div>
+  </div> */}
   
   <div className="col-12 text-center">
     <button type="submit" className="button btn-primary">submit</button>
