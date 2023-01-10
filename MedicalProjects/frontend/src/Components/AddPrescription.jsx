@@ -21,10 +21,13 @@ const AddPrescription=()=>{
    const[currentUser,setCurrentUser] = useState(undefined)
    //since we need to pass it to server that's why using it as object initially
    const[prescription,setPrescription] = useState({
-      OldRemarks : '',
-      NewRemarks : '',
-      DoctorId : '',
-      id:''
+      oldRemarks : '',
+      newRemarks : '',
+      doctorId : '',
+      id:'',
+      alcohol:'',
+      smoke:'',
+      operations:''
    })
 
     useEffect(
@@ -61,10 +64,10 @@ const AddPrescription=()=>{
         event.preventDefault();
         // console.log("form submitted")
         console.log(prescription)
-        if(prescription.OldRemarks.trim() === ''){
+        if(prescription.oldRemarks.trim() === ''){
             alert("Old Remarks Required");
         }
-        if(prescription.NewRemarks.trim() === ''){
+        if(prescription.newRemarks.trim() === ''){
             alert("New Remarks Required");
         }
         if(prescription.DoctorId === ''){
@@ -89,7 +92,7 @@ const AddPrescription=()=>{
         <div className="wrapper">
         <Card className="shadow-sm">
             <CardBody>
-                {JSON.stringify(prescription)}
+                {/* {JSON.stringify(prescription)} */}
                 <h3> User's Prescription </h3>
                 <Form onSubmit={createPrescription}>
                     <div className="my-3">
@@ -99,7 +102,7 @@ const AddPrescription=()=>{
                         id="oldRemarks"
                         placeholder="Old Remarks" 
                         onChange={fieldChanged}
-                        name="OldRemarks"
+                        name="oldRemarks"
                         />
                     </div>
 
@@ -110,7 +113,7 @@ const AddPrescription=()=>{
                         id="newRemarks"
                         placeholder="New Remarks" 
                         onChange={fieldChanged}
-                        name="NewRemarks"
+                        name="newRemarks"
                         />
                         {/* <JoditEditor 
                         ref = {editor}
@@ -123,8 +126,8 @@ const AddPrescription=()=>{
                         <Label for="doctor">Select Doctor</Label>
                         <Input 
                         type="select" 
-                        id="DoctorId"
-                        name="DoctorId"
+                        id="doctor"
+                        name="doctorId"
                         onChange={fieldChanged}
                         placeholder="Doctor" 
                         defaultValue={0}
@@ -134,7 +137,7 @@ const AddPrescription=()=>{
                             <option disabled value={0}>---Select Doctor---</option>
                        {
                         doctors.map((doctor)=>(
-                            <option value={doctor.DoctorId} key={doctor.DoctorId}>
+                            <option value={doctor.doctorId} key={doctor.doctorId}>
                                 {doctor.name}
                             </option>
                         ))
@@ -162,6 +165,36 @@ const AddPrescription=()=>{
                        }
                         </Input>
                     </div>
+                    </div>
+                    <div className="my-3">
+                        <Label for="alcohol">Alcohol</Label>
+                        <Input 
+                        type="text" 
+                        id="alcohol"
+                        placeholder="alcohol" 
+                        onChange={fieldChanged}
+                        name="alcohol"
+                        />
+                    </div>
+                    <div className="my-3">
+                        <Label for="smoke">Smoke</Label>
+                        <Input 
+                        type="text" 
+                        id="smoke"
+                        placeholder="smoke" 
+                        onChange={fieldChanged}
+                        name="smoke"
+                        />
+                    </div>
+                    <div className="my-3">
+                        <Label for="operations">Operations</Label>
+                        <Input 
+                        type="text" 
+                        id="operations"
+                        placeholder="operations" 
+                        onChange={fieldChanged}
+                        name="operations"
+                        />
                     </div>
                     <Container className="text-center">
                         <Button type="submit" color="primary">Create Prescription</Button>
