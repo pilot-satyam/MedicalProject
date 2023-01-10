@@ -62,6 +62,7 @@ const DoctorSignup = () =>{
                     id="id"
                     onChange={(e)=>handleChange(e,'id')}
                     value = {data.id}></input>
+                   
                 </FormGroup>
 
                 <FormGroup>
