@@ -14,6 +14,10 @@ export const loginUser = (loginDetail)=>{
     .then((response)=>response.data)
 }
 
+export const loadAllUsers=()=>{
+    return myAxios
+    .get(`/users/`).then(response=>{return response.data})
+}
 // import axios from 'axios';
 // import React, { Component } from 'react';
 
