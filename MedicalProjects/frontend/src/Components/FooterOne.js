@@ -19,7 +19,12 @@ import {
 function FooterOne(){
   return (
     // const icon = <FontAwesomeIcon icon = {faFacebook} />
+
+   
+    // <MDBFooter id ="footer" className='text-center' color='white' bgColor='dark'>
+
     <MDBFooter id ="footer" className='text-center ' color='white' bgColor='dark'  >
+
       <MDBContainer className='p-4'>
         <section className='mb-4'>
           <MDBBtn outline color="light" floating className='m-1' href='https://www.facebook.com/' role='button'>
@@ -78,6 +83,11 @@ function FooterOne(){
         </a>
       </div>
     </MDBFooter>
+
+   
+
+
+
    
   // footer{
   //   padding:14rem 0 9rem 0;

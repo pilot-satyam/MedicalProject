@@ -2,7 +2,7 @@
 import Base from "../Components/Base";
 import Content from "../Components/Content"
 import React from 'react'
-import { NavLink } from "react-router-dom";
+
 import '../Style/Global.css';
 import SliderAuto from "../pages/SliderAuto";
 function Home() {

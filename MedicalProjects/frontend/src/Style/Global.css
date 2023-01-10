@@ -41,8 +41,8 @@
 .img-style {
   /* width: 100%;
   height: auto; */
-  width: 560px;
-  height: 400px;
+  width: 850px;
+  height: 600px;
   margin-left: 500px;
 }
  
@@ -127,4 +127,10 @@
     display: grid;
     place-items: center;
     margin-right: 500px;
+  }
+
+  .footer{
+    left:0; 
+    bottom:0; 
+    width:100vw;
   }
