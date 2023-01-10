@@ -2,9 +2,6 @@ package com.ImyEye.info.entities;
 
 import java.util.Date;
 import jakarta.persistence.*;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,15 +12,20 @@ public class Prescription {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer Id;
-	private String oldRemarks;
+    @Column(nullable = false)
+	private String OldRemarks;
+    @Column(nullable = false)
 	private String NewRemarks;
 	private Date AddedDate;
 	private String ReportImage;
 	//alcohol
-	private String alchohol;
+	@Column(nullable = false)
+	private String alcohol;
 	//smoke
+	@Column(nullable = false)
 	private String smoke;
 	//operations
+	@Column(nullable = false)
 	private String operations;
 	@ManyToOne
 	private User user;
