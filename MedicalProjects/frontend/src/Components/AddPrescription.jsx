@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Card,CardBody, Input,Form, Label,Container,Button } from "reactstrap";
 import { loadAllDoctors } from "../services/doctor-service";
 import JoditEditor from "jodit-react";
+import {toast} from 'react-toastify'
 import { useRef } from "react";
 import { loadAllUsers } from "../services/user-service";
 import { getCurrentUserDetail } from "../auth";
@@ -65,26 +66,46 @@ const AddPrescription=()=>{
         // console.log("form submitted")
         console.log(prescription)
         if(prescription.oldRemarks.trim() === ''){
-            alert("Old Remarks Required");
+            toast.error("Old Remarks Required");
         }
         if(prescription.newRemarks.trim() === ''){
-            alert("New Remarks Required");
+            toast.error("New Remarks Required");
         }
         if(prescription.DoctorId === ''){
-            alert("Select A Doctor");
+            toast.error("Select A Doctor");
         }
         if(prescription.id ===''){
-            alert("Select Patient")
+            toast.error("Select Patient")
+        }
+        if(prescription.alcohol === ''){
+            toast.error("Required alcohol consumption")
+        }
+        if(prescription.smoke === ''){
+            toast.error("Required smoke consumption")
+        }
+        if(prescription.operations === ''){
+            toast.error("Required operations history")
         }
 
         //submit the form on server
         prescription['id'] = currentUser.id
         doCreatePrescription(prescription).then(data=>{
-            alert("Prescription Created")
-            console.log(prescription)
+            toast.success("Prescription Created")
+            // console.log(prescription)
+
+
+            setPrescription({
+                oldRemarks : '',
+                newRemarks : '',
+                doctorId : '',
+                id:'',
+                alcohol:'',
+                smoke:'',
+                operations:''
+            })
         }).catch((error)=>{
-            alert("error")
-            console.log(error)
+            toast.error("Prescription Not Created Due TO Some Error Caused!!!")
+            // console.log(error)
         })
     }
 
