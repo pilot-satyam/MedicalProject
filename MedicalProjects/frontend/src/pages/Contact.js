@@ -8,7 +8,15 @@ function Contact() {
     
 <div>
   <Base >
-  
+<div style={{
+         backgroundImage: `url("ContactUS.jpg")`,
+         backgroundPosition: 'center',
+         backgroundSize: 'cover',
+         backgroundRepeat: 'no-repeat',
+         width: '100vw',
+         height: '100vh'
+        }} 
+         >
 <h2 className="common-heading d-flex align-items-center justify-content-center mt-5">Contact page &nbsp;
   <i style={{fontSize:"24px"}} className='far'>&#xf086;</i>
 </h2>
@@ -16,6 +24,7 @@ function Contact() {
 
 
 <div className="container col-4 d-flex align-items-center justify-content-center">
+ 
   <div className="contact-form">
     <form 
       action="https://formspree.io/f/myyvrrwa"
@@ -66,6 +75,7 @@ function Contact() {
       </div>
     </form>
   </div>
+</div>
 </div>
 </Base>
 </div>

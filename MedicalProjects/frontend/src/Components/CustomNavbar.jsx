@@ -33,7 +33,7 @@ const CustomNavbar =()=> {
 
   return (
     // style={{width:"auto", height:"13%", justifyContent: "space-around"}} 
-    <Navbar bg="secondary" expand="lg" variant="light" fixed="top" >
+    <Navbar bg="dark" expand="lg" variant="dark" fixed="top" >
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
 {/* .........................
@@ -57,14 +57,16 @@ const CustomNavbar =()=> {
         <Navbar.Collapse id="responsive-navbar-nav">
 
          <Nav className="me-auto space">
-            <NavLink to="/home" style={{textDecoration: 'none'}}> Home &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/home" style={{textDecoration: 'none', color:'#FFFFFF'}}> HOME &nbsp;&nbsp;&nbsp;</NavLink>
             {/* <Nav className='me-auto'> */}
             
 
 
-            <NavLink to="/services" style={{textDecoration: 'none'}}> Services &nbsp;&nbsp;&nbsp;</NavLink>
-            <NavLink to="/contactUs" style={{textDecoration: 'none'}}>  Contact Us &nbsp;&nbsp;&nbsp;</NavLink>
-            <NavLink to="/address" style={{textDecoration: 'none'}}> Address &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/services" style={{textDecoration: 'none' ,color:'#FFFFFF'}}> SERVICES &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/contactUs" style={{textDecoration: 'none' ,color:'#FFFFFF'}}>  CONTACT US &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/address" style={{textDecoration: 'none' ,color:'#FFFFFF'}}> ADDRESS &nbsp;&nbsp;&nbsp;</NavLink>
+            <a href="https://youtu.be/6TXwBwVh_V8" style={{textDecoration: 'none' ,color:'#FFFFFF'}}> NEWS/EVENTS &nbsp;&nbsp;&nbsp;</a>
+            
 
             {/* <NavDropdown title="More" id="basic-nav-dropdown" className='nav'>
               <NavDropdown.Item href="/services" >Services</NavDropdown.Item>
@@ -90,8 +92,8 @@ const CustomNavbar =()=> {
             {
               !login && (
                 <>
-                <NavLink to="/login" style={{textDecoration: 'none'}}> New Admission &nbsp;&nbsp;&nbsp; </NavLink>
-          <NavLink to='/physicianlogin' style={{textDecoration: 'none'}}>Physician Login &nbsp;&nbsp;&nbsp;</NavLink>
+                <NavLink to="/login" style={{textDecoration: 'none',color:'#FFFFFF'}}> NEW ADMISSION&nbsp;&nbsp;&nbsp; </NavLink>
+          <NavLink to='/physicianlogin' style={{textDecoration: 'none' ,color:'#FFFFFF'}}>PHYSICIAN LOGIN &nbsp;&nbsp;&nbsp;</NavLink>
                 </>
               )
             }
