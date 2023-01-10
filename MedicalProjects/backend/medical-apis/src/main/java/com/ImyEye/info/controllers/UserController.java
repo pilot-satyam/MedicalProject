@@ -20,7 +20,7 @@ import com.ImyEye.info.services.UserService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/v1/users")
 public class UserController {
 
 	@Autowired

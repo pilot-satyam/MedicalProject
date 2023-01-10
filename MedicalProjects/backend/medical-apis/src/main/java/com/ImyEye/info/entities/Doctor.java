@@ -30,10 +30,10 @@ public class Doctor{
 
 	@Column(nullable = false,length=100)
      private String name;
-     @NotEmpty
      @Email
+     @Column(nullable = false)
      private String email;
-     @NotEmpty
+     @Column(nullable = false)
      private String password;
      
      @OneToMany(mappedBy = "doctor",cascade = CascadeType.ALL,fetch = FetchType.LAZY)

@@ -14,6 +14,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = () =>{
 
     const navigate = useNavigate()
+
     const[loginDetail,setLoginDetail] = useState({
         username : '',
         password : ''
@@ -59,8 +60,6 @@ const handleForSubmit = (event) =>{
         //redirect to user dashboard page
         navigate("/user/dashboard")  
       })
-
-
         toast.success("Login Successfull :)")
     }).catch(error=>{
         console.log(error)

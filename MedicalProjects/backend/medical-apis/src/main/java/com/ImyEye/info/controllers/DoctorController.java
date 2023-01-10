@@ -19,7 +19,7 @@ import com.ImyEye.info.services.DoctorService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/doctors")
+@RequestMapping("/api/v1/doctors/")
 public class DoctorController {
 
 	@Autowired
