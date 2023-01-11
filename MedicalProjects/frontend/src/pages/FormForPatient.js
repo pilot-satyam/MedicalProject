@@ -56,6 +56,20 @@ const handleZipCodeChange =(e)=>{
   }
 
 
+
+
+
+
+const myStyle ={
+    backgroundImage: 
+"url('background.jpg')",
+    height:'100vh',
+    marginTop:'-70px',
+    fontSize:'50px',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+};
+
   //Connect to backend 
   const handleSubmit=(e)=>{
    
@@ -75,7 +89,7 @@ const handleZipCodeChange =(e)=>{
   }
   return (
  <Base>
-   <form className="row g-3 justify-content-center mt-5" onSubmit={(e) => {handleSubmit(e)}} >
+   <form className="row g-3 justify-content-center mt-5 myStyle" onSubmit={(e) => {handleSubmit(e)}} >
 
     <div className='text-center'>
       <h3>

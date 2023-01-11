@@ -74,55 +74,72 @@ const handleForSubmit = (event) =>{
 
     return(
         <Base>
-       <Container className='mt-5 text-center'>
-         <Row className='mt-4'>
+        <div classNmae='bg-dark'>
+       <Container className='mt-5 text-center '>
+         <Row className='mt-4 '>
             <Col sm={{
-                size:6,
-                offset:2
+                size:8
             }}>
                 <Card className='mt-4'>
+                <Row>
+                    <Col sm={6}>
+                    <div className="hero-section-image imageCenter">
+            
+                    <img
+                      src="contact.jpg"
+                      alt="hero-section-photo"
+                      className="img-style w-75 float-left"
+                      />
+                
+                </div>
+                    </Col>
+                    <Col sm={5}>
                     <CardHeader className='mt-4'>
-                        <h3 className="centerIt">Login Here</h3>
-                        <i style={{fontSize:"24px"}} className="fa centerIt">&#xf2bc;</i>
-                    </CardHeader>
-                    <CardBody>
-                        <Form onSubmit={handleForSubmit}>
-                        <FloatingLabel
-                            controlId="floatingInput"
-                            label="Email address"
-                            className="mb-3"
-                        >
-                            <Form.Control
-                             type="email" 
-                             placeholder="email" 
-                             value={loginDetail.username}
-                             onChange={(e)=>handleChange(e,'username')} />
-                        </FloatingLabel>
+                    <h3 className="centerIt">Login Here</h3>
+                    <i style={{fontSize:"24px"}} className="fa centerIt">&#xf2bc;</i>
+                </CardHeader>
+                <CardBody>
+                    <Form onSubmit={handleForSubmit}>
+                    <FloatingLabel
+                        controlId="floatingInput"
+                        label="Email address"
+                        className="mb-3"
+                    >
+                        <Form.Control
+                         type="email" 
+                         placeholder="email" 
+                         value={loginDetail.username}
+                         onChange={(e)=>handleChange(e,'username')} />
+                    </FloatingLabel>
 
-                        <FloatingLabel controlId="floatingPassword" label="Password">
-                            <Form.Control 
-                            type="password" 
-                            placeholder = "password" 
-                            value = {loginDetail.password}
-                            onChange={(e)=>handleChange(e,'password')}
-                             />
-                        </FloatingLabel>
+                    <FloatingLabel controlId="floatingPassword" label="Password">
+                        <Form.Control 
+                        type="password" 
+                        placeholder = "password" 
+                        value = {loginDetail.password}
+                        onChange={(e)=>handleChange(e,'password')}
+                         />
+                    </FloatingLabel>
 
-                        <br></br>
-                      
-                    <Container className='text-center'>
-                        <Button color="dark" outline>Login</Button>
-                        <Button onClick={handleForReset} className='ms-2' color='secondary' outline>Reset</Button>
-                        <Button className='ms-2' color='dark' outline href='./Signup'>New Patient? Register Here</Button>
-                    </Container>
+                    <br></br>
+                  
+                <Container className='text-center'>
+                    <Button color="dark" outline>Login</Button>
+                    <Button onClick={handleForReset} className='ms-2' color='secondary' outline>Reset</Button>
+                    <Button className='ms-2' color='dark' outline href='./Signup'>New Patient? Register Here</Button>
+                </Container>
 
-                        </Form>
-                    </CardBody>
+                    </Form>
+                </CardBody>
+                    </Col>
+                </Row>
+                  
                 </Card>
 
             </Col>
          </Row>
        </Container>
+       </div>
         </Base>
     );
 }

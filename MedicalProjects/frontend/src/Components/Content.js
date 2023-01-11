@@ -15,9 +15,12 @@ const Content = ({ myData }) => {
           <div className="hero-section-data">
             
 
-            <h1 className="centerIt mt-5">
+            <h1 className="centerIt mt-5" style={{fontWeight:'bold',fontSize:'47px'}}>
             {/* <FontAwesomeIcon icon="fas fa-heading "/> */}
-            {name} &nbsp;
+            
+             {name} &nbsp;
+            
+            
 
 
 

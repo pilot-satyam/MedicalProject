@@ -49,6 +49,7 @@
 
   body {
     background-color: #e3e8f3;
+    /* background-image: 'background.jpg'; */
     color: rgb(0, 0, 0);
     padding: 40px;
     font-family: 'Arvo', serif;

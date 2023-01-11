@@ -29,7 +29,10 @@ function Home() {
 <FontAwesomeIcon icon={['fab', 'github']} /> */}
 
         <div >
-          <h2 className="centerIt">Welcome to<br/> ImyEYE Care Center &nbsp;
+          <h2 className="centerIt">Welcome to<br/> 
+          <h1 style={{fontWeight:'bold',fontSize:'47px'}}>
+            ImyEYE Care Center &nbsp;
+          </h1>
             <i style={{fontSize:"24px"}} className='far'>&#xf06e;</i>
           </h2>
           <p className="centerIt">We provide the best cure that you are looking for!</p>
