@@ -88,7 +88,11 @@ const handleForSubmit = (event) =>{
                     <img
                       src="contact.jpg"
                       alt="hero-section-photo"
-                      className="img-style w-75 float-left"
+                      className="img-style  float-left"
+                      style={{
+                        width:"80vh",
+                        marginRight:"7%"
+                       }} 
                       />
                 
                 </div>
