@@ -10,7 +10,6 @@ import { Container } from 'react-bootstrap';
 import Services from './pages/Services';
 import FormForPatient from './pages/FormForPatient';
 import ErrorPage from './pages/ErrorPage';
-import List from "../src/pages/DoctorList/List"
 import Contact from './pages/Contact';
 import Address from './pages/Address';
 import FooterOne from './Components/FooterOne';
@@ -26,6 +25,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './Components/PrivateRoute';
 import UserDashboard from './pages/user-routes/UserDashboard';
 import ProfileInfo from './pages/user-routes/ProfileInfo';
+import NewFeed from './pages/DoctorList/NewFeed';
 // import initFontAwesome from './Components/initFontAwesome';
 // initFontAwesome();
 
@@ -52,8 +52,8 @@ function App() {
   <Route exact path="/prescription" element={<Prescription/>}/>
   <Route exact path ="/appointmentForm" element={<Appointment/>}/>
   <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
-  <Route exact path ="/doctor" element ={<List/>}/>
-  <Route exact path='/ListForDoctor' element={<ListForDoctor />}/>
+  {/* <Route exact path ="/doctor" element ={<List/>}/> */}
+  <Route exact path='/newfeed' element={<NewFeed />}/>
   <Route exact path= "*" element ={<ErrorPage />} />
 
 

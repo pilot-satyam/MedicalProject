@@ -40,6 +40,9 @@ public class DoctorServiceImpl implements DoctorService {
 				doctor.setName(doctorDto.getName());
 				doctor.setEmail(doctorDto.getEmail());
 				doctor.setPassword(doctorDto.getPassword());
+				doctor.setQualification(doctorDto.getQualification());
+				doctor.setExperience(doctorDto.getExperience());
+				doctor.setFees(doctorDto.getFees());
 				//now update it
 				Doctor updatedDoc = doctorRepo.save(doctor);
 				DoctorDto docDto1 = doctorToDto(updatedDoc);
