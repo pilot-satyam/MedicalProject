@@ -2,20 +2,22 @@ import React from 'react';
 import Base from "../Components/Base";
 import '../Style/Global.css';
 import '../Style/placeholderTop.css';
+import '../Style/backgrd.css'
 function Contact() {
 
   return (
     
 <div>
   <Base >
-<div style={{
-         backgroundImage: `url("ContactUS.jpg")`,
-         backgroundPosition: 'center',
-         backgroundSize: 'cover',
-         backgroundRepeat: 'no-repeat',
-         width: '100vw',
-         height: '100vh'
-        }} 
+<div  
+// style={{
+//   backgroundImage: `url("ContactUS.jpg")`,
+//   backgroundPosition: 'center',
+//   backgroundSize: 'cover',
+//   backgroundRepeat: 'no-repeat',
+//   width: '100vw',
+//   height: '100vh'
+//  }} 
          >
 <h2 className="common-heading d-flex align-items-center justify-content-center mt-5">Contact page &nbsp;
   <i style={{fontSize:"24px"}} className='far'>&#xf086;</i>
@@ -25,11 +27,11 @@ function Contact() {
 
 <div className="container col-4 d-flex align-items-center justify-content-center">
  
-  <div className="contact-form">
+  <div className="contact-form form-container">
     <form 
       action="https://formspree.io/f/myyvrrwa"
       method="POST"
-      className="contact-inputs">
+      className="contact-inputs form">
 
     <div className="user-input-wrp">   
       <input

@@ -5,6 +5,12 @@ import { Button } from "react-bootstrap";
 import { Container } from "reactstrap";
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+library.add(fas)
+
 const Content = ({ myData }) => {
   const { name } = myData;
  
@@ -15,7 +21,7 @@ const Content = ({ myData }) => {
           <div className="hero-section-data">
             
 
-            <h1 className="centerIt mt-5" style={{fontWeight:'bold',fontSize:'47px'}}>
+            <h1 className="centerIt mt-5 styleH1" style={{fontWeight:'bold',fontSize:'47px'}}>
             {/* <FontAwesomeIcon icon="fas fa-heading "/> */}
             
              {name} &nbsp;
@@ -23,8 +29,8 @@ const Content = ({ myData }) => {
             
 
 
-
-            <i style={{fontSize:"24px"}} className='fas'>&#xf812;</i>
+            <FontAwesomeIcon icon="fa-clinic-medical"  size="1x" color="dark" />
+            {/* <i style={{fontSize:"24px"}} className='fas'>&#xf812;</i> */}
             </h1>
             
             {/* </h1> */}

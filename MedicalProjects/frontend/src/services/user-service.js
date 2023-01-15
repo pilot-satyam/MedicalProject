@@ -1,6 +1,7 @@
 import { myAxios } from "./helper";
 export const signUp = (user)=>{
-    //keeping in response.data so that the data which we are getting from the promise can be then pass to them of promise and will be used in signup
+    //keeping in response.data so that the data which we are getting from the promise can be then pass to 
+    //them of promise and will be used in signup
     return myAxios
     .post("/auth/register",user)
     .then((response)=>response.data)
@@ -16,7 +17,8 @@ export const loginUser = (loginDetail)=>{
 
 export const loadAllUsers=()=>{
     return myAxios
-    .get(`/users/`).then(response=>{return response.data})
+    .get(`/users/`)
+    .then(response=>{return response.data})
 }
 // import axios from 'axios';
 // import React, { Component } from 'react';

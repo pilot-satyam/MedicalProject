@@ -32,7 +32,6 @@ const CustomNavbar =()=> {
   }
 
   return (
-    // style={{width:"auto", height:"13%", justifyContent: "space-around"}} 
     <Navbar bg="dark" expand="lg" variant="dark" fixed="top" >
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>

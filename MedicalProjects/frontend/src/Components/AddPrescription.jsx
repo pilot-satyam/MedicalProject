@@ -2,19 +2,21 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Card,CardBody, Input,Form, Label,Container,Button } from "reactstrap";
 import { loadAllDoctors } from "../services/doctor-service";
-import JoditEditor from "jodit-react";
+// import JoditEditor from "jodit-react";
 import {toast} from 'react-toastify'
 import { useRef } from "react";
 import { loadAllUsers } from "../services/user-service";
 import { getCurrentUserDetail } from "../auth";
 import { createPrescription as doCreatePrescription } from "../services/prescription-service";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css'; // import the styles
 
 
 
 const AddPrescription=()=>{
 
-    const editor = useRef(null)
-    // const [content,setContent] = useState('')
+    // const editor = useRef(0)
+    const [content,setContent] = useState('')
 
     //use to destructure array so that data can be fetched from backend
    const [doctors,setDoctors] = useState([])
@@ -104,17 +106,18 @@ const AddPrescription=()=>{
                 operations:''
             })
         }).catch((error)=>{
-            toast.error("Prescription Not Created Due TO Some Error Caused!!!")
+            toast.error("Prescription Not Created Due To Some Error Caused!!!")
             // console.log(error)
         })
     }
 
     return(
-        <div className="wrapper">
+        <div>
+            {/* className="wrapper contact-page"   -- className but not usefull here*/}
         <Card className="shadow-sm">
             <CardBody>
                 {/* {JSON.stringify(prescription)} */}
-                <h3> User's Prescription </h3>
+                <h1 style={{textAlign: 'center'}}> User's Prescription </h1>
                 <Form onSubmit={createPrescription}>
                     <div className="my-3">
                         <Label for="oldRemarks">Old Remarks</Label>
@@ -129,19 +132,17 @@ const AddPrescription=()=>{
 
                     <div className="my-3">
                         <Label for="newRemarks">New Remarks</Label>
-                        <Input 
+                        {/* <Input 
                         type="text" 
                         id="newRemarks"
                         placeholder="New Remarks" 
                         onChange={fieldChanged}
                         name="newRemarks"
-                        />
-                        {/* <JoditEditor 
-                        ref = {editor}
-                        value = {content}
-                        onBlur={newContent => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
-			            onChange={newContent => {}}
                         /> */}
+                        <ReactQuill value={content} onChange={setContent}/>
+                      
+
+                       
                     </div>
                     <div className="my-3">
                         <Label for="doctor">Select Doctor</Label>

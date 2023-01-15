@@ -26,6 +26,7 @@ import PrivateRoute from './Components/PrivateRoute';
 import UserDashboard from './pages/user-routes/UserDashboard';
 import ProfileInfo from './pages/user-routes/ProfileInfo';
 import NewFeed from './pages/DoctorList/NewFeed';
+import AddPrescription from './Components/AddPrescription';
 // import initFontAwesome from './Components/initFontAwesome';
 // initFontAwesome();
 
@@ -54,6 +55,7 @@ function App() {
   <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
   {/* <Route exact path ="/doctor" element ={<List/>}/> */}
   <Route exact path='/newfeed' element={<NewFeed />}/>
+  <Route exact path ='addPrescription' element={<AddPrescription/>}/>
   <Route exact path= "*" element ={<ErrorPage />} />
 
 
