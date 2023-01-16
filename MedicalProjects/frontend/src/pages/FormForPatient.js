@@ -89,7 +89,7 @@ const myStyle ={
   }
   return (
  <Base>
-   <form className="row g-3 justify-content-center mt-5 myStyle" onSubmit={(e) => {handleSubmit(e)}} >
+   <form className="row g-3 justify-content-center mt-5 myStyle formStyle" onSubmit={(e) => {handleSubmit(e)}} >
 
     <div className='text-center'>
       <h3>

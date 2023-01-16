@@ -84,19 +84,19 @@ const Signup = () => {
 
     return(
         <Base>
-       <Container className='mt-5 text-center'>
+       <Container className='mt-5 text-center '>
         <Row className="mt-4">
             <Col sm={{
                 size:6, 
                 offset:2}}>
             <Card className='mt-4'>
-            <CardHeader className='mt-4'>
+            <CardHeader className='mt-4 formStyle'>
                <h4> Fill Information To Register
                 <br/>
                 <i style={{fontSize:"24px"}} className="fa">&#xf2bc;</i>
                </h4>
             </CardHeader>
-        <CardBody>
+        <CardBody className="formStyle">
             <Form onSubmit={submitForm}>
                         {/* <FloatingLabel
                             controlId="floatingInput"

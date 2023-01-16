@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { Card,CardBody, Input,Form, Label,Container,Button } from "reactstrap";
+import Base from '../Components/Base'
 import { loadAllDoctors } from "../services/doctor-service";
 // import JoditEditor from "jodit-react";
 import {toast} from 'react-toastify'
@@ -17,6 +18,7 @@ const AddPrescription=()=>{
 
     // const editor = useRef(0)
     const [content,setContent] = useState('')
+    const [content2,setContent2] = useState('')
 
     //use to destructure array so that data can be fetched from backend
    const [doctors,setDoctors] = useState([])
@@ -112,7 +114,9 @@ const AddPrescription=()=>{
     }
 
     return(
-        <div>
+        <Base>
+
+        <div className="mt-5">
             {/* className="wrapper contact-page"   -- className but not usefull here*/}
         <Card className="shadow-sm">
             <CardBody>
@@ -121,13 +125,14 @@ const AddPrescription=()=>{
                 <Form onSubmit={createPrescription}>
                     <div className="my-3">
                         <Label for="oldRemarks">Old Remarks</Label>
-                        <Input 
+                        {/* <Input 
                         type="text" 
                         id="oldRemarks"
                         placeholder="Old Remarks" 
                         onChange={fieldChanged}
                         name="oldRemarks"
-                        />
+                        /> */}
+                        <ReactQuill value={content} onChange={setContent}/>
                     </div>
 
                     <div className="my-3">
@@ -139,7 +144,7 @@ const AddPrescription=()=>{
                         onChange={fieldChanged}
                         name="newRemarks"
                         /> */}
-                        <ReactQuill value={content} onChange={setContent}/>
+                        <ReactQuill value={content2} onChange={setContent2}/>
                       
 
                        
@@ -226,6 +231,7 @@ const AddPrescription=()=>{
             </CardBody>
         </Card>
         </div>
+        </Base>
 
     );
 }

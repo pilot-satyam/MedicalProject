@@ -98,11 +98,11 @@ const handleForSubmit = (event) =>{
                 </div>
                     </Col>
                     <Col sm={5}>
-                    <CardHeader className='mt-4'>
+                    <CardHeader className='mt-4 formStyle'>
                     <h3 className="centerIt">Login Here</h3>
                     <i style={{fontSize:"24px"}} className="fa centerIt">&#xf2bc;</i>
                 </CardHeader>
-                <CardBody>
+                <CardBody className='formStyle'>
                     <Form onSubmit={handleForSubmit}>
                     <FloatingLabel
                         controlId="floatingInput"

@@ -8,13 +8,16 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import "../Style/Global.css";
 import { Link } from 'react-router-dom';
 import { doLogout, getCurrentUserDetail,isLoggedIn } from '../auth';
-
-const CustomNavbar =()=> {
+import '../Style/NavBar.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+const CustomNavbar =(props)=> {
 
   let navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
   const [login, setLogin] = useState(false)
   const [user, setUser] = useState(undefined)
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
 
@@ -32,7 +35,8 @@ const CustomNavbar =()=> {
   }
 
   return (
-    <Navbar bg="dark" expand="lg" variant="dark" fixed="top" >
+    // <Navbar bg="primary" expand="lg" variant="light" fixed="top"  className={`navbar navbar-${theme}`}>
+    <Navbar bg={props.bg} expand={props.expand} className={`navbar navbar-${theme}`} fixed={props.fixed} fixed="top">
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
 {/* .........................
@@ -56,15 +60,16 @@ const CustomNavbar =()=> {
         <Navbar.Collapse id="responsive-navbar-nav">
 
          <Nav className="me-auto space">
-            <NavLink to="/home" style={{textDecoration: 'none', color:'#FFFFFF'}}> HOME &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/home" style={{textDecoration: 'none'}}> HOME &nbsp;&nbsp;&nbsp;</NavLink>
+            {/* color:'#FFFFFF' */}
             {/* <Nav className='me-auto'> */}
             
 
 
-            <NavLink to="/services" style={{textDecoration: 'none' ,color:'#FFFFFF'}}> SERVICES &nbsp;&nbsp;&nbsp;</NavLink>
-            <NavLink to="/contactUs" style={{textDecoration: 'none' ,color:'#FFFFFF'}}>  CONTACT US &nbsp;&nbsp;&nbsp;</NavLink>
-            <NavLink to="/address" style={{textDecoration: 'none' ,color:'#FFFFFF'}}> ADDRESS &nbsp;&nbsp;&nbsp;</NavLink>
-            <a href="https://youtu.be/6TXwBwVh_V8" style={{textDecoration: 'none' ,color:'#FFFFFF'}}> NEWS/EVENTS &nbsp;&nbsp;&nbsp;</a>
+            <NavLink to="/services" style={{textDecoration: 'none'}}> SERVICES &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/contactUs" style={{textDecoration: 'none'}}>  CONTACT US &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/address" style={{textDecoration: 'none'}}> ADDRESS &nbsp;&nbsp;&nbsp;</NavLink>
+            <a href="https://youtu.be/6TXwBwVh_V8" style={{textDecoration: 'none'}}> NEWS/EVENTS &nbsp;&nbsp;&nbsp;</a>
             
 
             {/* <NavDropdown title="More" id="basic-nav-dropdown" className='nav'>
@@ -91,15 +96,17 @@ const CustomNavbar =()=> {
             {
               !login && (
                 <>
-                <NavLink to="/login" style={{textDecoration: 'none',color:'#FFFFFF'}}> NEW ADMISSION&nbsp;&nbsp;&nbsp; </NavLink>
-          <NavLink to='/physicianlogin' style={{textDecoration: 'none' ,color:'#FFFFFF'}}>PHYSICIAN LOGIN &nbsp;&nbsp;&nbsp;</NavLink>
+                <NavLink to="/login" style={{textDecoration: 'none'}}> NEW ADMISSION&nbsp;&nbsp;&nbsp; </NavLink>
+          <NavLink to='/physicianlogin' style={{textDecoration: 'none' }}>PHYSICIAN LOGIN &nbsp;&nbsp;&nbsp;</NavLink>
                 </>
               )
             }
           {/* <NavLink to="/login" style={{textDecoration: 'none'}}> New Admission &nbsp;&nbsp;&nbsp; </NavLink>
           <NavLink to='/physicianlogin' style={{textDecoration: 'none'}}>Physician Login &nbsp;&nbsp;&nbsp;</NavLink> */}
           </Nav>
-
+        <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+          <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} />
+      </button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

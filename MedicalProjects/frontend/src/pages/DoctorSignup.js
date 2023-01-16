@@ -43,14 +43,14 @@ const DoctorSignup = () =>{
         <Row className="mt-4">
             <Col sm={{size:6}}>
             <Card>
-            <CardHeader>
+            <CardHeader className="formStyle">
                <h6> Hey Doctors,<br/></h6>
                <h3>Please Register Here</h3>
                {/* <i style={{fontSize:"24px"}} className="fa">&#xf2bc;</i> */}
                <i className="fa-solid fa-user"></i>
                 
             </CardHeader>
-        <CardBody>
+        <CardBody className="formStyle">
             <Form>
 
                 <FormGroup>

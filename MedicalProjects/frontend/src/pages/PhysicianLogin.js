@@ -14,7 +14,7 @@ const PhysicianLogin = () =>{
              <Col sm={{
                  size:10
              }}>
-                 <Card>
+                 <Card className=''>
                     <Row>
                         <Col sm={6}><div className="hero-section-image imageCenter">
             
@@ -32,19 +32,19 @@ const PhysicianLogin = () =>{
                     
                     </div></Col>
                 
-                        <Col sm={5}><CardHeader>
-                        <h6 className="centerIt" >Hey Amazing Doctors, <br></br>
+                        <Col sm={5}><CardHeader className="formStyle">
+                        <h6 className="centerIt" >Hey Amazing Doctors, <br></br></h6>
                         <h3>
                         Login Here<br/>
                         </h3>
                         
                         
                            <i style={{fontSize:"24px"}} class="fa">&#xf2bc;</i>
-                        </h6>
+                        
                         
                     </CardHeader>
                 
-                    <CardBody>
+                    <CardBody className='formStyle'>
                         <Form>
                             {/* <FormGroup>
                                 <label htmlFor="email"> Enter Email</label> <br></br>
