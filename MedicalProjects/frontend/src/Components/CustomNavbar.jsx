@@ -17,7 +17,7 @@ const CustomNavbar =(props)=> {
   const [isOpen, setIsOpen] = useState(false)
   const [login, setLogin] = useState(false)
   const [user, setUser] = useState(undefined)
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
 
@@ -35,13 +35,13 @@ const CustomNavbar =(props)=> {
   }
 
   return (
-    // <Navbar bg="primary" expand="lg" variant="light" fixed="top"  className={`navbar navbar-${theme}`}>
-    <Navbar bg={props.bg} expand={props.expand} className={`navbar navbar-${theme}`} fixed={props.fixed} fixed="top">
+    // <Navbar bg="primary" expand="lg" variant="light" fixed="top"  className={`navbar navbar-${theme}`} fixed={props.fixed}>
+    <Navbar bg={props.bg} expand={props.expand} className={`navbar navbar-${theme}`} fixed="top">
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
 {/* .........................
         <Navbar.Brand href="#">I-myEYE</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Toggle aria-controls="navbarScroll" /> 
         {/* basic-navbar-nav */}
         {/* <Navbar.Collapse id="navbarScroll">
           <Nav className="mr-auto my-2 my-lg-0">

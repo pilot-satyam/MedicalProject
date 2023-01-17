@@ -33,6 +33,7 @@ import AddPrescription from './Components/AddPrescription';
 
 //Edit form Context Provider 
 import FormProvider from './EditPages/FormProvider';
+import { AppointmentPage } from './pages/AppointmentPage/AppoitmentPage';
 // import AppointForm from './pages/AppointmentPage/AppointForm';
 function App() {
   
@@ -64,7 +65,7 @@ function App() {
   <Route exact path="/patientDetails" element={<PatientDetails/>}/>
   <Route exact path ="/patientProblemDetails" element={<PatientProblemDetails/>}/>
   <Route exact path="/prescription" element={<Prescription/>}/>
-  <Route exact path ="/appointmentForm" element={<Appointment/>}/>
+  <Route exact path ="/appointmentForm" element={<AppointmentPage/>}/>
   {/* <Route exact path ="/appointmentForm" element={<AppointForm/>}/> */}
   <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
   {/* <Route exact path ="/doctor" element ={<List/>}/> */}
