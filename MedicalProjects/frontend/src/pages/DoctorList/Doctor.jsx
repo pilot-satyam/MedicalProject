@@ -1,6 +1,7 @@
 //this component is responsible to view single doctor
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Button, Card,CardBody, CardText } from 'reactstrap'
 
 function Doctor({doctor={name:"THis is default doctor",qualification:"Default qualification"}}){
@@ -14,7 +15,7 @@ function Doctor({doctor={name:"THis is default doctor",qualification:"Default qu
           Fees : Rs. {doctor.fees}
         </CardText>
         <div>
-          <Button>Details Of Doc</Button>
+          <Link className='btn btn-secondary' to={'/doctors/'+doctor.doctorId}>Details Of Doc</Link>
         </div>
     </CardBody>
 </Card>
