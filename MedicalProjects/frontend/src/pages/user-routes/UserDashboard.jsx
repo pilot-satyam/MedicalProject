@@ -5,11 +5,11 @@ import Base from '../../Components/Base'
 
 const UserDashboard =()=>{
   return (
-  //  <Base>
-  <Container>
-   <AddPrescription />
+   <Base>
+    <Container>
+      <AddPrescription />
    </Container>
-  //  </Base>
+   </Base>
   )
 }
 

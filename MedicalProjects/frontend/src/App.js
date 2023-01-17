@@ -26,11 +26,19 @@ import PrivateRoute from './Components/PrivateRoute';
 import UserDashboard from './pages/user-routes/UserDashboard';
 import ProfileInfo from './pages/user-routes/ProfileInfo';
 import NewFeed from './pages/DoctorList/NewFeed';
+import AddPrescription from './Components/AddPrescription';
 import Doctors from './pages/Doctors';
 // import initFontAwesome from './Components/initFontAwesome';
 // initFontAwesome();
 
+
+//Edit form Context Provider 
+import FormProvider from './EditPages/FormProvider';
+import { AppointmentPage } from './pages/AppointmentPage/AppoitmentPage';
+// import AppointForm from './pages/AppointmentPage/AppointForm';
 function App() {
+  
+
   return (
 
   <Container> 
@@ -43,7 +51,14 @@ function App() {
   <Route exact path ="/signup" element={<Signup />} />
   <Route exact path="/physicianlogin" element={<PhysicianLogin />} />
   <Route exact path="/doctorsignup" element={<DoctorSignup />} />
-  <Route exact path ="/patientForm" element ={<FormForPatient />} />
+
+  {/* <Route exact path='/patientForm' render={() => (
+          <FormProvider>
+            <FormForPatient />
+          </FormProvider>
+        )} /> */}
+    <Route exact path ="/patientForm" element ={<FormForPatient />} />
+ 
   <Route exact path="/services" element={<Services />} />
   <Route exact path="/contactUs" element={<Contact />}/>
   <Route exact path="/address" element={<Address/>}/>  
@@ -51,10 +66,12 @@ function App() {
   <Route exact path="/patientDetails" element={<PatientDetails/>}/>
   <Route exact path ="/patientProblemDetails" element={<PatientProblemDetails/>}/>
   <Route exact path="/prescription" element={<Prescription/>}/>
-  <Route exact path ="/appointmentForm" element={<Appointment/>}/>
+  <Route exact path ="/appointmentForm" element={<AppointmentPage/>}/>
+  {/* <Route exact path ="/appointmentForm" element={<AppointForm/>}/> */}
   <Route exact path ="/showAppointment" element ={<ShowAppointment/>}/>
   {/* <Route exact path ="/doctor" element ={<List/>}/> */}
   <Route exact path='/newfeed' element={<NewFeed />}/>
+  <Route exact path ='addPrescription' element={<AddPrescription/>}/>
   <Route exact path='/doctors/:doctorId' element={<Doctors />}/>
   <Route exact path= "*" element ={<ErrorPage />} />
 
