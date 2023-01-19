@@ -34,11 +34,17 @@ function NewFeed() {
   }, []);
 
   return (
-    <div className='container-fluid'>
+    <div className='NewFeed container-fluid'>
+       style={{
+        backgroundImage: URL('public/background.jpg'),
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
       <Row>
         <Col md={{ size: 10, offset: 1 }}>
-          <h1>
-            Doctors List Length: {doctors.length} 
+          <h1 className="text-center my-5" style={{ color: "#ffffff" }}> 
+            {/* Doctors List Length: {doctors.length}  */}
+            Find the perfect doctor for you
           </h1>
           {error && <p>{error}</p>}
           {

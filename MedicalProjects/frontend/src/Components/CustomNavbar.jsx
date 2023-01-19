@@ -35,8 +35,8 @@ const CustomNavbar =(props)=> {
   }
 
   return (
-    // <Navbar bg="primary" expand="lg" variant="light" fixed="top"  className={`navbar navbar-${theme}`} fixed={props.fixed}>
-    <Navbar bg={props.bg} expand={props.expand} className={`navbar navbar-${theme}`} fixed="top">
+    // <Navbar bg="primary" expand="lg" expand={props.expand} variant="light" fixed="top"  className={`navbar navbar-${theme}`} fixed={props.fixed}>
+    <Navbar bg={props.bg} className={`navbar navbar-${theme}`} fixed="top">
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
 {/* .........................

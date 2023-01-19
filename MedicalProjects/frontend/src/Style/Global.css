@@ -61,7 +61,7 @@ h1 {
 }
   body {
     background-color: #e3e8f3;
-    background-image: url('D:\JS_visual studio\MedicalProject\MedicalProjects\frontend\public\body.jpg');
+    background-image: url('../../public/body.jpg');
     color: rgb(0, 0, 0);
     padding: 40px;
     font-family: 'Arvo', serif;
@@ -166,9 +166,29 @@ h2 {
     font-weight: bold;
     font-family: 'Merriweather', serif;
 }
+
 .formStyle{
-  background-image: url('D:\JS_visual studio\MedicalProject\MedicalProjects\frontend\public\background.jpg');
+  background-image: url('../../public/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   
+}
+
+.NewFeed {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.doctors-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.doctor-card {
+  width: 30%;
+  margin: 0 1.5%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
