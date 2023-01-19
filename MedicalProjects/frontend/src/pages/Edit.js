@@ -43,7 +43,7 @@ function Edit(props) {
      <CardHeader className='mt-4 formStyle'>
         <h4> Edit the Profile
          <br/>
-         <i style={{fontSize:"24px"}} className="fa">&#xf2bc;</i>
+         <i style={{fontSize:"24px"}} className='fas'>&#xf044;</i>
         </h4>
      </CardHeader>
  <CardBody className="formStyle">
