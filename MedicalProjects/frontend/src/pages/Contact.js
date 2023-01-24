@@ -9,19 +9,10 @@ function Contact() {
     
 <div>
   <Base >
-<div  
-// style={{
-//   backgroundImage: `url("ContactUS.jpg")`,
-//   backgroundPosition: 'center',
-//   backgroundSize: 'cover',
-//   backgroundRepeat: 'no-repeat',
-//   width: '100vw',
-//   height: '100vh'
-//  }} 
-         >
-<h2 className="common-heading d-flex align-items-center justify-content-center mt-5">Contact page &nbsp;
+<div className='contact'>
+<h1 className="common-heading d-flex align-items-center justify-content-center mt-5">Contact page &nbsp;
   <i style={{fontSize:"24px"}} className='far'>&#xf086;</i>
-</h2>
+</h1>
 
 
 

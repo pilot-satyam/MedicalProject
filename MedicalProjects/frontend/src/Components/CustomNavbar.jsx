@@ -11,6 +11,7 @@ import { doLogout, getCurrentUserDetail,isLoggedIn } from '../auth';
 import '../Style/NavBar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import '../Style/Global.css'
 const CustomNavbar =(props)=> {
 
   let navigate = useNavigate()
@@ -60,7 +61,7 @@ const CustomNavbar =(props)=> {
         <Navbar.Collapse id="responsive-navbar-nav">
 
          <Nav className="me-auto space">
-            <NavLink to="/home" style={{textDecoration: 'none'}}> HOME &nbsp;&nbsp;&nbsp;</NavLink>
+            <NavLink to="/home" style={{textDecoration: 'none'}} className="nav-content"> HOME &nbsp;&nbsp;&nbsp;</NavLink>
             {/* color:'#FFFFFF' */}
             {/* <Nav className='me-auto'> */}
             
