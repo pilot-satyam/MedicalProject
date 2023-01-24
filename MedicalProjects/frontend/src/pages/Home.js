@@ -2,7 +2,7 @@
 import Base from "../Components/Base";
 import Content from "../Components/Content"
 import React from 'react'
-
+import Grid from "./Grid";
 import '../Style/Global.css';
 import SliderAuto from "../pages/SliderAuto";
 function Home() {
@@ -42,6 +42,9 @@ function Home() {
             <SliderAuto/>
          
             <Content myData={data} />
+        </div>
+        <div>
+          <Grid/>
         </div>
     </Base>
     </div>

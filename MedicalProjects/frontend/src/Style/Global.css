@@ -25,6 +25,8 @@ h1 {
 
 
 
+
+
 .button:hover{
   border-radius: 5ch;
   border-color: rgb(46, 3, 87);
@@ -192,3 +194,10 @@ h2 {
   margin: 0 1.5%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.newFeedStyle{
+  background-image: "url('public/background.jpg')";
+  background-size: cover;
+  background-position: center;
+}
+
