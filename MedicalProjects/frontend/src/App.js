@@ -29,13 +29,15 @@ import AddPrescription from './Components/AddPrescription';
 import Doctors from './pages/Doctors';
 import { AppointmentPage } from './pages/AppointmentPage/AppoitmentPage';
 import Edit from './pages/Edit'
+import { Chat } from './pages/Chat';
+import UserProvider from './context/UserProvider';
+
 function App() {
-  
-
   return (
-
+  <UserProvider>
   <Container> 
   <BrowserRouter>
+  <Chat />
   <ToastContainer />
   <Routes>   
   <Route path="/" element={<Home />} />    
@@ -70,13 +72,14 @@ function App() {
 
   <Route path="/user" element={<PrivateRoute />} >
   <Route path="dashboard" element={<UserDashboard />} />
-  <Route path="profile-info/:userId" element={<ProfileInfo />} />
+  <Route path="profile-info" element={<ProfileInfo />} />
 
   </Route>
    </Routes>
   <FooterOne />
   </BrowserRouter>
   </Container>
+  </UserProvider>
   );
 }
 

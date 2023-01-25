@@ -223,6 +223,10 @@ const AddPrescription=()=>{
                         name="operations"
                         />
                     </div>
+                  {/* file field for uploading of scanning images */}
+                    <div className="mt-3">
+                        <Input type="file" />  
+                    </div>
                     <Container className="text-center">
                         <Button type="submit" color="primary">Create Prescription</Button>
                         <Button className="ms-2" color="danger">Reset Button</Button>

@@ -1,10 +1,13 @@
 // import CustomNavbar from "../components/CustomNavbar";
 import Base from "../Components/Base";
 import Content from "../Components/Content"
+import { Component } from "react";
 import React from 'react'
 
 import '../Style/Global.css';
 import SliderAuto from "../pages/SliderAuto";
+
+
 function Home() {
 
     const data = {
@@ -43,6 +46,7 @@ function Home() {
          
             <Content myData={data} />
         </div>
+        
     </Base>
     </div>
   )
