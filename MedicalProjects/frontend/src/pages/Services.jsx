@@ -15,7 +15,7 @@ const Services = () => {
         <br/>
         <container className="centerIt">
             <div className="col-container bg1">
-                <div className="col mt-4">
+                <div className="col mt-4" style={{ margin: "1rem"}}>
                     <p className="mt-6">Cure with Care Center</p>
                     <p> and make your vision clear</p>
                     <Link to="/doctor">
@@ -25,9 +25,9 @@ const Services = () => {
                     </Link>
                 </div>
 
-                <div className="col bg2">
+                <div className="col bg2 ml-5">
                     
-                    <p className="mt-4">Want to book Appointment</p>
+                    <p className="mt-4 ">Want to book Appointment</p>
                     <p>to avaid the last minute rush then</p>
                     <p>book your Appointment</p>
                     <p>here!</p>

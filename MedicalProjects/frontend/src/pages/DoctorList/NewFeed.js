@@ -34,19 +34,18 @@ function NewFeed() {
   }, []);
 
   return (
-    <div className='NewFeed container-fluid'>
-       style={{
-        backgroundImage: URL('public/background.jpg'),
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+    <div className='NewFeed container-fluid newFeedStyle'>
       <Row>
         <Col md={{ size: 10, offset: 1 }}>
           <h1 className="text-center my-5" style={{ color: "#ffffff" }}> 
             {/* Doctors List Length: {doctors.length}  */}
             Find the perfect doctor for you
           </h1>
-          {error && <p>{error}</p>}
+
+          {/* //error is object and to render it we have to do like this  */}
+          {/* {error && <p>{error}</p>} */}
+          {error && <p>{error.message}</p>}
+
           {
             doctors.map((doctor) => (
               <Doctor key={doctor.id} doctor={doctor} />

@@ -1,17 +1,3 @@
-/* .container{
-    width: 100%;
-  padding: 0rem 12rem;
-} */
-/* @keyframes typed {
-  from { width: 0; }
-}
-h1 {
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typed 0s steps(20);
-} */
-
 
 .button {
 
@@ -24,18 +10,11 @@ h1 {
 }
 
 
-
 .button:hover{
   border-radius: 5ch;
   border-color: rgb(46, 3, 87);
   transform:scale(1.05);
 }
-
-/* img {
-  min-width: 10rem;
-  height: 10rem;
-} */
-
 
 .hero-section-image {
   /* width: 100%; */
@@ -78,6 +57,10 @@ h1 {
       
   
     
+  }
+
+  .body{
+    background-image: url('../../public/body.jpg');
   }
   .space{
     display: inline-block;
@@ -191,4 +174,55 @@ h2 {
   width: 30%;
   margin: 0 1.5%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.newFeedStyle{
+  background-image: url('../../public/background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* this style is being applied for the Grid page */
+
+.slide {
+  animation: slide 0.5s ease-in-out;
+}
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+
+
+
+}
+
+.icon-container:hover .icon {
+  transform: scale(1.2); /* Increase the size of the icon by 20% */
+}
+hr {
+  width: 80%; /* set the width of the hr tag */
+  height: 4px;
+  margin: 10px auto; /* center the hr tag horizontally */
+  background: linear-gradient(to right, #f7f7f7, #fff);
+  border: none;
+}
+
+
+/* NavBar styling */
+
+nav .nav-content {
+  transition: transform 0.5s ease-in-out; /* add a transition for the scale effect */
+}
+
+nav:hover .nav-content {
+  transform: scale(2.2); /* Increase the size of the navbar content by 20% */
+}
+
+/* //for the contact us page */
+.contact{
+  background-image: url('../../public/Image1.jpg');
+
 }
