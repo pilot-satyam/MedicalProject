@@ -46,13 +46,10 @@ function Home() {
          
             <Content myData={data} />
         </div>
-<<<<<<< HEAD
         
-=======
         <div>
           <Grid/>
         </div>
->>>>>>> 2297fdbfdca6bcfcc7520c6a3658ec1e71d89e63
     </Base>
     </div>
   )

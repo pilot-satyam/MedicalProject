@@ -8,9 +8,10 @@ import {toast} from 'react-toastify'
 import { useRef } from "react";
 import { loadAllUsers } from "../services/user-service";
 import { getCurrentUserDetail } from "../auth";
-import { createPrescription as doCreatePrescription } from "../services/prescription-service";
+import { createPrescription as doCreatePrescription, uploadImage } from "../services/prescription-service";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // import the styles
+// import { error } from "jodit/types/core/helpers";
 
 
 
@@ -25,6 +26,9 @@ const AddPrescription=()=>{
    const[users,setUsers] = useState([])
    const[currentUser,setCurrentUser] = useState(undefined)
    //since we need to pass it to server that's why using it as object initially
+
+   const[Image,setImage] = useState(null)
+
    const[prescription,setPrescription] = useState({
       oldRemarks : '',
       newRemarks : '',
@@ -32,7 +36,8 @@ const AddPrescription=()=>{
       id:'',
       alcohol:'',
       smoke:'',
-      operations:''
+      operations:'',
+    //   Image : ''
    })
 
     useEffect(
@@ -57,6 +62,13 @@ const AddPrescription=()=>{
             })
         },[]
     )
+
+
+    //handling file change event
+    const handleFileChange=(event)=>{
+        console.log(event.target.files[0])
+        setImage(event.target.files[0])
+    }
 
     //field changed fn
     const fieldChanged=(event)=>{
@@ -92,10 +104,18 @@ const AddPrescription=()=>{
         }
 
         //submit the form on server
+        console.log(prescription);
         prescription['id'] = currentUser.id
         doCreatePrescription(prescription).then(data=>{
+            uploadImage(Image,data.id).then(data=>{
+                 toast.success("Image Uploaded");
+            }).catch(error=>{
+                toast.error("Error in uploading the image");
+                console.log(error);
+            })
+
             toast.success("Prescription Created")
-            // console.log(prescription)
+             console.log(prescription)
 
 
             setPrescription({
@@ -105,11 +125,12 @@ const AddPrescription=()=>{
                 id:'',
                 alcohol:'',
                 smoke:'',
-                operations:''
+                operations:'',
+                // Image : ''
             })
         }).catch((error)=>{
             toast.error("Prescription Not Created Due To Some Error Caused!!!")
-            // console.log(error)
+             console.log(error)
         })
     }
 
@@ -125,26 +146,26 @@ const AddPrescription=()=>{
                 <Form onSubmit={createPrescription}>
                     <div className="my-3">
                         <Label for="oldRemarks">Old Remarks</Label>
-                        {/* <Input 
+                        <Input 
                         type="text" 
                         id="oldRemarks"
                         placeholder="Old Remarks" 
                         onChange={fieldChanged}
                         name="oldRemarks"
-                        /> */}
-                        <ReactQuill value={content} onChange={setContent}/>
+                        />
+                        {/* <ReactQuill value={content} onChange={setContent}/> */}
                     </div>
 
                     <div className="my-3">
                         <Label for="newRemarks">New Remarks</Label>
-                        {/* <Input 
+                        <Input 
                         type="text" 
                         id="newRemarks"
                         placeholder="New Remarks" 
                         onChange={fieldChanged}
                         name="newRemarks"
-                        /> */}
-                        <ReactQuill value={content2} onChange={setContent2}/>
+                        />
+                        {/* <ReactQuill value={content2} onChange={setContent2}/> */}
                       
 
                        
@@ -225,9 +246,10 @@ const AddPrescription=()=>{
                     </div>
                   {/* file field for uploading of scanning images */}
                     <div className="mt-3">
-                        <Input type="file" />  
+                        <Label for="Image">Upload Reports</Label>
+                        <Input id="Image" type="file" onChange={handleFileChange} />  
                     </div>
-                    <Container className="text-center">
+                    <Container className="text-center mt-3">
                         <Button type="submit" color="primary">Create Prescription</Button>
                         <Button className="ms-2" color="danger">Reset Button</Button>
                     </Container>

@@ -7,6 +7,7 @@ const UserDashboard =()=>{
   return (
    <Base>
     <Container>
+      {/* <ProfileInfo /> */}
       <AddPrescription />
    </Container>
    </Base>

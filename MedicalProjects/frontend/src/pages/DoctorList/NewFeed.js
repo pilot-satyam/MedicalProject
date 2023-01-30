@@ -36,7 +36,7 @@ function NewFeed() {
   return (
     <div className='NewFeed container-fluid newFeedStyle'>
       <Row>
-        <Col md={{ size: 10, offset: 1 }}>
+        <Col md={{ size: 12 }}>
           <h1 className="text-center my-5" style={{ color: "#ffffff" }}> 
             {/* Doctors List Length: {doctors.length}  */}
             Find the perfect doctor for you

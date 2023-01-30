@@ -31,6 +31,7 @@ import { AppointmentPage } from './pages/AppointmentPage/AppoitmentPage';
 import Edit from './pages/Edit'
 import { Chat } from './pages/Chat';
 import UserProvider from './context/UserProvider';
+import FeedPlusMenu from './pages/DoctorList/FeedPlusMenu';
 
 function App() {
   return (
@@ -64,11 +65,11 @@ function App() {
   <Route exact path="/prescription" element={<Prescription/>}/>
   <Route exact path ="/appointmentForm" element={<AppointmentPage/>}/>
 
-  <Route exact path='/newfeed' element={<NewFeed />}/>
+  <Route exact path='/doctors' element={<NewFeed />}/>
   <Route exact path ='addPrescription' element={<AddPrescription/>}/>
   <Route exact path='/doctors/:doctorId' element={<Doctors />}/>
   <Route exact path= "*" element ={<ErrorPage />} />
-
+  <Route path='/feedplusmenu' element={<FeedPlusMenu/>} />
 
   <Route path="/user" element={<PrivateRoute />} >
   <Route path="dashboard" element={<UserDashboard />} />

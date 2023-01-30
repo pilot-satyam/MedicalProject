@@ -8,11 +8,11 @@ function UserProvider({children}) {
         name : "Satyam"
     })
 
-    useEffect(()=>{
-        setUser({
-            name : "Paridhi"
-        })
-    },[])
+    // useEffect(()=>{
+    //     setUser({
+    //         name : "Paridhi"
+    //     })
+    // },[])
 
   return (
       <userContext.Provider value = {user}>

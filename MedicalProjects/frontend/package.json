@@ -23,11 +23,8 @@
     "react-icons": "^4.7.1",
     "react-infinite-scroll-component": "^6.1.0",
     "react-phone-number-input": "^3.2.13",
-<<<<<<< HEAD
     "react-quill": "^2.0.0",
-=======
     "react-responsive": "^9.0.2",
->>>>>>> 2297fdbfdca6bcfcc7520c6a3658ec1e71d89e63
     "react-router-dom": "^6.4.5",
     "react-router-redux": "^5.0.0-alpha.9",
     "react-scripts": "^5.0.1",

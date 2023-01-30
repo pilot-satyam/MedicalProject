@@ -91,10 +91,10 @@ public class PrescriptionController {
     }
 
     //update Prescription
-    @PutMapping("/prescriptions/{pId}")
-    public ResponseEntity<PrescriptionDto> updatePrescription(@RequestBody PrescriptionDto pDto,@PathVariable Integer pId)
+    @PutMapping("/prescriptions/{Id}")
+    public ResponseEntity<PrescriptionDto> updatePrescription(@RequestBody PrescriptionDto pDto,@PathVariable Integer Id)
     {
-      PrescriptionDto updatedPrescriptionDto =  this.prescriptionService.updatePrescription(pDto, pId);
+      PrescriptionDto updatedPrescriptionDto =  this.prescriptionService.updatePrescription(pDto, Id);
       return new ResponseEntity<PrescriptionDto>(updatedPrescriptionDto,HttpStatus.OK);
     }
 
@@ -111,16 +111,24 @@ public class PrescriptionController {
 
     //Post Image Upload
     //Path variable is used to fetch the prescription Id
-    /**
-     * @param image
-     * @param Id
-     * @return
-     * @throws IOException
-     */
+
+    // @PostMapping("/prescription/image/upload/{Id}")
+    // public ResponseEntity<PrescriptionDto> uploadReportImage(
+    //     @RequestParam("image") MultipartFile image,
+    //     @PathVariable Integer Id
+    // ) throws IOException
+    // {
+    //    PrescriptionDto prescriptionDto = this.prescriptionService.getPrescriptionById(Id);
+    //    String fileName =   this.fileService.uploadImage(path, image);
+    //    prescriptionDto.setReportImage(fileName);
+    //    PrescriptionDto updatedPrescription = this.prescriptionService.updatePrescription(prescriptionDto, Id);
+    //    return new ResponseEntity<PrescriptionDto>(updatedPrescription,HttpStatus.OK);
+    // }
+
     @PostMapping("/prescription/image/upload/{Id}")
     public ResponseEntity<PrescriptionDto> uploadReportImage(
         @RequestParam("image") MultipartFile image,
-        @PathVariable Integer Id
+        @PathVariable("Id") Integer Id
     ) throws IOException
     {
        PrescriptionDto prescriptionDto = this.prescriptionService.getPrescriptionById(Id);
