@@ -70,7 +70,7 @@ const CustomNavbar =(props)=> {
             <NavLink to="/services" style={{textDecoration: 'none'}}> SERVICES &nbsp;&nbsp;&nbsp;</NavLink>
             <NavLink to="/contactUs" style={{textDecoration: 'none'}}>  CONTACT US &nbsp;&nbsp;&nbsp;</NavLink>
             <NavLink to="/address" style={{textDecoration: 'none'}}> ADDRESS &nbsp;&nbsp;&nbsp;</NavLink>
-            <a href="https://youtu.be/6TXwBwVh_V8" style={{textDecoration: 'none'}}> NEWS/EVENTS &nbsp;&nbsp;&nbsp;</a>
+            <NavLink to ="/news&Event" style={{textDecoration: 'none'}}> NEWS/EVENTS &nbsp;&nbsp;&nbsp;</NavLink>
             
 
             {/* <NavDropdown title="More" id="basic-nav-dropdown" className='nav'>
