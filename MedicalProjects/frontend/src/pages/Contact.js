@@ -3,7 +3,8 @@ import Base from "../Components/Base";
 import '../Style/Global.css';
 import '../Style/placeholderTop.css';
 import '../Style/backgrd.css'
-function Contact() {
+import userContext from '../context/userContext';
+const Contact=()=>{
 
   return (
     

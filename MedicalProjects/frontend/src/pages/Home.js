@@ -1,11 +1,14 @@
 // import CustomNavbar from "../components/CustomNavbar";
 import Base from "../Components/Base";
 import Content from "../Components/Content"
+import { Component } from "react";
 import React from 'react'
 import Grid from "./Grid";
 import '../Style/Global.css';
 import SliderAuto from "../pages/SliderAuto";
+
 import Testimonial from "../pages/Testimonial"
+
 function Home() {
 
     const data = {
@@ -44,9 +47,12 @@ function Home() {
          
             <Content myData={data} />
         </div>
+        
+
         <div>
           <Grid/>
         </div>
+
 
         <br/><br/><br/>
         <div style={{backgroundColor:'#7657b1'}}>
@@ -54,6 +60,7 @@ function Home() {
           <h3 className="centerIt">Testimonial</h3>
           <Testimonial/>
         </div>
+
     </Base>
     </div>
   )
