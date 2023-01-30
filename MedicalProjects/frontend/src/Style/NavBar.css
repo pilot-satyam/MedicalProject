@@ -30,10 +30,10 @@
     margin-right: 20px;
   }
   .navbar:hover {
-    background-color: #f5f5f5;
+    background-color: #d1c6c6;
   }
   
   .navbar-dark:hover {
-    background-color: #333;
+    background-color: rgb(83, 81, 81);
   }
   

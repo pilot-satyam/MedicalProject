@@ -1,10 +1,13 @@
 // import CustomNavbar from "../components/CustomNavbar";
 import Base from "../Components/Base";
 import Content from "../Components/Content"
+import { Component } from "react";
 import React from 'react'
-
+import Grid from "./Grid";
 import '../Style/Global.css';
 import SliderAuto from "../pages/SliderAuto";
+
+
 function Home() {
 
     const data = {
@@ -29,7 +32,7 @@ function Home() {
 <FontAwesomeIcon icon={['fab', 'github']} /> */}
 
         <div >
-          <h2 className="centerIt">Welcome to<br/> 
+          <h2 className="centerIt body">Welcome to<br/> 
           <h1 style={{fontWeight:'bold',fontSize:'47px'}}>
             ImyEYE Care Center &nbsp;
           </h1>
@@ -43,6 +46,13 @@ function Home() {
          
             <Content myData={data} />
         </div>
+<<<<<<< HEAD
+        
+=======
+        <div>
+          <Grid/>
+        </div>
+>>>>>>> 2297fdbfdca6bcfcc7520c6a3658ec1e71d89e63
     </Base>
     </div>
   )
