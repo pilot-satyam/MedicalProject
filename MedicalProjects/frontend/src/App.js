@@ -29,6 +29,7 @@ import AddPrescription from './Components/AddPrescription';
 import Doctors from './pages/Doctors';
 import { AppointmentPage } from './pages/AppointmentPage/AppoitmentPage';
 import Edit from './pages/Edit'
+import NewsEvent from './pages/NewsEvent';
 function App() {
   
 
@@ -65,6 +66,7 @@ function App() {
   <Route exact path='/newfeed' element={<NewFeed />}/>
   <Route exact path ='addPrescription' element={<AddPrescription/>}/>
   <Route exact path='/doctors/:doctorId' element={<Doctors />}/>
+  <Route exact path ='/news&Event' element ={<NewsEvent/>}/>
   <Route exact path= "*" element ={<ErrorPage />} />
 
 

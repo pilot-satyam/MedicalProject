@@ -5,6 +5,7 @@ import React from 'react'
 import Grid from "./Grid";
 import '../Style/Global.css';
 import SliderAuto from "../pages/SliderAuto";
+import Testimonial from "../pages/Testimonial"
 function Home() {
 
     const data = {
@@ -45,6 +46,13 @@ function Home() {
         </div>
         <div>
           <Grid/>
+        </div>
+
+        <br/><br/><br/>
+        <div style={{backgroundColor:'#7657b1'}}>
+          <br/><br/>
+          <h3 className="centerIt">Testimonial</h3>
+          <Testimonial/>
         </div>
     </Base>
     </div>
