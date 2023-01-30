@@ -5,10 +5,12 @@ import Base from "../Components/Base";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import DoctorSignup from './DoctorSignup';
+import '../Style/login.css';
 
 const PhysicianLogin = () =>{
     return(
         <Base>
+        <div className ="container-fluid">
         <Container className='mt-5 text-center'>
           <Row className='mt-4'>
              <Col sm={{
@@ -18,7 +20,7 @@ const PhysicianLogin = () =>{
                     <Row>
                         <Col sm={6}><div className="hero-section-image imageCenter">
             
-                        <img
+                        <img id="image_id"
                           src="contact.jpg"
                           alt="hero-section-photo"
                           className="img-style  float-left"
@@ -32,7 +34,7 @@ const PhysicianLogin = () =>{
                     
                     </div></Col>
                 
-                        <Col sm={5}><CardHeader className="formStyle">
+                        <Col sm={5} id="login_details"><CardHeader className="mt-4 formStyle">
                         <h6 className="centerIt" >Hey Amazing Doctors, <br></br></h6>
                         <h3>
                         Login Here<br/>
@@ -80,7 +82,9 @@ const PhysicianLogin = () =>{
  
              </Col>
           </Row>
+          
         </Container>
+        </div>
          </Base>
     );
 }
