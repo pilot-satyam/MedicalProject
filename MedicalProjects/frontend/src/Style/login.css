@@ -5,7 +5,10 @@
     }
 
     #image_id{
-        width:30rem;
-        margin-left: 100px;;
+        /* margin-left: 45em; */
+    }
+
+    #patient_login_id{
+        width:100%;
     }
 }

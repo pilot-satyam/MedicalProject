@@ -10,6 +10,7 @@ import Form from 'react-bootstrap/Form';
 import { loginUser } from '../services/user-service';
 import { doLogin } from '../auth';
 import { useNavigate } from 'react-router-dom';
+import '../Style/login.css';
 
 const Login = () =>{
 
@@ -97,7 +98,7 @@ const handleForSubmit = (event) =>{
                 
                 </div>
                     </Col>
-                    <Col sm={5}>
+                    <Col sm={5} id='patient_login_id'>
                     <CardHeader className='mt-4 formStyle'>
                     <h3 className="centerIt">Login Here</h3>
                     <i style={{fontSize:"24px"}} className="fa centerIt">&#xf2bc;</i>
