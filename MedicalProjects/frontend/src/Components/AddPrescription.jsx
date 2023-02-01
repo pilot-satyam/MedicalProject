@@ -105,7 +105,9 @@ const AddPrescription=()=>{
 
         //submit the form on server
         console.log(prescription);
-        prescription['id'] = currentUser.id
+        // prescription['id'] = currentUser.id
+        prescription['id'] = currentUser ? currentUser.id : '';
+
         doCreatePrescription(prescription).then(data=>{
             uploadImage(Image,data.id).then(data=>{
                  toast.success("Image Uploaded");

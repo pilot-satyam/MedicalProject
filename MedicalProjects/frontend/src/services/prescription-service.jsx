@@ -23,7 +23,7 @@ export const uploadImage = (image,Id)=>{
 //load prescription by doctor
 export function loadPrescriptionByDoctor(doctorId)
 {
-        return privateAxios
+        return myAxios
         .get(`/doctor/${doctorId}/prescriptions`)
         .then(response => response.data)
 };
@@ -31,7 +31,7 @@ export function loadPrescriptionByDoctor(doctorId)
 //load prescription for user
 export function loadPrescriptionForUser(userId)
 {
-        return privateAxios
+        return myAxios
         .get(`/user/${userId}/prescriptions`)
         .then(response => {return response.data})
 };
