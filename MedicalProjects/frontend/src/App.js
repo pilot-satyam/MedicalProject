@@ -35,6 +35,9 @@ import NewsEvent from './pages/NewsEvent';
 import { Chat } from './pages/Chat';
 import UserProvider from './context/UserProvider';
 import FeedPlusMenu from './pages/DoctorList/FeedPlusMenu';
+import MoreDetails from './pages/MoreDetails';
+import UserFeed from './pages/UsersList/UserFeed';
+import SingleUserVisible from './pages/UsersList/SingleUserVisible';
 
 
 function App() {
@@ -72,9 +75,12 @@ function App() {
   <Route exact path='/doctors' element={<NewFeed />}/>
   <Route exact path ='addPrescription' element={<AddPrescription/>}/>
   <Route exact path='/doctors/:doctorId' element={<Doctors />}/>
+  <Route exact path='/users/:userId' element={<SingleUserVisible/>} />
   <Route exact path ='/news&Event' element ={<NewsEvent/>}/>
   <Route exact path= "*" element ={<ErrorPage />} />
   <Route path='/feedplusmenu' element={<FeedPlusMenu/>} />
+  <Route path='/feedplusmenu/:doctorId' element={<MoreDetails/>} />
+  <Route path="/users" element={<UserFeed/>} />
 
   <Route path="/user" element={<PrivateRoute />} >
   <Route path="dashboard" element={<UserDashboard />} />

@@ -16,6 +16,23 @@ export const uploadImage = (image,Id)=>{
                 headers:{
                         'Content-Type'  :'multipart/form-data'
                 } 
-        }).then((response)=>response.data)
+        })
+        .then((response)=>response.data)
+};
+
+//load prescription by doctor
+export function loadPrescriptionByDoctor(doctorId)
+{
+        return privateAxios
+        .get(`/doctor/${doctorId}/prescriptions`)
+        .then(response => response.data)
+};
+
+//load prescription for user
+export function loadPrescriptionForUser(userId)
+{
+        return privateAxios
+        .get(`/user/${userId}/prescriptions`)
+        .then(response => {return response.data})
 };
 
