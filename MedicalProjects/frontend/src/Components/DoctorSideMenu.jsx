@@ -30,7 +30,8 @@ function DoctorSideMenu() {
 
         {doctors && doctors.map((doc,index)=>{
             return(
-            <ListGroupItem tag={Link} to={'/doctors/'+doc.doctorId} key={doc.doctorId} action={true} className='border-0 shadow-0 mt-1 '>
+            // <ListGroupItem tag={Link} to={'/doctors/'+doc.doctorId} key={doc.doctorId} action={true} className='border-0 shadow-0 mt-1 '>
+            <ListGroupItem tag={Link} to={'/feedplusmenu/'+doc.doctorId} key={doc.doctorId} action={true} className='border-0 shadow-0 mt-1 '>
                 {doc.name}
             </ListGroupItem>
             )
