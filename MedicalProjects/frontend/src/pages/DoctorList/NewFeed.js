@@ -12,18 +12,64 @@ function NewFeed() {
     const[doctors,setDoctors] = useState([]) //initializing the state with an empty array
     const[error,setError] = useState(null)
 
-    useEffect(()=>{
+   
+   
+    //useState for infinite scroll
+    const [loading, setLoading] = useState(false);
+    const [hasMore, setHasMore] = useState(true);
 
-        //---->load all doctors from server<------
+    // useEffect(()=>{
+
+    //     //---->load all doctors from server<------
+    //     loadAllDoctors()
+    //         .then((data)=>{
+    //             setDoctors(data)
+    //         })
+    //         .catch((error)=>{
+    //             setError(error)
+    //         })
+
+    // },[])
+
+
+    //useEffect with the fetching data nd infinite scroll
+  
+    useEffect(() => {
+        fetchData();
+        window.addEventListener("scroll", handleScroll);
+
+        //cleanUp function
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+
+      const handleScroll = () => {
+        if (
+          window.innerHeight + document.documentElement.scrollTop !==
+            document.documentElement.offsetHeight ||
+          loading
+        )
+          return;
+        fetchData();
+      };
+
+      const fetchData = async () => {
+        setLoading(true);
+
+      
+        //loads all doctors for server
         loadAllDoctors()
-            .then((data)=>{
-                setDoctors(data)
-            })
-            .catch((error)=>{
-                setError(error)
-            })
+                .then((data)=>{
+                    setDoctors(prevDoctors => [...prevDoctors, ...data]);
+                    setHasMore(data.length > 0);
+                    setLoading(false);
+                })
+                .catch((error)=>{
+                    setError(error);
+                    setLoading(false);
+                })
 
-    },[])
+       
+      };
 
    return(
         
@@ -41,7 +87,11 @@ function NewFeed() {
                     doctors.map((doctor)=>(
                         <Doctor key={doctor.id} doctor={doctor} /> //passing the doctor object as a prop
                     ))
-                }   
+                } 
+            
+            {/* //Will load more data if it comes to end of the page */}
+            {loading && <p>Loading...</p>}
+            {!loading && !hasMore && <p>No more data to show</p>}    
             </Col>
         </Row>
     </div>
