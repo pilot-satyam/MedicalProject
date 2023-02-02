@@ -18,8 +18,8 @@ import 'react-quill/dist/quill.snow.css'; // import the styles
 const AddPrescription=()=>{
 
     // const editor = useRef(0)
-    const [content,setContent] = useState('')
-    const [content2,setContent2] = useState('')
+    // const [content,setContent] = useState('')
+    // const [content2,setContent2] = useState('')
 
     //use to destructure array so that data can be fetched from backend
    const [doctors,setDoctors] = useState([])
@@ -72,36 +72,59 @@ const AddPrescription=()=>{
 
     //field changed fn
     const fieldChanged=(event)=>{
-        setPrescription({...prescription,[event.target.name]:event.target.value})
+        // setPrescription({...prescription,[event.target.name]:event.target.value})
+
+        //to access the particular field of prescription state
+
+        const { name, value } = event.target;
+        const { oldRemarks, newRemarks, doctorId, id, alcohol, smoke, operations } = prescription;
+
+    if (name === "oldRemarks") {
+        setPrescription({ oldRemarks: value, newRemarks, doctorId, id, alcohol, smoke, operations });
+    } if (name === "newRemarks") {
+        setPrescription({ oldRemarks, newRemarks: value, doctorId, id, alcohol, smoke, operations });
+    }if (name === "doctorId") {
+        setPrescription({ oldRemarks, newRemarks, doctorId : value, id, alcohol, smoke, operations });
+    }if (name === "id") {
+        setPrescription({ oldRemarks, newRemarks, id: value, doctorId, newRemarks, alcohol, smoke, operations });
+    }if (name === "alcohol") {
+        setPrescription({ oldRemarks, newRemarks, doctorId, id,  alcohol: value, smoke, operations });
+    }if (name === "smoke") {
+        setPrescription({ oldRemarks, newRemarks, doctorId, id, alcohol,  smoke: value, operations });
+    }if (name === "operatios") {
+        setPrescription({ oldRemarks,newRemarks, doctorId, id, alcohol, smoke, operations: value});
+    }
+
+
     }
 
     //create prescription function
 
     const createPrescription = (event)=>{
         event.preventDefault();
-        // console.log("form submitted")
-        console.log(prescription)
-        if(prescription.oldRemarks.trim() === ''){
-            toast.error("Old Remarks Required");
-        }
-        if(prescription.newRemarks.trim() === ''){
-            toast.error("New Remarks Required");
-        }
-        if(prescription.DoctorId === ''){
-            toast.error("Select A Doctor");
-        }
-        if(prescription.id ===''){
-            toast.error("Select Patient")
-        }
-        if(prescription.alcohol === ''){
-            toast.error("Required alcohol consumption")
-        }
-        if(prescription.smoke === ''){
-            toast.error("Required smoke consumption")
-        }
-        if(prescription.operations === ''){
-            toast.error("Required operations history")
-        }
+        console.log("form submitted")}
+    //     console.log(prescription)
+    //     if(prescription.oldRemarks.trim() === ''){
+    //         toast.error("Old Remarks Required");
+    //     }
+    //     if(prescription.newRemarks.trim() === ''){
+    //         toast.error("New Remarks Required");
+    //     }
+    //     if(prescription.DoctorId === ''){
+    //         toast.error("Select A Doctor");
+    //     }
+    //     if(prescription.id ===''){
+    //         toast.error("Select Patient")
+    //     }
+    //     if(prescription.alcohol === ''){
+    //         toast.error("Required alcohol consumption")
+    //     }
+    //     if(prescription.smoke === ''){
+    //         toast.error("Required smoke consumption")
+    //     }
+    //     if(prescription.operations === ''){
+    //         toast.error("Required operations history")
+    //     }
 
         //submit the form on server
         console.log(prescription);
@@ -132,7 +155,7 @@ const AddPrescription=()=>{
             toast.error("Prescription Not Created Due To Some Error Caused!!!")
              console.log(error)
         })
-    }
+    
 
     return(
         <Base>
@@ -146,26 +169,26 @@ const AddPrescription=()=>{
                 <Form onSubmit={createPrescription}>
                     <div className="my-3">
                         <Label for="oldRemarks">Old Remarks</Label>
-                        <Input 
+                        {/* <Input 
                         type="text" 
                         id="oldRemarks"
                         placeholder="Old Remarks" 
                         onChange={fieldChanged}
                         name="oldRemarks"
-                        />
-                        {/* <ReactQuill value={content} onChange={setContent}/> */}
+                        /> */}
+                        <ReactQuill value='' name="oldRemarks" id="oldRemarks" onChange={fieldChanged}/>
                     </div>
 
                     <div className="my-3">
                         <Label for="newRemarks">New Remarks</Label>
-                        <Input 
+                        {/* <Input 
                         type="text" 
                         id="newRemarks"
                         placeholder="New Remarks" 
                         onChange={fieldChanged}
                         name="newRemarks"
-                        />
-                        {/* <ReactQuill value={content2} onChange={setContent2}/> */}
+                        /> */}
+                        <ReactQuill value='' name="newRemarks" id="newRemarks"onChange={fieldChanged}/>
                       
 
                        

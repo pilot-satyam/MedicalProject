@@ -206,27 +206,30 @@ hr {
   width: 80%; /* set the width of the hr tag */
   height: 4px;
   margin: 10px auto; /* center the hr tag horizontally */
-  background: linear-gradient(to right, #f7f7f7, #fff);
+  background: linear-gradient(to right, #cbc1c1, #fff);
   border: none;
 }
-
-
-/* NavBar styling */
-
-nav .nav-content {
-  transition: transform 0.5s ease-in-out; /* add a transition for the scale effect */
+.outer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-nav:hover .nav-content {
-  transform: scale(2.2); /* Increase the size of the navbar content by 20% */
+.box {
+  width: 200px;
+  height: 400px;
+  margin: 10px;
+  background-color: #7657b1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
 }
 
-/* //for the contact us page */
-.contact{
-  background-image: url('../../public/Image1.jpg');
-
+.box:hover {
+  transform: scale(1.07);
+  cursor: pointer;
 }
-
 
 
 /* //css added for the News&EVent Page */
@@ -290,4 +293,26 @@ nav:hover .nav-content {
   height: 100%;
 }
 
+/* //for the service boxes */
 
+.outerService{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.boxService {
+  width: 200px;
+  height: 220px;
+  margin: 10px;
+  background-color: #7657b1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.boxService:hover {
+  transform: scale(1.07);
+  cursor: pointer;
+}
