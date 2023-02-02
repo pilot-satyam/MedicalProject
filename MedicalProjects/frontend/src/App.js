@@ -84,7 +84,7 @@ function App() {
 
   <Route path="/user" element={<PrivateRoute />} >
   <Route path="dashboard" element={<UserDashboard />} />
-  <Route path="profile-info" element={<ProfileInfo />} />
+  <Route path="profile-info/:userId" element={<ProfileInfo />} />
 
   </Route>
    </Routes>

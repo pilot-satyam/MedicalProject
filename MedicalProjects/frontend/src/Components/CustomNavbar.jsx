@@ -86,7 +86,7 @@ const CustomNavbar =(props)=> {
             {
               login && ( 
                 <>
-                <Nav.Link href="/user/profile-info">
+                <Nav.Link href={`/user/profile-info/${user.id}`}>
                   Profile Info
                 </Nav.Link>
                 <Nav.Link href="/user/dashboard">{user.email}</Nav.Link>

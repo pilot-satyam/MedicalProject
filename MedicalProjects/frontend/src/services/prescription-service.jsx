@@ -28,11 +28,10 @@ export function loadPrescriptionByDoctor(doctorId)
         .then(response => response.data)
 };
 
-//load prescription for user
-export function loadPrescriptionForUser(userId)
-{
-        return myAxios
+//load prescription UserWise
+export function loadPrescriptionUserWise(userId){
+        return privateAxios
         .get(`/user/${userId}/prescriptions`)
-        .then(response => {return response.data})
-};
+        .then(response=>response.data)
+}
 
