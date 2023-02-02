@@ -4,11 +4,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Card,CardBody, CardText } from 'reactstrap'
-
+import "../../Style/Global.css"
 function User({prescription={name:"THis is default prescription",age:"Default age"}}  ){
   return (
-    <Card className='border-0 shadow-sm  mt-3'>
-    <CardBody>
+    <Card className='border-0 shadow-sm  mt-3 newFeedStyle outer'>
+    <CardBody className='box'>
         <h1>{prescription.name}</h1>
         <CardText>
           Age :  {prescription.age}<br></br>

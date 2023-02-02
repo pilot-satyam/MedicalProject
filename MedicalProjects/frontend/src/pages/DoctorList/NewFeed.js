@@ -37,6 +37,8 @@ function NewFeed() {
     useEffect(() => {
         fetchData();
         window.addEventListener("scroll", handleScroll);
+
+        //cleanUp function
         return () => window.removeEventListener("scroll", handleScroll);
       }, []);
 
