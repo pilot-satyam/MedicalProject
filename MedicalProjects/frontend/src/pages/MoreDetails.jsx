@@ -7,6 +7,7 @@ import Base from '../Components/Base'
 import DoctorSideMenu from '../Components/DoctorSideMenu'
 import { loadPrescriptionByDoctor } from '../services/prescription-service'
 import Doctor from './DoctorList/Doctor'
+import User from './UsersList/User'
 
 function MoreDetails() {
 
@@ -38,7 +39,7 @@ useEffect(()=>{
         {
             prescription && prescription.map((prescription,index)=>{
                 return (
-                    <Doctor key={index} prescription = {prescription} />
+                    <User key={index} prescription = {prescription} />
                 )
             })
         }
