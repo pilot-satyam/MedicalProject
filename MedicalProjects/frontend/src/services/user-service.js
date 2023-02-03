@@ -31,8 +31,8 @@ export const loadUser = (userId) => {
     // return Promise.reject("User ID is undefined");
   };
 
-  //update the user
 
+  //update the user
   export const updateUser = (userId, updatedUserData) => {
     return privateAxios
       .put(`/users/${userId}`, updatedUserData)
