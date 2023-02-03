@@ -18,8 +18,8 @@ import 'react-quill/dist/quill.snow.css'; // import the styles
 const AddPrescription=()=>{
 
     // const editor = useRef(0)
-    const [content,setContent] = useState('')
-    const [content2,setContent2] = useState('')
+    // const [content,setContent] = useState('')
+    // const [content2,setContent2] = useState('')
 
     //use to destructure array so that data can be fetched from backend
    const [doctors,setDoctors] = useState([])
@@ -79,7 +79,7 @@ const AddPrescription=()=>{
 
     const createPrescription = (event)=>{
         event.preventDefault();
-        // console.log("form submitted")
+        console.log("form submitted")}
         console.log(prescription)
         if(prescription.oldRemarks.trim() === ''){
             toast.error("Old Remarks Required");
@@ -120,21 +120,21 @@ const AddPrescription=()=>{
              console.log(prescription)
 
 
-            setPrescription({
-                oldRemarks : '',
-                newRemarks : '',
-                doctorId : '',
-                id:'',
-                alcohol:'',
-                smoke:'',
-                operations:'',
-                // Image : ''
-            })
+            // setPrescription({
+            //     oldRemarks : '',
+            //     newRemarks : '',
+            //     doctorId : '',
+            //     id:'',
+            //     alcohol:'',
+            //     smoke:'',
+            //     operations:'',
+            //     // Image : ''
+            // })
         }).catch((error)=>{
             toast.error("Prescription Not Created Due To Some Error Caused!!!")
              console.log(error)
         })
-    }
+    
 
     return(
         <Base>
@@ -148,26 +148,26 @@ const AddPrescription=()=>{
                 <Form onSubmit={createPrescription}>
                     <div className="my-3">
                         <Label for="oldRemarks">Old Remarks</Label>
-                        <Input 
+                        {/* <Input 
                         type="text" 
                         id="oldRemarks"
                         placeholder="Old Remarks" 
                         onChange={fieldChanged}
                         name="oldRemarks"
-                        />
-                        {/* <ReactQuill value={content} onChange={setContent}/> */}
+                        /> */}
+                        <ReactQuill value='' name="oldRemarks" id="oldRemarks" onChange={fieldChanged}/>
                     </div>
 
                     <div className="my-3">
                         <Label for="newRemarks">New Remarks</Label>
-                        <Input 
+                        {/* <Input 
                         type="text" 
                         id="newRemarks"
                         placeholder="New Remarks" 
                         onChange={fieldChanged}
                         name="newRemarks"
-                        />
-                        {/* <ReactQuill value={content2} onChange={setContent2}/> */}
+                        /> */}
+                        <ReactQuill value='' name="newRemarks" id="newRemarks" onChange={fieldChanged}/>
                       
 
                        

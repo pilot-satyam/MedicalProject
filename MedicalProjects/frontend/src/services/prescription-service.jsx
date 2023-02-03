@@ -2,7 +2,8 @@ import { myAxios, privateAxios } from "./helper"
 
 export const createPrescription =(prescriptionData)=>{
         return privateAxios
-        .post(`/user/${prescriptionData.id}/doctor/${prescriptionData.doctorId}/prescriptions`,prescriptionData).then(response=>response.data )
+        .post(`/user/${prescriptionData.id}/doctor/${prescriptionData.doctorId}/prescriptions`,prescriptionData)
+        .then(response=>response.data )
 }
  
 // upload report Images
@@ -28,11 +29,10 @@ export function loadPrescriptionByDoctor(doctorId)
         .then(response => response.data)
 };
 
-//load prescription for user
-export function loadPrescriptionForUser(userId)
-{
-        return myAxios
+//load prescription UserWise
+export function loadPrescriptionUserWise(userId){
+        return privateAxios
         .get(`/user/${userId}/prescriptions`)
-        .then(response => {return response.data})
-};
+        .then(response=>response.data)
+}
 
