@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Card,CardBody, CardText } from 'reactstrap'
+import "../../Style/Global.css"
 import { getCurrentUserDetail, isLoggedIn } from '../../auth'
 
 function Doctor({doctor={id:-1,name:"THis is default doctor",qualification:"Default qualification"}}){
@@ -16,18 +17,18 @@ function Doctor({doctor={id:-1,name:"THis is default doctor",qualification:"Defa
        setLogin(isLoggedIn())
   },[])
 
+
   return (
-    <Card className='border-0 shadow-sm  mt-3'>
-    <CardBody>
-        <h1>{doctor.name}</h1>
+    <Card className='border-0 shadow-sm  mt-3 outer newFeedStyle'>
+    <CardBody className='box'>
+        <h1><b>{doctor.name}</b></h1>
         <CardText>
-          Qualification :  {doctor.qualification}<br></br>
-          Experience :  {doctor.experience}<br></br>
-          Fees : Rs. {doctor.fees}
+          Qualification :  <i style={{fontSize:"24px"}} className="fa">&#xf19d;</i> &nbsp; {doctor.qualification}<br></br>
+          Experience : <i style={{fontSize:"24px"}} className="fa">&#xf091;</i> &nbsp; {doctor.experience}<br></br>
+          Fees : <i style={{fontSize:"24px"}} className="fa">&#xf0d6;</i> &nbsp; Rs. {doctor.fees}
         </CardText>
         <div>
           <Link className='btn btn-secondary' to={'/doctors/'+doctor.doctorId}>Details Of Doc</Link>
-          {/* {isLoggedIn && (user.id === doctor.user.id ? <Button color='danger' className='ms-2'>Delete</Button> : '')} */}
         </div>
     </CardBody>
 </Card>
