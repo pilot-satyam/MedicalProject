@@ -10,13 +10,13 @@ import '../Style/login.css';
 const PhysicianLogin = () =>{
     return(
         <Base>
-        <div className ="container-fluid">
-        <Container className='mt-5 text-center'>
+        <div className ="">
+        <Container className='mt-4 text-center'>
           <Row className='mt-4'>
              <Col sm={{
                  size:10
              }}>
-                 <Card className=''>
+                 <Card className='mt-4'>
                     <Row>
                         <Col sm={6}><div className="hero-section-image imageCenter">
             

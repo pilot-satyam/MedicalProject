@@ -81,7 +81,7 @@ const handleForSubmit = (event) =>{
             <Col sm={{
                 size:8
             }}>
-                <Card className='mt-4'>
+                <Card className=''>
                 <Row>
                     <Col sm={6}>
                     <div className="hero-section-image imageCenter">
