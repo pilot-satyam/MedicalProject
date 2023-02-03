@@ -38,7 +38,7 @@ import FeedPlusMenu from './pages/DoctorList/FeedPlusMenu';
 import MoreDetails from './pages/MoreDetails';
 import UserFeed from './pages/UsersList/UserFeed';
 import SingleUserVisible from './pages/UsersList/SingleUserVisible';
-
+import FakeDoctor from './pages/DoctorList/FakeDoctor'
 
 function App() {
   return (
@@ -81,6 +81,7 @@ function App() {
   <Route path='/feedplusmenu' element={<FeedPlusMenu/>} />
   <Route path='/feedplusmenu/:doctorId' element={<MoreDetails/>} />
   <Route path="/users" element={<UserFeed/>} />
+
 
   <Route path="/user" element={<PrivateRoute />} >
   <Route path="dashboard" element={<UserDashboard />} />
