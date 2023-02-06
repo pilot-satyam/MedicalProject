@@ -4,11 +4,29 @@
     #login_details{width:100%;
     }
 
-    #image_id{
-        /* margin-left: 45em; */
-    }
 
     #patient_login_id{
         width:100%;
     }
 }
+#login_details{
+    width:90vh;
+    height: 486px;
+}
+
+#patient_login_id{
+    width:90.1vh;
+    height: 512.3px;
+}
+
+ #img_id{
+    border-radius:0.37rem;
+    border-top-right-radius: 0px ;
+    border-bottom-right-radius: 0px ;
+ }
+
+ #image_id{
+    border-radius:0.37rem;
+    border-top-right-radius: 0px ;
+    border-bottom-right-radius: 0px ;
+ }
