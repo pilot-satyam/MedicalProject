@@ -36,8 +36,11 @@ export const loadUser = (userId) => {
   export const updateUser = (userId, updatedUserData) => {
     return privateAxios
       .put(`/users/${userId}`, updatedUserData)
-      .then((response) => response.data)
-  }
+      .then(response => {
+        return response.data.updatedAt;
+      });
+  };
+  
   
   
 

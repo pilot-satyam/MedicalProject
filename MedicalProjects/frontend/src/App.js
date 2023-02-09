@@ -38,6 +38,7 @@ import FeedPlusMenu from './pages/DoctorList/FeedPlusMenu';
 import MoreDetails from './pages/MoreDetails';
 import UserFeed from './pages/UsersList/UserFeed';
 import SingleUserVisible from './pages/UsersList/SingleUserVisible';
+import PrescriptionFeed from './pages/PrescriptionList/PrescriptionFeed';
 
 
 function App() {
@@ -81,6 +82,7 @@ function App() {
   <Route path='/feedplusmenu' element={<FeedPlusMenu/>} />
   <Route path='/feedplusmenu/:doctorId' element={<MoreDetails/>} />
   <Route path="/users" element={<UserFeed/>} />
+  <Route path="/prescriptions/:Id" element={<PrescriptionFeed />} />
 
   <Route path="/user" element={<PrivateRoute />} >
   <Route path="dashboard" element={<UserDashboard />} />

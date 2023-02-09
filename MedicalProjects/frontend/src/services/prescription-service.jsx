@@ -35,3 +35,11 @@ export function loadPrescriptionUserWise(userId){
         .then(response=>response.data)
 }
 
+//load prescription Id wise
+export function loadSinglePrescription(Id){
+        return myAxios
+        .get(`/prescriptions/${Id}`)
+        .then((response)=>{
+                return response.data;
+        })
+}

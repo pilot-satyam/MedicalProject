@@ -2,12 +2,11 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { Col, Container, Row } from 'reactstrap'
+import { Card, CardBody, Col, Container, Row } from 'reactstrap'
 import Base from '../Components/Base'
 import DoctorSideMenu from '../Components/DoctorSideMenu'
 import { loadPrescriptionByDoctor } from '../services/prescription-service'
-import Doctor from './DoctorList/Doctor'
-import User from './UsersList/User'
+import PrescriptionList from './PrescriptionList/PrescriptionList'
 
 function MoreDetails() {
 
@@ -39,14 +38,18 @@ useEffect(()=>{
         {
             prescription && prescription.map((prescription,index)=>{
                 return (
-                    <User key={index} prescription = {prescription} />
+                    <PrescriptionList key={prescription.id} prescription = {prescription} />
                 )
             })
         }
 
-        {
-           prescription.length<=0 ? <h1> No User Under this Doctor </h1> : ''
-        }
+        <Card>
+            <CardBody>
+            {
+           prescription.length<=0 ? <h3> No User Under this Doctor </h3> : ''
+            }
+            </CardBody>
+        </Card>
 
         </Col>
     </Row>

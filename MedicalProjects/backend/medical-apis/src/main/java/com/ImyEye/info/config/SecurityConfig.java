@@ -55,13 +55,15 @@ public SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Excepti
     .requestMatchers("/api/v1/auth/login")
     // .requestMatchers("/api/v1/auth/**")
     .permitAll()
-    // .requestMatchers("/api/v1/auth/docLogin")
+    // .requestMatchers("/api/v1/auth/docLogin")	
     // .permitAll()
     .requestMatchers("/v3/api-docs")
     .permitAll()
     .requestMatchers("/api/v1/auth/register")
     .permitAll()
     .requestMatchers("/api/v1/doctors")
+    .permitAll()
+    .requestMatchers("/api/v1/users/{userId}")
     .permitAll()
     // .requestMatchers("/api/v1/auth/docRegister")
     // .permitAll()
@@ -116,6 +118,7 @@ public FilterRegistrationBean coresFilter() {
     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 
     CorsConfiguration corsConfiguration = new CorsConfiguration();
+    // corsConfiguration.addExposedHeader("Access-Control-Allow-Origin");
     corsConfiguration.setAllowCredentials(true);
     corsConfiguration.addAllowedOriginPattern("*");
     corsConfiguration.addAllowedHeader("Authorization");
@@ -127,6 +130,7 @@ public FilterRegistrationBean coresFilter() {
     corsConfiguration.addAllowedMethod("PUT");
     corsConfiguration.addAllowedMethod("OPTIONS");
     corsConfiguration.setMaxAge(3600L);
+
 
     source.registerCorsConfiguration("/**", corsConfiguration);
 
