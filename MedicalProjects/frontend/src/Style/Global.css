@@ -157,6 +157,8 @@ h2 {
   
 }
 
+/* //styling for doctor Page  */
+
 .NewFeed {
   height: 100vh;
   display: flex;
@@ -180,6 +182,13 @@ h2 {
   background-image: url('../../public/background.jpg');
   background-size: cover;
   background-position: center;
+}
+
+.centerCard{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center 
 }
 
 /* this style is being applied for the Grid page */
@@ -206,27 +215,30 @@ hr {
   width: 80%; /* set the width of the hr tag */
   height: 4px;
   margin: 10px auto; /* center the hr tag horizontally */
-  background: linear-gradient(to right, #f7f7f7, #fff);
+  background: linear-gradient(to right, #cbc1c1, #fff);
   border: none;
 }
-
-
-/* NavBar styling */
-
-nav .nav-content {
-  transition: transform 0.5s ease-in-out; /* add a transition for the scale effect */
+.outer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-nav:hover .nav-content {
-  transform: scale(2.2); /* Increase the size of the navbar content by 20% */
+.box {
+  width: 200px;
+  height: 400px;
+  margin: 10px;
+  /* background-color: #7657b1; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
 }
 
-/* //for the contact us page */
-.contact{
-  background-image: url('../../public/Image1.jpg');
-
+.box:hover {
+  transform: scale(1.07);
+  cursor: pointer;
 }
-
 
 
 /* //css added for the News&EVent Page */
@@ -243,7 +255,7 @@ nav:hover .nav-content {
   width: 300px;
   height: 400px;
   margin: 20px;
-  background-color: #a490ca;
+  background-image: url('../../public/background.jpg');
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -267,4 +279,49 @@ nav:hover .nav-content {
 .section li {
   font-size: 18px;
   margin: 10px 0;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+.link-hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+
+/* 
+//css for the contact page */
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* //for the service boxes */
+
+.outerService{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.boxService {
+  width: 200px;
+  height: 220px;
+  margin: 10px;
+  background-color: #7657b1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.boxService:hover {
+  transform: scale(1.07);
+  cursor: pointer;
 }

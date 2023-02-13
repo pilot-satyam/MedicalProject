@@ -10,13 +10,13 @@ import '../Style/login.css';
 const PhysicianLogin = () =>{
     return(
         <Base>
-        <div className ="container-fluid">
-        <Container className='mt-5 text-center'>
+        <div className ="">
+        <Container className='mt-4 text-center'>
           <Row className='mt-4'>
              <Col sm={{
                  size:10
              }}>
-                 <Card className=''>
+                 <Card className='mt-4'>
                     <Row>
                         <Col sm={6}><div className="hero-section-image imageCenter">
             
@@ -24,17 +24,18 @@ const PhysicianLogin = () =>{
                           src="contact.jpg"
                           alt="hero-section-photo"
                           className="img-style  float-left"
-    
+     
                            style={{
-                            width:"80vh",
-                            marginRight:"7%"
-                           }} 
+                            width:"89.5vh",
+                            marginRight:"-2.0%"
+                           
+                        }} 
                       
                         />
                     
                     </div></Col>
                 
-                        <Col sm={5} id="login_details"><CardHeader className="mt-4 formStyle">
+                        <Col sm={5} id="login_details"><CardHeader className="formStyle ">
                         <h6 className="centerIt" >Hey Amazing Doctors, <br></br></h6>
                         <h3>
                         Login Here<br/>

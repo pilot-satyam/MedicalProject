@@ -84,16 +84,6 @@ function FooterOne(){
       </div>
     </MDBFooter>
 
-   
-
-
-
-   
-  // footer{
-  //   padding:14rem 0 9rem 0;
-
-  // }
-
   );
 }
 export default FooterOne;
